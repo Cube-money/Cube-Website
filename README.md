@@ -60,13 +60,20 @@ pnpm dev
 ```
 Cube-Site/
 ├── app/
-│   ├── layout.tsx      # Root layout with metadata
-│   ├── page.tsx        # Landing page
-│   └── globals.css     # Global styles with Tailwind
+│   ├── layout.tsx              # Root layout with metadata
+│   ├── page.tsx                # Landing page
+│   ├── globals.css             # Global styles with Tailwind
+│   ├── invitations/
+│   │   └── accept/
+│   │       └── page.tsx        # Invitation acceptance page
+│   └── test-auth/
+│       └── page.tsx            # Auth testing page (dev only)
 ├── components/
-│   ├── WaitlistForm.tsx    # Waitlist signup form
-│   └── FeatureCard.tsx     # Feature display component
-├── public/             # Static assets
+│   ├── WaitlistForm.tsx        # Waitlist signup form
+│   └── FeatureCard.tsx         # Feature display component
+├── lib/
+│   └── auth.ts                 # Authentication utilities
+├── public/                     # Static assets
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
@@ -79,6 +86,8 @@ Cube-Site/
 - ✅ Fully responsive (mobile, tablet, desktop)
 - ✅ Comprehensive explanation of Cube's concept
 - ✅ Interactive waitlist signup form
+- ✅ Invitation acceptance page with API integration
+- ✅ Authentication token management
 - ✅ Smooth animations and transitions
 - ✅ SEO optimized
 - ✅ TypeScript for type safety
@@ -109,6 +118,32 @@ For production, you may want to add:
 - Analytics tracking IDs
 - Other third-party service credentials
 
+## 🔐 Invitation Acceptance Flow
+
+The site includes a fully functional invitation acceptance page that integrates with your backend API.
+
+### How it works:
+
+1. Users receive an invitation link: `https://yourdomain.com/invitations/accept?token=INVITE_TOKEN`
+2. The page checks if the user is authenticated (has an auth token in localStorage)
+3. If authenticated, it sends a POST request to your API to accept the invitation
+4. Shows success/error states with beautiful UI
+
+### Testing the Invitation Flow:
+
+1. Go to `http://localhost:3000/test-auth` (development only)
+2. Set a test auth token or use a real JWT from your backend
+3. Enter an invite token and click "Go to Invitation Page"
+4. Test the acceptance flow
+
+### API Integration:
+
+The invitation page calls:
+- **Endpoint:** `https://cube-services2-1.onrender.com/api/invitations/accept`
+- **Method:** POST
+- **Headers:** `Authorization: Bearer {token}`
+- **Body:** `{ "inviteToken": "..." }`
+
 ## 📝 Customization
 
 ### Colors
@@ -126,6 +161,7 @@ colors: {
 ### Content
 
 - **Landing Page:** Edit `app/page.tsx`
+- **Invitation Page:** Edit `app/invitations/accept/page.tsx`
 - **Metadata (SEO):** Edit `app/layout.tsx`
 - **Styling:** Modify `app/globals.css` and component files
 
