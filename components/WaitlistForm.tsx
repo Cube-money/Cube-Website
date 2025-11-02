@@ -31,10 +31,10 @@ export default function WaitlistForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20">
+      <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 text-center border border-black/40">
         <div className="text-6xl mb-4">🎉</div>
-        <h3 className="text-2xl font-bold text-white mb-2">You're on the list!</h3>
-        <p className="text-blue-100">
+        <h3 className="text-2xl font-bold text-black mb-2">You're on the list!</h3>
+        <p className="text-black/70">
           We'll notify you as soon as Cube launches. Get ready to revolutionize your savings!
         </p>
       </div>
@@ -42,10 +42,10 @@ export default function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="bg-black rounded-2xl shadow-2xl p-8 max-w-md mx-auto border border-gray-800">
       <div className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
             Full Name
           </label>
           <input
@@ -54,13 +54,13 @@ export default function WaitlistForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
+            className="w-full px-4 py-3 bg-gray-900 border-2 border-gray-800 rounded-xl focus:border-amber-500 focus:outline-none transition-colors text-white placeholder-gray-500"
             placeholder="Enter your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
             Email Address
           </label>
           <input
@@ -69,7 +69,7 @@ export default function WaitlistForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
+            className="w-full px-4 py-3 bg-gray-900 border-2 border-gray-800 rounded-xl focus:border-amber-500 focus:outline-none transition-colors text-white placeholder-gray-500"
             placeholder="Enter your email"
           />
         </div>
@@ -77,7 +77,7 @@ export default function WaitlistForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 rounded-xl hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-white text-black font-semibold py-4 rounded-xl hover:shadow-xl hover:bg-gray-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? (
             <span className="flex items-center justify-center">
@@ -92,7 +92,7 @@ export default function WaitlistForm() {
           )}
         </button>
 
-        <p className="text-xs text-gray-500 text-center mt-4">
+        <p className="text-xs text-gray-400 text-center mt-4">
           By joining, you agree to receive updates about Cube. Unsubscribe anytime.
         </p>
       </div>
