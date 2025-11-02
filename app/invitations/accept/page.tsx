@@ -25,17 +25,16 @@ function AcceptInvitationContent() {
     }
 
     if (!authToken) {
-      if (confirm("Authentication Required. Please log in to accept this invitation. Would you like to go to the login page?")) {
-        // For now, redirect to home. Update this to your login page when you build it
-        router.push("/");
-      }
+      // Redirect to login with the current page as redirect target
+      const currentPath = `/invitations/accept?token=${token}`;
+      router.push(`/auth/login?redirect=${encodeURIComponent(currentPath)}`);
       return;
     }
 
     try {
       setLoading(true);
       
-      const response = await fetch("https://cube-services2-1.onrender.com/api/invitations/accept", {
+      const response = await fetch("https://cube-service-788967711773.us-central1.run.app/api/invitations/accept", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

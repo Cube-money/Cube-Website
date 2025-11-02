@@ -63,6 +63,9 @@ Cube-Site/
 │   ├── layout.tsx              # Root layout with metadata
 │   ├── page.tsx                # Landing page
 │   ├── globals.css             # Global styles with Tailwind
+│   ├── auth/
+│   │   └── login/
+│   │       └── page.tsx        # Login page
 │   ├── invitations/
 │   │   └── accept/
 │   │       └── page.tsx        # Invitation acceptance page
@@ -118,31 +121,55 @@ For production, you may want to add:
 - Analytics tracking IDs
 - Other third-party service credentials
 
-## 🔐 Invitation Acceptance Flow
+## 🔐 Authentication & Invitation Flow
 
-The site includes a fully functional invitation acceptance page that integrates with your backend API.
+The site includes fully functional authentication and invitation acceptance pages that integrate with your backend API.
 
-### How it works:
+### Login Page (`/auth/login`)
 
+Beautiful login page with:
+- Email and password authentication
+- Show/hide password toggle
+- Loading and error states
+- Redirect support (returns user to intended page after login)
+- Integration with your auth API
+
+**API Integration:**
+- **Endpoint:** `https://cube-service-788967711773.us-central1.run.app/api/auth/signin`
+- **Method:** POST
+- **Body:** `{ "email": "...", "password": "..." }`
+- **Response:** Expects `token` (or `authToken`/`access_token`) and `userId` (or `user_id`/`id`)
+- **Storage:** Saves both token and userId to localStorage
+
+### Invitation Acceptance Flow (`/invitations/accept`)
+
+How it works:
 1. Users receive an invitation link: `https://yourdomain.com/invitations/accept?token=INVITE_TOKEN`
 2. The page checks if the user is authenticated (has an auth token in localStorage)
-3. If authenticated, it sends a POST request to your API to accept the invitation
-4. Shows success/error states with beautiful UI
+3. If not authenticated, redirects to login page with return URL
+4. After login, user is redirected back to accept the invitation
+5. If authenticated, it sends a POST request to your API to accept the invitation
+6. Shows success/error states with beautiful UI
 
-### Testing the Invitation Flow:
-
-1. Go to `http://localhost:3000/test-auth` (development only)
-2. Set a test auth token or use a real JWT from your backend
-3. Enter an invite token and click "Go to Invitation Page"
-4. Test the acceptance flow
-
-### API Integration:
-
-The invitation page calls:
+**API Integration:**
 - **Endpoint:** `https://cube-services2-1.onrender.com/api/invitations/accept`
 - **Method:** POST
 - **Headers:** `Authorization: Bearer {token}`
 - **Body:** `{ "inviteToken": "..." }`
+
+### Testing the Flow:
+
+**Option 1: Use the Test Page (Development Only)**
+1. Go to `http://localhost:3000/test-auth`
+2. Set a test auth token or use a real JWT from your backend
+3. Enter an invite token and click "Go to Invitation Page"
+4. Test the acceptance flow
+
+**Option 2: Test Complete Flow**
+1. Go to `http://localhost:3000/auth/login`
+2. Login with real credentials
+3. After login, go to an invitation link
+4. Accept the invitation
 
 ## 📝 Customization
 
@@ -161,7 +188,9 @@ colors: {
 ### Content
 
 - **Landing Page:** Edit `app/page.tsx`
+- **Login Page:** Edit `app/auth/login/page.tsx`
 - **Invitation Page:** Edit `app/invitations/accept/page.tsx`
+- **Auth Utilities:** Edit `lib/auth.ts`
 - **Metadata (SEO):** Edit `app/layout.tsx`
 - **Styling:** Modify `app/globals.css` and component files
 

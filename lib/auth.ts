@@ -16,11 +16,32 @@ export const AuthStorage = {
     return null;
   },
 
-  // Remove auth token
+  // Store user ID
+  setUserId: (userId: string) => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("userId", userId);
+    }
+  },
+
+  // Get user ID
+  getUserId: (): string | null => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("userId");
+    }
+    return null;
+  },
+
+  // Remove auth token and user ID
   removeToken: () => {
     if (typeof window !== "undefined") {
       localStorage.removeItem("authToken");
+      localStorage.removeItem("userId");
     }
+  },
+
+  // Remove all auth data (alias for removeToken)
+  logout: () => {
+    AuthStorage.removeToken();
   },
 
   // Check if user is authenticated
