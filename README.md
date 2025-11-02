@@ -63,14 +63,17 @@ Cube-Site/
 │   ├── layout.tsx              # Root layout with metadata
 │   ├── page.tsx                # Landing page
 │   ├── globals.css             # Global styles with Tailwind
+│   ├── api/                    # API proxy routes (avoid CORS)
+│   │   ├── auth/signin/
+│   │   │   └── route.ts        # Login proxy
+│   │   └── invitations/accept/
+│   │       └── route.ts        # Invitation proxy
 │   ├── auth/
 │   │   └── login/
 │   │       └── page.tsx        # Login page
-│   ├── invitations/
-│   │   └── accept/
-│   │       └── page.tsx        # Invitation acceptance page
-│   └── test-auth/
-│       └── page.tsx            # Auth testing page (dev only)
+│   └── invitations/
+│       └── accept/
+│           └── page.tsx        # Invitation acceptance page
 ├── components/
 │   ├── WaitlistForm.tsx        # Waitlist signup form
 │   └── FeatureCard.tsx         # Feature display component
@@ -135,11 +138,13 @@ Beautiful login page with:
 - Integration with your auth API
 
 **API Integration:**
-- **Endpoint:** `https://cube-service-788967711773.us-central1.run.app/api/auth/signin`
+- **Frontend calls:** `/api/auth/signin` (Next.js proxy route)
+- **Backend:** `https://cube-service-788967711773.us-central1.run.app/api/auth/signin`
 - **Method:** POST
 - **Body:** `{ "email": "...", "password": "..." }`
 - **Response:** Expects `token` (or `authToken`/`access_token`) and `userId` (or `user_id`/`id`)
 - **Storage:** Saves both token and userId to localStorage
+- **Note:** Using proxy routes to avoid CORS issues
 
 ### Invitation Acceptance Flow (`/invitations/accept`)
 
@@ -152,24 +157,27 @@ How it works:
 6. Shows success/error states with beautiful UI
 
 **API Integration:**
-- **Endpoint:** `https://cube-services2-1.onrender.com/api/invitations/accept`
+- **Frontend calls:** `/api/invitations/accept` (Next.js proxy route)
+- **Backend:** `https://cube-service-788967711773.us-central1.run.app/api/invitations/accept`
 - **Method:** POST
 - **Headers:** `Authorization: Bearer {token}`
 - **Body:** `{ "inviteToken": "..." }`
+- **Note:** Using proxy routes to avoid CORS issues
 
 ### Testing the Flow:
 
-**Option 1: Use the Test Page (Development Only)**
-1. Go to `http://localhost:3000/test-auth`
-2. Set a test auth token or use a real JWT from your backend
-3. Enter an invite token and click "Go to Invitation Page"
-4. Test the acceptance flow
-
-**Option 2: Test Complete Flow**
 1. Go to `http://localhost:3000/auth/login`
-2. Login with real credentials
-3. After login, go to an invitation link
+2. Login with real credentials from your backend
+3. After login, navigate to an invitation link: `/invitations/accept?token=YOUR_TOKEN`
 4. Accept the invitation
+
+### Why Proxy Routes?
+
+We're using Next.js API routes as proxies to avoid CORS issues:
+- Browser → Next.js Proxy → Backend (no CORS errors!)
+- The proxy runs server-side, so it can call your backend without restrictions
+- This is a production-ready pattern used by many applications
+- Your backend URLs are not exposed to the client
 
 ## 📝 Customization
 

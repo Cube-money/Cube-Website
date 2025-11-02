@@ -18,7 +18,11 @@ function LoginContent() {
 
   const signIn = async (email: string, password: string) => {
     try {
-      const response = await fetch("https://cube-service-788967711773.us-central1.run.app/api/auth/signin", {
+      console.log("🔐 Attempting to sign in with:", email);
+      console.log("📡 Using proxy route to avoid CORS");
+      
+      // Using Next.js API route as proxy to avoid CORS issues
+      const response = await fetch("/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,16 +30,24 @@ function LoginContent() {
         body: JSON.stringify({ email, password }),
       });
 
+      console.log("📥 Response status:", response.status);
+      console.log("📥 Response headers:", Object.fromEntries(response.headers.entries()));
+
       if (!response.ok) {
         const error = await response.json();
+        console.error("❌ Login failed:", error);
         throw new Error(error.message || "Login failed");
       }
 
       const data = await response.json();
+      console.log("✅ Login response data:", data);
       
       // Extract token and userId from response
       const token = data.token || data.authToken || data.access_token;
       const id = data.userId || data.user_id || data.id;
+
+      console.log("🔑 Extracted token:", token ? "✓ Found" : "✗ Missing");
+      console.log("👤 Extracted userId:", id ? "✓ Found" : "✗ Missing");
 
       if (!token || !id) {
         throw new Error("Invalid response from server");
@@ -45,9 +57,21 @@ function LoginContent() {
       localStorage.setItem("authToken", token);
       localStorage.setItem("userId", id);
 
+      console.log("💾 Saved to localStorage successfully");
       return { token, userId: id };
-    } catch (error) {
-      console.error("Sign in error:", error);
+    } catch (error: any) {
+      console.error("❌ Sign in error:", error);
+      console.error("❌ Error details:", {
+        name: error.name,
+        message: error.message,
+        stack: error.stack
+      });
+      
+      // Check if it's a network error
+      if (error instanceof TypeError && error.message.includes("fetch")) {
+        throw new Error("Unable to connect to the server. Please check your internet connection or try again later.");
+      }
+      
       throw error;
     }
   };

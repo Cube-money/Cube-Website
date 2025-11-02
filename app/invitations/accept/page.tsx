@@ -34,7 +34,8 @@ function AcceptInvitationContent() {
     try {
       setLoading(true);
       
-      const response = await fetch("https://cube-service-788967711773.us-central1.run.app/api/invitations/accept", {
+      // Using Next.js API route as proxy to avoid CORS issues
+      const response = await fetch("/api/invitations/accept", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
