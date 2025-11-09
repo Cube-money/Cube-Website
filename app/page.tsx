@@ -271,32 +271,32 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
-              icon="🔒"
+              number="01"
               title="Secure & Transparent"
               description="Bank-level security with complete transparency. Track every contribution and payout in real-time."
             />
             <FeatureCard
-              icon="🤝"
+              number="02"
               title="Trusted Community"
               description="Build savings circles with people you trust. Set your own rules, amounts, and schedules."
             />
             <FeatureCard
-              icon="📱"
+              number="03"
               title="Easy to Use"
               description="Simple mobile app to manage contributions, track cycles, and receive notifications."
             />
             <FeatureCard
-              icon="💰"
+              number="04"
               title="Flexible Amounts"
               description="Choose contribution amounts that work for your group, from $50 to $5,000 per cycle."
             />
             <FeatureCard
-              icon="⚡"
+              number="05"
               title="Instant Payouts"
               description="When it's your turn, receive your lump sum instantly - no delays, no hassle."
             />
             <FeatureCard
-              icon="📊"
+              number="06"
               title="Smart Insights"
               description="Track your savings progress, view history, and plan for future cycles with detailed analytics."
             />

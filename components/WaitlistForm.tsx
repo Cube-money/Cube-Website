@@ -12,21 +12,32 @@ export default function WaitlistForm() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Send to Google Sheets via Apps Script
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzDeHBVRxz3NEsndtpYb6uRvuF-gz38ruC2joh4kqmy_CEYqFJF3TSTGaOgTxOOkGLhew/exec', {
+        method: 'POST',
+        mode: 'no-cors', // Required for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email }),
+      });
 
-    // In a real app, you'd send this to your backend/API
-    console.log("Waitlist signup:", { name, email });
+      setIsSubmitted(true);
+      setName("");
+      setEmail("");
 
-    setIsSubmitted(true);
-    setIsLoading(false);
-    setName("");
-    setEmail("");
-
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Error submitting to waitlist:", error);
+      // Still show success message to user
+      setIsSubmitted(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
