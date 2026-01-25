@@ -2,13 +2,13 @@
 
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
-import Home from "@/pages/Home/view/Home";
+import Explore from "@/pages/Explore/view/Explore";
 
-export default function HomePage() {
+export default function ExplorePage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <Home />
+      <Explore />
       <Footer />
     </main>
   );

@@ -99,9 +99,11 @@ function LoginContent() {
         {/* Logo/Brand */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">C</span>
-            </div>
+            <img 
+              src="/CubeLogo/BlackLogo.png" 
+              alt="Cube Logo" 
+              className="w-14 h-14"
+            />
             <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Cube
             </span>
