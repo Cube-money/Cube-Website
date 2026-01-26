@@ -1,72 +1,139 @@
 export default function WhatIsCubeSection() {
   return (
-    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-            What is Cube?
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A modern take on traditional community savings, powered by technology and trust.
-          </p>
+    <section
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+        overflow: "hidden",
+        borderTop: "1px solid rgb(128, 128, 128)",
+      }}
+    >
+      {/* Full-screen Image Background */}
+      <img
+        src="/Home/frame2/Group 16.png"
+        alt="What is Cube"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: 0,
+        }}
+      />
+      
+      {/* Dark overlay - 20% opacity */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          zIndex: 1,
+        }}
+      />
+      
+      {/* Centered Text Container */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        {/* Main Heading */}
+        <div
+          style={{
+            fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
+            fontStyle: "normal",
+            fontWeight: 400,
+            color: "rgb(255, 255, 255)",
+            fontSize: "clamp(48px, 8vw, 88px)",
+            letterSpacing: "-0.02em",
+            lineHeight: "100%",
+            textAlign: "center",
+            whiteSpace: "nowrap",
+            boxSizing: "border-box",
+            WebkitFontSmoothing: "antialiased",
+            display: "inline-block",
+            marginBottom: "16px",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
+          }}
+        >
+          Rewrite the rules of money together.
         </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-3xl font-display font-bold text-white mb-6">
-              The Power of Rotational Savings
-            </h3>
-            <p className="text-lg text-gray-400 mb-4">
-              Cube brings together trusted groups of people who pool their money together. Each cycle, one member receives the entire pot, allowing them to make big purchases, investments, or cover important expenses.
-            </p>
-            <p className="text-lg text-gray-400 mb-4">
-              It's like having a group of friends who save together and take turns accessing the collective funds - but with the security, transparency, and convenience of modern banking technology.
-            </p>
-            <div className="flex items-start space-x-3 bg-gray-900 border border-gray-800 p-4 rounded-xl">
-              <span className="text-2xl">💡</span>
-              <p className="text-gray-300">
-                <strong className="text-amber-500">Traditional name:</strong> Also known as ROSCA (Rotating Savings and Credit Association) or "Susu" in various cultures.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-gray-800">
-            <div className="space-y-4">
-              <div className="bg-gray-950 rounded-2xl p-6 border border-gray-800 shadow-lg shadow-amber-500/10">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-semibold text-white">Month 1</span>
-                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm font-medium border border-amber-500/30">
-                    Active
-                  </span>
-                </div>
-                <div className="text-sm text-gray-500 mb-2">5 members × $200 = $1,000</div>
-                <div className="text-xl font-bold text-amber-500">→ Member A receives $1,000</div>
-              </div>
-
-              <div className="bg-gray-950 rounded-2xl p-6 border border-gray-800 shadow-lg opacity-70">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-semibold text-white">Month 2</span>
-                  <span className="px-3 py-1 bg-gray-800 text-gray-400 rounded-full text-sm font-medium border border-gray-700">
-                    Next
-                  </span>
-                </div>
-                <div className="text-sm text-gray-500 mb-2">5 members × $200 = $1,000</div>
-                <div className="text-xl font-bold text-amber-500">→ Member B receives $1,000</div>
-              </div>
-
-              <div className="bg-gray-950 rounded-2xl p-6 border border-gray-800 shadow-lg opacity-40">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-semibold text-white">Month 3</span>
-                  <span className="px-3 py-1 bg-gray-800 text-gray-500 rounded-full text-sm font-medium border border-gray-700">
-                    Upcoming
-                  </span>
-                </div>
-                <div className="text-sm text-gray-500 mb-2">5 members × $200 = $1,000</div>
-                <div className="text-xl font-bold text-amber-500">→ Member C receives $1,000</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        {/* Subtext */}
+        <span
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "22px",
+            fontWeight: 400,
+            letterSpacing: "-0.25px",
+            lineHeight: "30px",
+            margin: 0,
+            fontStyle: "normal",
+            WebkitFontSmoothing: "antialiased",
+            color: "rgb(255, 255, 255)",
+            maxWidth: "600px",
+            marginBottom: "24px",
+          }}
+        >
+          When people coordinate, agree on timing, and move together, a system emerges one that’s fair, predictable, and owned by the group itself.
+        </span>
+        
+        {/* Sign up Button */}
+        <a
+          href="#waitlist"
+          style={{
+            opacity: 0.85,
+            textDecoration: "none",
+            alignItems: "center",
+            alignSelf: "center",
+            borderRadius: "36px",
+            boxSizing: "border-box",
+            display: "inline-flex",
+            height: "44px",
+            justifyContent: "center",
+            overflow: "hidden",
+            padding: "0px 32px",
+            position: "relative",
+            textAlign: "center",
+            whiteSpace: "nowrap",
+            backgroundColor: "rgb(204, 255, 0)",
+            border: "1px solid rgb(204, 255, 0)",
+            color: "rgb(17, 14, 8)",
+            cursor: "pointer",
+            WebkitFontSmoothing: "antialiased",
+            outline: "rgb(17, 14, 8) none 0px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+              fontSize: "16px",
+              fontWeight: 400,
+              letterSpacing: "-0.25px",
+              lineHeight: "24px",
+              margin: 0,
+              fontStyle: "normal",
+              WebkitFontSmoothing: "antialiased",
+            }}
+          >
+            Sign up
+          </span>
+        </a>
       </div>
     </section>
   );
