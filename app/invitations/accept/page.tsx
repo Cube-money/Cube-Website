@@ -6,7 +6,7 @@ import { useState, useEffect, Suspense } from "react";
 function AcceptInvitationContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const token = searchParams.get("token");
+  const token = searchParams?.get("token") || null;
   
   const [loading, setLoading] = useState(false);
   const [accepted, setAccepted] = useState(false);
