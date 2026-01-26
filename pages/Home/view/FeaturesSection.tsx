@@ -96,7 +96,7 @@ export default function FeaturesSection() {
             width: "100%",
           }}
         >
-          When people coordinate, agree on timing, and move together, a system emerges one that's fair, predictable, and owned by the group itself.
+          Save without debt or interest, and move way faster than traditional saving by pooling together instead of waiting months for slow, solo progress.
         </span>
       </div>
 
@@ -110,7 +110,7 @@ export default function FeaturesSection() {
           zIndex: 2,
           display: "flex",
           flexDirection: "row",
-          gap: "350px",
+          gap: "400px",
           justifyContent: "center",
           alignItems: "center",
           width: "100%",

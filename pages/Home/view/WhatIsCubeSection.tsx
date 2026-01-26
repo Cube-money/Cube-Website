@@ -11,7 +11,7 @@ export default function WhatIsCubeSection() {
     >
       {/* Full-screen Image Background */}
       <img
-        src="/Home/frame2/Group 16.png"
+        src="/Home/frame2/Group 24.png"
         alt="What is Cube"
         style={{
           position: "absolute",

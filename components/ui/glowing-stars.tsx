@@ -16,7 +16,7 @@ export const GlowingStarsBackgroundCard = ({
   return (
     <div
       className={cn(
-        "bg-black p-4 max-w-lg max-h-[16rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600 flex flex-col",
+        "bg-black p-4 max-w-[28rem] max-h-[16rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600 flex flex-col",
         className
       )}
     >
@@ -42,7 +42,13 @@ export const GlowingStarsDescription = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <p className={cn("text-sm text-white max-w-[16rem]", className)}>
+    <p 
+      className={cn("text-sm max-w-[16rem]", className)}
+      style={{
+        fontFamily: "Inter, sans-serif",
+        color: "#999999",
+      }}
+    >
       {children}
     </p>
   );
@@ -56,7 +62,14 @@ export const GlowingStarsTitle = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <h2 className={cn("font-bold text-xl text-[#eaeaea]", className)}>
+    <h2 
+      className={cn("text-xl", className)}
+      style={{
+        fontFamily: "Inter, sans-serif",
+        fontWeight: 300,
+        color: "#ffffff",
+      }}
+    >
       {children}
     </h2>
   );
