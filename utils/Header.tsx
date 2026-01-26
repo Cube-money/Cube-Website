@@ -9,6 +9,7 @@ export default function Header() {
   const pathname = usePathname();
   const isPrivacyPage = pathname === "/privacy-policy";
   const isTermsPage = pathname === "/terms-conditions";
+  const isLearnPage = pathname === "/learn";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,7 @@ export default function Header() {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: isPrivacyPage || isTermsPage || isScrolled ? "#000" : "transparent",
+        backgroundColor: isPrivacyPage || isTermsPage || isLearnPage || isScrolled ? "#000" : "transparent",
         transition: "background-color 0.3s ease",
       }}
     >
