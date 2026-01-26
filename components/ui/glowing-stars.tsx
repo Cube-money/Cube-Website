@@ -7,29 +7,29 @@ import { cn } from "@/lib/utils";
 export const GlowingStarsBackgroundCard = ({
   className,
   children,
+  imageSrc,
 }: {
   className?: string;
   children?: React.ReactNode;
+  imageSrc?: string;
 }) => {
-  const [mouseEnter, setMouseEnter] = useState(false);
-
   return (
     <div
-      onMouseEnter={() => {
-        setMouseEnter(true);
-      }}
-      onMouseLeave={() => {
-        setMouseEnter(false);
-      }}
       className={cn(
-        "bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 max-w-md max-h-[20rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
+        "bg-black p-4 max-w-lg max-h-[16rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600 flex flex-col",
         className
       )}
     >
-      <div className="flex justify-center items-center">
-        <Illustration mouseEnter={mouseEnter} />
-      </div>
-      <div className="px-2 pb-6">{children}</div>
+      {imageSrc && (
+        <div className="flex justify-start items-center mb-10">
+          <img 
+            src={imageSrc} 
+            alt="Card icon" 
+            className="w-24 h-24 object-contain"
+          />
+        </div>
+      )}
+      <div className="px-2 pb-6 flex-1 flex flex-col justify-center">{children}</div>
     </div>
   );
 };
@@ -42,7 +42,7 @@ export const GlowingStarsDescription = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <p className={cn("text-base text-white max-w-[16rem]", className)}>
+    <p className={cn("text-sm text-white max-w-[16rem]", className)}>
       {children}
     </p>
   );
@@ -56,14 +56,14 @@ export const GlowingStarsTitle = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <h2 className={cn("font-bold text-2xl text-[#eaeaea]", className)}>
+    <h2 className={cn("font-bold text-xl text-[#eaeaea]", className)}>
       {children}
     </h2>
   );
 };
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
-  const stars = 108;
+  const stars = 30;
   const columns = 18;
 
   const [glowingStars, setGlowingStars] = useState<number[]>([]);
@@ -76,7 +76,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
         Math.floor(Math.random() * stars)
       );
       setGlowingStars([...highlightedStars.current]);
-    }, 3000);
+    }, 4500);
 
     return () => clearInterval(interval);
   }, []);
@@ -152,7 +152,28 @@ const Glow = ({ delay }: { delay: number }) => {
       exit={{
         opacity: 0,
       }}
-      className="absolute  left-1/2 -translate-x-1/2 z-10 h-[4px] w-[4px] rounded-full bg-blue-500 blur-[1px] shadow-2xl shadow-blue-400"
+      className="absolute left-1/2 -translate-x-1/2 z-10 h-[4px] w-[4px] rounded-full bg-blue-500 blur-[1px] shadow-2xl shadow-blue-400"
     />
   );
 };
+
+const Icon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="h-4 w-4 text-white stroke-2"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+      />
+    </svg>
+  );
+};
+
+export { Icon };
