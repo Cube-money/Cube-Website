@@ -8,7 +8,7 @@ import Link from "next/link";
 function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = searchParams?.get("redirect") || "/";
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
