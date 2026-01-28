@@ -100,30 +100,10 @@ export default function Learn() {
                   style={{
                     minHeight: '500px',
                     borderRadius: '0',
-                    position: 'relative'
+                    position: 'relative',
+                    backgroundColor: '#B6E0E5'
                   }}
                 >
-                  <Image
-                    src="/learn/couch.png"
-                    alt="Wallet Management"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                      transition: 'transform 0.5s ease-out',
-                      transform: 'scale(1)',
-                      willChange: 'transform',
-                      backfaceVisibility: 'hidden'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'scale(1.1)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'scale(1)';
-                    }}
-                  />
                 </div>
               </Link>
               
@@ -159,7 +139,7 @@ export default function Learn() {
                     lineHeight: '1.6'
                   }}
                 >
-                  Every business aspires to grow, but not all growth is sustainable. Rapid expansion without a solid foundation can lead to operational challenges, financial strain, and inefficiencies that ultimately stifle success.
+                  Cube keeps wallet setup simple because it only needs one thing: a way for other members to send you money when it's your turn to win.
                 </p>
               </div>
             </div>

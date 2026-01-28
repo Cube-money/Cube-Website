@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname();
   const isPrivacyPage = pathname === "/privacy-policy";
   const isTermsPage = pathname === "/terms-conditions";
-  const isLearnPage = pathname === "/learn";
+  const isLearnPage = pathname === "/learn" || pathname?.startsWith("/learn/");
 
   useEffect(() => {
     const handleScroll = () => {
