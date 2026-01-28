@@ -64,7 +64,7 @@ export default function HeroSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 6vw, 72px)",
+            fontSize: "clamp(44px, 7.5vw, 96px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "left",
@@ -84,7 +84,7 @@ export default function HeroSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 2.5vw, 18px)",
+            fontSize: "clamp(20px, 3.2vw, 28px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 26px)",
@@ -130,7 +130,7 @@ export default function HeroSection() {
             <span
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "clamp(12px, 1.8vw, 14px)",
+                fontSize: "clamp(16px, 2.2vw, 18px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
                 lineHeight: "clamp(18px, 2.5vw, 22px)",
@@ -169,7 +169,7 @@ export default function HeroSection() {
             <span
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "clamp(12px, 1.8vw, 14px)",
+                fontSize: "clamp(16px, 2.2vw, 18px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
                 lineHeight: "clamp(18px, 2.5vw, 22px)",

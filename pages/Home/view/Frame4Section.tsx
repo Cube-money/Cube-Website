@@ -139,7 +139,7 @@ export default function Frame4Section() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 7vw, 88px)",
+            fontSize: "clamp(40px, 8vw, 100px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             whiteSpace: "normal",
@@ -160,7 +160,7 @@ export default function Frame4Section() {
           className="frame4-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 2.5vw, 22px)",
+            fontSize: "clamp(20px, 3.2vw, 32px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 30px)",
@@ -206,7 +206,7 @@ export default function Frame4Section() {
           <span
             style={{
               fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "clamp(14px, 2vw, 16px)",
+              fontSize: "clamp(18px, 2.5vw, 20px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",
               lineHeight: "clamp(20px, 3vw, 24px)",
