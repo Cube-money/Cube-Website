@@ -67,7 +67,7 @@ export default function HowItWorksSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(36px, 5.5vw, 80px)",
+            fontSize: "clamp(32px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -87,7 +87,7 @@ export default function HowItWorksSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(20px, 3vw, 28px)",
+            fontSize: "clamp(18px, 2.2vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3vw, 26px)",
@@ -135,7 +135,7 @@ export default function HowItWorksSection() {
           <span
             style={{
               fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "clamp(18px, 2.5vw, 20px)",
+              fontSize: "clamp(16px, 2vw, 18px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",
               lineHeight: "24px",

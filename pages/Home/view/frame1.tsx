@@ -61,7 +61,7 @@ export default function WhatIsCubeSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(44px, 8.5vw, 116px)",
+            fontSize: "clamp(40px, 7vw, 88px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -81,7 +81,7 @@ export default function WhatIsCubeSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(20px, 3.2vw, 32px)",
+            fontSize: "clamp(18px, 2.5vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 30px)",
@@ -125,7 +125,7 @@ export default function WhatIsCubeSection() {
           <span
             style={{
               fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "clamp(18px, 2.5vw, 20px)",
+              fontSize: "clamp(16px, 2vw, 18px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",
               lineHeight: "clamp(20px, 3vw, 24px)",
