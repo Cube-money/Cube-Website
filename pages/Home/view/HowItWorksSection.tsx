@@ -14,8 +14,8 @@ export default function HowItWorksSection() {
       style={{
         position: "relative",
         width: "100%",
-        height: "auto",
-        minHeight: "100vh",
+        height: "140vh",
+        minHeight: "140vh",
         paddingBottom: "80px",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
@@ -49,14 +49,16 @@ export default function HowItWorksSection() {
         }}
       />
       
-      {/* Header Text */}
+      {/* Content - vertically centered */}
       <div
         style={{
-          position: "relative",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "100%",
           zIndex: 2,
-          paddingTop: "80px",
           textAlign: "center",
-          marginBottom: "60px",
         }}
       >
         <div
@@ -146,7 +148,7 @@ export default function HowItWorksSection() {
         </a>
         
         {/* BentoGrid Component */}
-        <div style={{ marginTop: "60px", position: "relative", zIndex: 2 }}>
+        <div style={{ marginTop: "60px", position: "relative" }}>
           <BentoGridDemo />
         </div>
       </div>

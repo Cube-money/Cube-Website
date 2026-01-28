@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
@@ -17,6 +17,12 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Cube - Smart Rotational Savings & Checking",
   description: "Join the future of community finance. Save together, prosper together with Cube's rotational savings accounts.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

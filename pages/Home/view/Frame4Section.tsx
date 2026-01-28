@@ -54,7 +54,7 @@ export default function Frame4Section() {
         }}
       />
       
-      {/* Left-aligned Text Container */}
+      {/* Left-aligned Text Container - original Frame4Section */}
       <div
         style={{
           position: "absolute",

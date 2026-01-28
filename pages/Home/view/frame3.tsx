@@ -6,6 +6,7 @@ import {
   GlowingStarsTitle,
   Icon,
 } from "@/components/ui/glowing-stars";
+import { Spotlight } from "@/components/ui/spotlight";
 
 export default function FeaturesSection() {
   return (
@@ -43,6 +44,12 @@ export default function FeaturesSection() {
           backgroundColor: "rgba(0, 0, 0, 0.3)",
           zIndex: 1,
         }}
+      />
+
+      {/* Spotlight Effect */}
+      <Spotlight
+        className="-top-40 left-0 md:-top-20 md:left-60 z-[2]"
+        fill="white"
       />
 
       {/* Header Text */}

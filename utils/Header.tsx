@@ -111,6 +111,24 @@ export default function Header() {
           </li>
           <li style={{ marginLeft: "36px", display: "block", padding: 0, position: "relative", whiteSpace: "nowrap" }}>
             <a
+              href="/preview"
+              style={{
+                textDecoration: "none",
+                color: "rgb(255, 255, 255)",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "16px",
+                fontWeight: 400,
+                letterSpacing: "-0.25px",
+                lineHeight: "24px",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Preview
+            </a>
+          </li>
+          <li style={{ marginLeft: "36px", display: "block", padding: 0, position: "relative", whiteSpace: "nowrap" }}>
+            <a
               href="/stories"
               style={{
                 textDecoration: "none",
@@ -267,6 +285,7 @@ export default function Header() {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <a href="/how-it-works" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>How It Works</a>
+            <a href="/preview" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Preview</a>
             <a href="/stories" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Stories</a>
             <a href="/explore" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Explore</a>
             <a href="/learn" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Learn</a>
