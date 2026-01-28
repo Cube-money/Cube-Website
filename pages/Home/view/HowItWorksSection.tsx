@@ -67,17 +67,17 @@ export default function HowItWorksSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(28px, 4.5vw, 56px)",
+            fontSize: "clamp(24px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "inline-block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "16px",
+            marginBottom: "clamp(12px, 2vh, 16px)",
           }}
         >
           Explore the library
@@ -87,10 +87,10 @@ export default function HowItWorksSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "18px",
+            fontSize: "clamp(14px, 2.2vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "26px",
+            lineHeight: "clamp(20px, 3vw, 26px)",
             margin: "0 auto",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
@@ -99,6 +99,7 @@ export default function HowItWorksSection() {
             display: "block",
             textAlign: "center",
             width: "100%",
+            padding: "0 clamp(16px, 3vw, 0)",
           }}
         >
           Learn how coordination, trust, and shared timing come together to form a fair financial system.

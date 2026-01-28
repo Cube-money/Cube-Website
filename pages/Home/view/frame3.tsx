@@ -10,6 +10,19 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function FeaturesSection() {
   return (
+    <>
+      <style jsx>{`
+        .cards-container-responsive {
+          flex-direction: column;
+          gap: clamp(32px, 8vw, 400px);
+        }
+        @media (min-width: 900px) {
+          .cards-container-responsive {
+            flex-direction: row;
+            gap: clamp(200px, 25vw, 400px);
+          }
+        }
+      `}</style>
     <section
       style={{
         position: "relative",
@@ -56,11 +69,14 @@ export default function FeaturesSection() {
       <div
         style={{
           position: "absolute",
-          top: "15%",
+          top: "clamp(10%, 12vh, 15%)",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
           textAlign: "center",
+          width: "calc(100% - 32px)",
+          maxWidth: "800px",
+          padding: "0 clamp(16px, 3vw, 0)",
         }}
       >
         <div
@@ -69,17 +85,17 @@ export default function FeaturesSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(28px, 4.5vw, 56px)",
+            fontSize: "clamp(24px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "inline-block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "16px",
+            marginBottom: "clamp(12px, 2vh, 16px)",
           }}
         >
           How does zero debt, zero interest sounds?
@@ -89,10 +105,10 @@ export default function FeaturesSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "18px",
+            fontSize: "clamp(14px, 2.2vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "26px",
+            lineHeight: "clamp(20px, 3vw, 26px)",
             margin: "0 auto",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
@@ -109,18 +125,19 @@ export default function FeaturesSection() {
 
       {/* Cards Container - Lower Position */}
       <div
+        className="cards-container-responsive"
         style={{
           position: "absolute",
-          bottom: "26%",
+          bottom: "clamp(20%, 22vh, 26%)",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
+          width: "calc(100% - 32px)",
+          maxWidth: "1200px",
+          padding: "0 clamp(16px, 3vw, 0)",
           display: "flex",
-          flexDirection: "row",
-          gap: "400px",
           justifyContent: "center",
           alignItems: "center",
-          width: "100%",
         }}
       >
         <GlowingStarsBackgroundCard imageSrc="/AbstractSymbols/Create2.png">
@@ -148,5 +165,6 @@ export default function FeaturesSection() {
         </GlowingStarsBackgroundCard>
       </div>
     </section>
+    </>
   );
 }

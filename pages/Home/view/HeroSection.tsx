@@ -44,15 +44,17 @@ export default function HeroSection() {
       <div
         style={{
           position: "absolute",
-          top: "72%",
-          left: "5%",
+          top: "clamp(60%, 65vh, 72%)",
+          left: "clamp(5%, 4vw, 5%)",
           transform: "translateY(-50%)",
           zIndex: 3,
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
           textAlign: "left",
-          maxWidth: "50%",
+          maxWidth: "clamp(90%, 50vw, 50%)",
+          width: "calc(100% - clamp(10%, 8vw, 10%))",
+          padding: "0 clamp(16px, 2vw, 0)",
         }}
       >
         {/* Main Heading */}
@@ -62,7 +64,7 @@ export default function HeroSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(40px, 6.5vw, 72px)",
+            fontSize: "clamp(32px, 6vw, 72px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "left",
@@ -70,7 +72,7 @@ export default function HeroSection() {
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
-            marginBottom: "16px",
+            marginBottom: "clamp(12px, 2vh, 16px)",
             wordBreak: "break-word",
             overflowWrap: "break-word",
           }}
@@ -82,16 +84,16 @@ export default function HeroSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "18px",
+            fontSize: "clamp(14px, 2.5vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "26px",
+            lineHeight: "clamp(20px, 3.5vw, 26px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "24px",
+            marginBottom: "clamp(16px, 3vh, 24px)",
             textAlign: "left",
             display: "block",
           }}
@@ -102,19 +104,19 @@ export default function HeroSection() {
         </span>
 
         {/* Buttons */}
-        <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "clamp(8px, 1.5vw, 12px)", alignItems: "center", flexWrap: "wrap" }}>
           <a
             href="#"
             style={{
               textDecoration: "none",
               alignItems: "center",
-              borderRadius: "36px",
+              borderRadius: "clamp(28px, 3vw, 36px)",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "44px",
+              height: "clamp(40px, 5vh, 44px)",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px 32px",
+              padding: "0px clamp(20px, 3vw, 32px)",
               position: "relative",
               textAlign: "center",
               whiteSpace: "nowrap",
@@ -128,10 +130,10 @@ export default function HeroSection() {
             <span
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "14px",
+                fontSize: "clamp(12px, 1.8vw, 14px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "22px",
+                lineHeight: "clamp(18px, 2.5vw, 22px)",
                 margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
@@ -146,13 +148,13 @@ export default function HeroSection() {
               opacity: 0.85,
               textDecoration: "none",
               alignItems: "center",
-              borderRadius: "36px",
+              borderRadius: "clamp(28px, 3vw, 36px)",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "44px",
+              height: "clamp(40px, 5vh, 44px)",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px 32px",
+              padding: "0px clamp(20px, 3vw, 32px)",
               position: "relative",
               textAlign: "left",
               whiteSpace: "nowrap",
@@ -167,10 +169,10 @@ export default function HeroSection() {
             <span
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "14px",
+                fontSize: "clamp(12px, 1.8vw, 14px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "22px",
+                lineHeight: "clamp(18px, 2.5vw, 22px)",
                 margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",

@@ -49,6 +49,9 @@ export default function WhatIsCubeSection() {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
+          width: "calc(100% - 32px)",
+          maxWidth: "800px",
+          padding: "0 clamp(16px, 3vw, 0)",
         }}
       >
         {/* Main Heading */}
@@ -58,15 +61,15 @@ export default function WhatIsCubeSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(48px, 8vw, 88px)",
+            fontSize: "clamp(32px, 7vw, 88px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "inline-block",
-            marginBottom: "16px",
+            marginBottom: "clamp(12px, 2vh, 16px)",
             wordBreak: "break-word",
             overflowWrap: "break-word",
           }}
@@ -78,19 +81,19 @@ export default function WhatIsCubeSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "22px",
+            fontSize: "clamp(14px, 2.5vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "30px",
+            lineHeight: "clamp(20px, 3.5vw, 30px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "24px",
+            marginBottom: "clamp(16px, 3vh, 24px)",
           }}
         >
-          When people coordinate, agree on timing, and move together, a system emerges one that’s fair, predictable, and owned by the group itself.
+          When people coordinate, agree on timing, and move together, a system emerges one that's fair, predictable, and owned by the group itself.
         </span>
         
         {/* Sign up Button */}
@@ -101,13 +104,13 @@ export default function WhatIsCubeSection() {
             textDecoration: "none",
             alignItems: "center",
             alignSelf: "center",
-            borderRadius: "36px",
+            borderRadius: "clamp(28px, 3vw, 36px)",
             boxSizing: "border-box",
             display: "inline-flex",
-            height: "44px",
+            height: "clamp(40px, 5vh, 44px)",
             justifyContent: "center",
             overflow: "hidden",
-            padding: "0px 32px",
+            padding: "0px clamp(20px, 3vw, 32px)",
             position: "relative",
             textAlign: "center",
             whiteSpace: "nowrap",
@@ -122,10 +125,10 @@ export default function WhatIsCubeSection() {
           <span
             style={{
               fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "16px",
+              fontSize: "clamp(14px, 2vw, 16px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",
-              lineHeight: "24px",
+              lineHeight: "clamp(20px, 3vw, 24px)",
               margin: 0,
               fontStyle: "normal",
               WebkitFontSmoothing: "antialiased",

@@ -61,17 +61,18 @@ export default function WaitlistSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(28px, 4.5vw, 56px)",
+            fontSize: "clamp(24px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "24px",
+            marginBottom: "clamp(16px, 3vh, 24px)",
+            padding: "0 clamp(16px, 3vw, 0)",
           }}
         >
           Your turn is now!
