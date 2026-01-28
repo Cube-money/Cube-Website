@@ -143,12 +143,11 @@ export default function Footer() {
               />
               <span
                 style={{
-                  fontSize: "24px",
+                  fontSize: "clamp(20px, 3vw, 24px)",
                   fontWeight: 600,
                   color: "rgb(0, 0, 0)",
                   fontFamily: "Inter, sans-serif",
                 }}
-                style={{ fontSize: "clamp(20px, 3vw, 24px)" }}
               >
                 Cube
               </span>
@@ -157,14 +156,13 @@ export default function Footer() {
             {/* Tagline */}
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "clamp(16px, 2.2vw, 18px)",
                 fontWeight: 500,
                 color: "rgb(0, 0, 0)",
                 fontFamily: "Inter, sans-serif",
                 marginBottom: "24px",
                 lineHeight: "1.4",
               }}
-              style={{ fontSize: "clamp(16px, 2.2vw, 18px)" }}
             >
               The future of community savings.
               <br />
@@ -486,13 +484,12 @@ export default function Footer() {
         <div style={{ marginBottom: "40px" }}>
           <p
             style={{
-              fontSize: "12px",
+              fontSize: "clamp(10px, 1.5vw, 12px)",
               color: "rgba(0, 0, 0, 0.6)",
               fontFamily: "Inter, sans-serif",
               lineHeight: "1.7",
               margin: 0,
             }}
-            style={{ fontSize: "clamp(10px, 1.5vw, 12px)" }}
           >
             CUBE® is operated by Cube Technologies, Inc., a company registered in the United States under the laws of the State of Delaware (Registration No. DE-XXXXXX). The company conducts its operations in accordance with applicable federal and state regulations. Cube is not a bank. Banking services are provided by our partner banks, Members FDIC. Cube adheres to industry best practices for security, transparency, and responsible financial technology. Investment products are not FDIC insured, have no bank guarantee, and may lose value. By using our services, you agree to our Terms of Service and Privacy Policy.
           </p>
