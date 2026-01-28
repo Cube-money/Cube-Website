@@ -104,6 +104,20 @@ export default function Learn() {
                     backgroundColor: '#B6E0E5'
                   }}
                 >
+                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                    <Image
+                      src="/learn/wallet-management.png"
+                      alt="Wallet management illustration"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: '720px',
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain'
+                      }}
+                    />
+                  </div>
                 </div>
               </Link>
               
