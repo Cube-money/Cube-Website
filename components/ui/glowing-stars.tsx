@@ -8,10 +8,12 @@ export const GlowingStarsBackgroundCard = ({
   className,
   children,
   imageSrc,
+  showStars = true,
 }: {
   className?: string;
   children?: React.ReactNode;
   imageSrc?: string;
+  showStars?: boolean;
 }) => {
   const [mouseEnter, setMouseEnter] = useState(false);
 
@@ -24,9 +26,11 @@ export const GlowingStarsBackgroundCard = ({
         className
       )}
     >
-      <div className="flex justify-center items-center">
-        <Illustration mouseEnter={mouseEnter} />
-      </div>
+      {showStars && (
+        <div className="flex justify-center items-center">
+          <Illustration mouseEnter={mouseEnter} />
+        </div>
+      )}
       {imageSrc && (
         <div className="flex justify-start items-center mb-4">
           <img 

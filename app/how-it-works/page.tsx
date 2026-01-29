@@ -2,13 +2,13 @@
 
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
-import HowItWorks from "@/pages/HowItWorks/view/HowItWorks";
+import HowItWorksMain from "@/pages/HowItWorks/view/HowItWorksMain";
 
 export default function HowItWorksPage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <HowItWorks />
+      <HowItWorksMain />
       <Footer />
     </main>
   );
