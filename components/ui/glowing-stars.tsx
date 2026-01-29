@@ -13,15 +13,22 @@ export const GlowingStarsBackgroundCard = ({
   children?: React.ReactNode;
   imageSrc?: string;
 }) => {
+  const [mouseEnter, setMouseEnter] = useState(false);
+
   return (
     <div
+      onMouseEnter={() => setMouseEnter(true)}
+      onMouseLeave={() => setMouseEnter(false)}
       className={cn(
-        "bg-black p-4 max-w-[28rem] max-h-[16rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600 flex flex-col",
+        "bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 max-w-[28rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
         className
       )}
     >
+      <div className="flex justify-center items-center">
+        <Illustration mouseEnter={mouseEnter} />
+      </div>
       {imageSrc && (
-        <div className="flex justify-start items-center mb-10">
+        <div className="flex justify-start items-center mb-4">
           <img 
             src={imageSrc} 
             alt="Card icon" 
@@ -29,7 +36,7 @@ export const GlowingStarsBackgroundCard = ({
           />
         </div>
       )}
-      <div className="px-2 pb-6 flex-1 flex flex-col justify-center">{children}</div>
+      <div className="px-2 pb-4">{children}</div>
     </div>
   );
 };
@@ -76,8 +83,8 @@ export const GlowingStarsTitle = ({
 };
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
-  const stars = 30;
-  const columns = 18;
+  const stars = 72;
+  const columns = 12;
 
   const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
@@ -89,14 +96,14 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
         Math.floor(Math.random() * stars)
       );
       setGlowingStars([...highlightedStars.current]);
-    }, 4500);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      className="h-48 p-1 w-full"
+      className="h-28 p-1 w-full"
       style={{
         display: "grid",
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
