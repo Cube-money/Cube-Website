@@ -89,15 +89,15 @@ export default function WalletManagementPage() {
                   backgroundColor: '#B6E0E5'
                 }}
               >
-                <div className="absolute inset-0 flex items-center justify-center p-4">
+                <div className="absolute inset-0 flex items-center justify-center p-10">
                   <Image
                     src="/learn/wallet-management.png"
                     alt="Wallet management illustration"
                     width={900}
                     height={900}
                     style={{
-                      maxWidth: '720px',
-                      width: '100%',
+                      maxWidth: '400px',
+                      width: '65%',
                       height: 'auto',
                       objectFit: 'contain'
                     }}
@@ -453,30 +453,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#f5f5f0',
-                  position: 'relative'
+                  backgroundColor: '#f5f5f0'
                 }}
               >
-                <Image
-                  src="/learn/badge-systems.png"
-                  alt="Badge system"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
@@ -520,30 +499,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#ffe4d6',
-                  position: 'relative'
+                  backgroundColor: '#ffe4d6'
                 }}
               >
-                <Image
-                  src="/learn/trust-score.png"
-                  alt="Trust Score"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
@@ -587,30 +545,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#e0f2fe',
-                  position: 'relative'
+                  backgroundColor: '#e0f2fe'
                 }}
               >
-                <Image
-                  src="/learn/choosing-winner.png"
-                  alt="Choosing winner"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
@@ -657,30 +594,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#f0e7ff',
-                  position: 'relative'
+                  backgroundColor: '#f0e7ff'
                 }}
               >
-                <Image
-                  src="/learn/contributions.png"
-                  alt="Contributions"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
@@ -724,30 +640,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#dcfce7',
-                  position: 'relative'
+                  backgroundColor: '#dcfce7'
                 }}
               >
-                <Image
-                  src="/learn/invite-memebers.png"
-                  alt="Invite members"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
@@ -791,30 +686,9 @@ export default function WalletManagementPage() {
                 style={{
                   minHeight: '300px',
                   borderRadius: '0',
-                  backgroundColor: '#fef3c7',
-                  position: 'relative'
+                  backgroundColor: '#fef3c7'
                 }}
               >
-                <Image
-                  src="/learn/submit-receipt.png"
-                  alt="Submit receipt"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    transition: 'transform 0.5s ease-out',
-                    transform: 'scale(1)',
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                />
               </div>
               <div className="pt-6">
                 <p 
