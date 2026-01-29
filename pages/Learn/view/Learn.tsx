@@ -113,6 +113,7 @@ export default function Learn() {
                       width={900}
                       height={900}
                       placeholder="empty"
+                      loading="eager"
                       style={{
                         maxWidth: '400px',
                         width: '65%',
@@ -191,6 +192,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '320px',
                       width: '55%',
@@ -272,6 +274,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '520px',
                       width: '85%',
@@ -348,6 +351,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '440px',
                       width: '75%',
@@ -502,6 +506,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '380px',
                       width: '68%',
@@ -581,6 +586,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '310px',
                       width: '58%',
@@ -657,6 +663,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '400px',
                       width: '72%',
@@ -747,6 +754,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
@@ -823,6 +831,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
@@ -902,6 +911,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '360px',
                       width: '65%',
@@ -978,6 +988,7 @@ export default function Learn() {
                     width={900}
                     height={900}
                     placeholder="empty"
+                    loading="eager"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
