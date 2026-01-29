@@ -3,6 +3,7 @@
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PayoutsPage() {
   return (
@@ -437,6 +438,301 @@ export default function PayoutsPage() {
             >
               That's how Cube makes group saving feel reliable every single time.
             </p>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "1px",
+              backgroundColor: "#999999",
+              marginTop: "60px",
+            }}
+          />
+
+          <h2
+            className="text-4xl mt-12 mb-8"
+            style={{
+              fontFamily: "var(--font-instrument-serif), serif",
+              color: "#222222",
+              fontWeight: 600,
+            }}
+          >
+            Related Articles
+          </h2>
+
+          {/* Related Articles Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div>
+              <Link href="/learn/wallet-management">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#B6E0E5", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/wallet-management.png"
+                      alt="Wallet management"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "260px",
+                        width: "75%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  What is wallet management?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Cube keeps wallet setup simple because it only needs one thing: a way for other members to send you money when it's your turn to win.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/trust-score">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#FFDDAA", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/trust-score.png"
+                      alt="Trust Score"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "240px",
+                        width: "70%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  What is a Trust Score?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  When you join Cube, you start with a Trust Score of 100%. From there, your actions do the talking. Trust Score isn't about promises or intentions. It's a simple reflection of how reliably you show up for your Cube.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/choosing-winner">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#008BF2", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/choosing-winner.png"
+                      alt="Choosing winners"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "320px",
+                        width: "85%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How are winners chosen?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  When you create or join a Cube, everyone agrees upfront on the cycle duration. That can be weekly, bi-weekly, monthly, or every three months. Once the cycle starts, the rules are locked in. No one can tweak them mid-stream. No one can influence the outcome.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div>
+              <Link href="/learn/send-payment">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#CFE2FE", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/send-payment.png"
+                      alt="Send payment"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How do payments get sent?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Cube is built to move money without ever holding it. When you send a payment on Cube, the transfer happens directly between you and the winner. Cube does not store funds, route payments, or sit in the middle of the transaction.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/submit-receipt">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#F3EAD6", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/recepit.png"
+                      alt="Submit receipt"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "260px",
+                        width: "75%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How do I submit a receipt?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  After you send a payment to the winner, you submit proof in the app. Once the winner confirms receipt, your contribution is marked complete and visible to the rest of the Cube.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/contributions">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#C68CC0", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/contributions.png"
+                      alt="Contributions"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How is contributions handled?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  When a winner is selected in a Cube, contributions happen user to user, directly between members. Cube coordinates the process, but the money always moves on your terms.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
