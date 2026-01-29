@@ -390,6 +390,121 @@ export default function ChoosingWinnerPage() {
               That’s how Cube keeps saving simple and fair.
             </p>
           </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "1px",
+              backgroundColor: "#999999",
+              marginTop: "60px",
+            }}
+          />
+
+          <h2
+            className="text-4xl mt-12 mb-8"
+            style={{
+              fontFamily: "var(--font-instrument-serif), serif",
+              color: "#222222",
+              fontWeight: 600,
+            }}
+          >
+            Related Articles
+          </h2>
+
+          {/* Related Articles Cards (placeholder) */}
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#f5f5f0" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#ffe4d6" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#e0f2fe" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#f0e7ff" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#dcfce7" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="overflow-hidden" style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#fef3c7" }} />
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  Title placeholder
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Subtext placeholder
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

@@ -3,6 +3,7 @@
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TrustScorePage() {
   return (
@@ -382,10 +383,42 @@ export default function TrustScorePage() {
           {/* Related Articles Cards (no images) */}
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#f5f5f0" }}
-              />
+              <Link href="/learn/badge-system">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#F3EAD6",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/badge-systems.png"
+                      alt="Badge system"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "260px",
+                        width: "75%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -409,16 +442,48 @@ export default function TrustScorePage() {
                   What is the badge system?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  Badges are earned automatically as you hit meaningful milestones across your Cubes. They’re designed to reflect how reliably you show up, how often you follow through, and how trusted you are by others.
                 </p>
               </div>
             </div>
 
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#ffe4d6" }}
-              />
+              <Link href="/learn/wallet-management">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#B6E0E5",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/wallet-management.png"
+                      alt="Wallet management"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "260px",
+                        width: "75%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -439,19 +504,51 @@ export default function TrustScorePage() {
                     fontWeight: 600,
                   }}
                 >
-                  What is a Trust Score?
+                  How does wallet management work?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  Cube keeps wallet setup simple because it only needs one thing: a way for other members to send you money when it's your turn to win.
                 </p>
               </div>
             </div>
 
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#e0f2fe" }}
-              />
+              <Link href="/learn/choosing-winner">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#008BF2",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/choosing-winner.png"
+                      alt="Choosing winner"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "320px",
+                        width: "85%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -475,7 +572,7 @@ export default function TrustScorePage() {
                   How are winners chosen?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  When you create or join a Cube, everyone agrees upfront on the cycle duration. That can be weekly, bi-weekly, monthly, or every three months. Once the cycle starts, the rules are locked in. No one can tweak them mid-stream. No one can influence the outcome.
                 </p>
               </div>
             </div>
@@ -483,10 +580,42 @@ export default function TrustScorePage() {
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#f0e7ff" }}
-              />
+              <Link href="/learn/contributions">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#C68CC0",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/contributions.png"
+                      alt="Contributions"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -510,16 +639,48 @@ export default function TrustScorePage() {
                   How is contributions handled?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  When a winner is selected in a Cube, contributions happen user to user, directly between members. Cube coordinates the process, but the money always moves on your terms.
                 </p>
               </div>
             </div>
 
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#dcfce7" }}
-              />
+              <Link href="/learn/invites">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#FFCADB",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/invites.png"
+                      alt="Invites"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "300px",
+                        width: "85%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -543,16 +704,48 @@ export default function TrustScorePage() {
                   How do invites work?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  Cube works best with people you trust. That’s why inviting friends isn’t just encouraged, it’s built directly into how the product grows. When you invite friends to Cube, you’re not just adding people. You’re unlocking the ability to create and run more Cubes.
                 </p>
               </div>
             </div>
 
             <div>
-              <div
-                className="overflow-hidden"
-                style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#fef3c7" }}
-              />
+              <Link href="/learn/submit-receipt">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{
+                    minHeight: "300px",
+                    borderRadius: "0",
+                    backgroundColor: "#FFCADB",
+                    position: "relative",
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/recepit.png"
+                      alt="Receipt submission"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "220px",
+                        width: "70%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
               <div className="pt-6">
                 <p
                   className="text-xs mb-3"
@@ -576,7 +769,7 @@ export default function TrustScorePage() {
                   How to submit a receipt?
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
-                  Unveiling the Future of Web Design
+                  Cube keeps contributions simple by breaking them into two clear actions: sending the payment and confirming it with a receipt. This keeps everyone aligned and cycles moving without friction.
                 </p>
               </div>
             </div>
