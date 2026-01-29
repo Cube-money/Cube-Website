@@ -1,6 +1,6 @@
-"use client";
+import React from "react";
 
-export default function WaitlistSection() {
+export default function LearnWaitlistSection() {
   return (
     <section
       style={{
@@ -30,7 +30,7 @@ export default function WaitlistSection() {
         <source src="/Home/Hero/footervideo.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark overlay - 20% opacity */}
+      {/* Dark overlay */}
       <div
         style={{
           position: "absolute",
@@ -43,7 +43,7 @@ export default function WaitlistSection() {
         }}
       />
 
-      {/* Header Text */}
+      {/* Content */}
       <div
         style={{
           position: "absolute",
@@ -55,34 +55,61 @@ export default function WaitlistSection() {
           width: "100%",
         }}
       >
+        {/* Pill label */}
         <div
           style={{
-            fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "6px 16px",
+            borderRadius: "999px",
+            border: "1px solid rgba(255, 255, 255, 0.6)",
+            marginBottom: "16px",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+          }}
+        >
+          <span
+            style={{
+              fontFamily:
+                'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+              fontSize: "12px",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "rgba(255, 255, 255, 0.9)",
+            }}
+          >
+            GET&nbsp;STARTED&nbsp;TODAY
+          </span>
+        </div>
+
+        {/* Heading */}
+        <div
+          style={{
+            fontFamily:
+              'var(--font-instrument-serif), "Instrument Serif", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 4vw, 56px)",
+            fontSize: "clamp(32px, 4.5vw, 64px)",
             letterSpacing: "-0.02em",
-            lineHeight: "100%",
+            lineHeight: "1",
             textAlign: "center",
-            whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "clamp(16px, 3vh, 24px)",
-            padding: "0 clamp(16px, 3vw, 0)",
+            marginBottom: "24px",
           }}
         >
           Your turn is now!
         </div>
-        
-        {/* Sign up Button */}
-        <a
-          href="#waitlist"
+
+        {/* CTA Button */}
+        <button
+          type="button"
           style={{
-            opacity: 0.85,
+            opacity: 0.9,
             textDecoration: "none",
             alignItems: "center",
             alignSelf: "center",
@@ -101,13 +128,14 @@ export default function WaitlistSection() {
             color: "rgb(17, 14, 8)",
             cursor: "pointer",
             WebkitFontSmoothing: "antialiased",
-            outline: "rgb(17, 14, 8) none 0px",
+            outline: "none",
           }}
         >
           <span
             style={{
-              fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "clamp(16px, 2vw, 18px)",
+              fontFamily:
+                "Phonic, Helvetica, system-ui, -apple-system, Arial, sans-serif",
+              fontSize: "16px",
               fontWeight: 400,
               letterSpacing: "-0.25px",
               lineHeight: "24px",
@@ -116,10 +144,11 @@ export default function WaitlistSection() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Sign up
+            Start my cube
           </span>
-        </a>
+        </button>
       </div>
     </section>
   );
 }
+
