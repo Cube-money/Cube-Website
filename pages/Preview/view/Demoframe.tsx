@@ -312,24 +312,21 @@ export default function Demoframe() {
       <div
         style={{
           position: "absolute",
-          top: "clamp(6%, 8vh, 10%)",
+          top: "10%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           zIndex: 3,
           textAlign: "center",
-          width: "calc(100% - 32px)",
-          maxWidth: "600px",
-          padding: "0 clamp(12px, 3vw, 0)",
         }}
       >
         {/* Subtext */}
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(12px, 2.2vw, 18px)",
+            fontSize: "18px",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(18px, 3vw, 26px)",
+            lineHeight: "26px",
             margin: "0 auto",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
@@ -338,7 +335,7 @@ export default function Demoframe() {
             display: "block",
             textAlign: "center",
             width: "100%",
-            marginBottom: "clamp(40px, 8vh, 120px)",
+            marginBottom: "120px",
           }}
         >
          Inside a Cube, that same goal can arrive much sooner through coordinated contributions. <span style={{ color: "#C1FF35" }}>lets see how!</span>
@@ -350,7 +347,7 @@ export default function Demoframe() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(16px, 3.5vw, 42px)",
+            fontSize: "clamp(20px, 3.5vw, 42px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -370,23 +367,23 @@ export default function Demoframe() {
       <div
         style={{
           position: "absolute",
-          top: "clamp(12%, 15vh, 18%)",
+          top: "18%",
           left: "50%",
           transform: "translateX(-50%)",
           maxWidth: "1000px",
-          width: "clamp(calc(100vw - 32px), 90vw, 75%)",
+          width: "75%",
           padding: "1px",
           background: "linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 0%, rgba(144, 144, 144, 0.6) 50%, rgba(255, 255, 255, 0.6) 100%)",
-          borderRadius: "clamp(16px, 2vw, 22px)",
+          borderRadius: "22px",
           zIndex: 3,
         }}
       >
         <div
           style={{
-            // Extra bottom space to contain the progress rows - more aggressive mobile padding
-            padding: "clamp(80px, 15vh, 300px) clamp(12px, 3vw, 120px) clamp(150px, 25vh, 390px) clamp(12px, 3vw, 120px)",
+            // Extra bottom space to contain the progress rows
+            padding: "300px 120px 390px 120px",
             background: "linear-gradient(to bottom, #181818, #000000)",
-            borderRadius: "clamp(15px, 2vw, 22px)",
+            borderRadius: "22px",
             position: "relative",
           }}
         >
@@ -395,14 +392,14 @@ export default function Demoframe() {
             <div
               style={{
                 position: "absolute",
-                top: "clamp(12px, 2vh, 40px)",
-                left: "clamp(12px, 2vw, 60px)",
+                top: "40px",
+                left: "60px",
                 fontFamily:
                   'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(255, 255, 255)",
-                fontSize: "clamp(18px, 5vw, 48px)",
+                fontSize: "clamp(24px, 3.5vw, 48px)",
                 letterSpacing: "-0.02em",
                 lineHeight: "100%",
               }}
@@ -418,13 +415,13 @@ export default function Demoframe() {
             <div
               style={{
                 position: "absolute",
-                top: "clamp(40px, 6vh, 90px)",
-                left: "clamp(12px, 2vw, 60px)",
+                top: "90px",
+                left: "60px",
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(10px, 2.5vw, 16px)",
+                fontSize: "16px",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "clamp(16px, 3vw, 24px)",
+                lineHeight: "24px",
                 color: "rgb(200, 200, 200)",
               }}
             >
@@ -437,13 +434,13 @@ export default function Demoframe() {
             <div
               style={{
                 position: "absolute",
-                top: "clamp(40px, 6vh, 90px)",
-                right: "clamp(12px, 2vw, 60px)",
+                top: "90px",
+                right: "60px",
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(10px, 2.5vw, 16px)",
+                fontSize: "16px",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "clamp(16px, 3vw, 24px)",
+                lineHeight: "24px",
                 color: "rgb(200, 200, 200)",
                 textAlign: "right",
               }}
@@ -457,14 +454,14 @@ export default function Demoframe() {
             <div
               style={{
                 position: "absolute",
-                top: "clamp(70px, 10vh, 150px)",
-                left: "clamp(12px, 2vw, 60px)",
+                top: "150px",
+                left: "60px",
                 fontFamily:
                   'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(255, 255, 255)",
-                fontSize: "clamp(16px, 4vw, 36px)",
+                fontSize: "clamp(24px, 3.5vw, 36px)",
                 letterSpacing: "-0.02em",
                 lineHeight: "100%",
                 marginBottom: "20px",
@@ -479,12 +476,12 @@ export default function Demoframe() {
             <div
               style={{
                 position: "absolute",
-                top: "clamp(110px, 14vh, 200px)",
-                left: "clamp(12px, 2vw, 60px)",
-                right: "clamp(12px, 2vw, 60px)",
+                top: "200px",
+                left: "60px",
+                right: "60px",
                 display: "flex",
                 flexDirection: "column",
-                gap: "clamp(8px, 1.5vw, 12px)",
+                gap: "12px",
                 opacity: isShuffling ? 0.5 : 1,
                 transition: "opacity 260ms ease",
               }}
@@ -503,8 +500,8 @@ export default function Demoframe() {
                   padding: "1px",
                   background:
                     "linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 0%, rgba(144, 144, 144, 0.6) 50%, rgba(255, 255, 255, 0.6) 100%)",
-                  borderRadius: "clamp(6px, 1vw, 8px)",
-                  height: "clamp(40px, 7vh, 55px)",
+                  borderRadius: "8px",
+                  height: "55px",
                   opacity: isWon && !isGold ? 0.55 : 1,
                 };
 
@@ -536,10 +533,10 @@ export default function Demoframe() {
                         width: "100%",
                         height: "100%",
                         background: innerBg,
-                        borderRadius: "clamp(5px, 1vw, 7px)",
+                        borderRadius: "7px",
                         display: "flex",
                         alignItems: "center",
-                        padding: "0 clamp(6px, 1.5vw, 16px)",
+                        padding: "0 16px",
                         transition:
                           "background 650ms ease, box-shadow 650ms ease, color 650ms ease",
                         boxShadow: isWinner
@@ -551,8 +548,8 @@ export default function Demoframe() {
                       {/* Avatar */}
                       <div
                         style={{
-                          width: "clamp(28px, 5vw, 40px)",
-                          height: "clamp(28px, 5vw, 40px)",
+                          width: "40px",
+                          height: "40px",
                           borderRadius: "50%",
                           backgroundColor: isWinner
                             ? "rgba(0, 0, 0, 0.12)"
@@ -560,10 +557,9 @@ export default function Demoframe() {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          marginRight: "clamp(6px, 1.2vw, 12px)",
-                          flexShrink: 0,
+                          marginRight: "12px",
                           color: isWinner ? "rgb(17, 14, 8)" : "white",
-                          fontSize: "clamp(11px, 2.2vw, 16px)",
+                          fontSize: "16px",
                           fontWeight: 500,
                         }}
                       >
@@ -585,12 +581,8 @@ export default function Demoframe() {
                           style={{
                             flex: 1,
                             fontFamily: "Inter, sans-serif",
-                            fontSize: "clamp(11px, 2.2vw, 16px)",
+                            fontSize: "16px",
                             color: nameColor,
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            minWidth: 0,
                           }}
                         >
                           {participant.name}
@@ -601,12 +593,11 @@ export default function Demoframe() {
                       <div
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "clamp(9px, 1.8vw, 16px)",
+                          fontSize: "16px",
                           color: rightColor,
                           position: participant.type === "you" ? "relative" : "static",
-                          minWidth: "clamp(80px, 18vw, 170px)",
+                          minWidth: "170px",
                           textAlign: "right",
-                          flexShrink: 0,
                         }}
                       >
                         {isCovered && !isWon ? (
@@ -615,7 +606,7 @@ export default function Demoframe() {
                               height: "14px",
                               borderRadius: "999px",
                               background: "rgba(255,255,255,0.14)",
-                              width: "clamp(100px, 20vw, 160px)",
+                              width: "160px",
                               marginLeft: "auto",
                             }}
                           />
@@ -658,13 +649,12 @@ export default function Demoframe() {
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(10px, 1.8vw, 14px)",
-                  lineHeight: "clamp(14px, 2.5vw, 20px)",
+                  fontSize: "14px",
+                  lineHeight: "20px",
                   color: "rgb(200, 200, 200)",
-                  marginTop: "clamp(6px, 1vw, 8px)",
+                  marginTop: "8px",
                   textAlign: "center",
                   width: "100%",
-                  padding: "0 clamp(4px, 1vw, 0)",
                 }}
                 className="turnNotice"
               >
@@ -681,13 +671,12 @@ export default function Demoframe() {
                 className="winnerNotice"
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(10px, 1.8vw, 14px)",
-                  lineHeight: "clamp(14px, 2.5vw, 20px)",
+                  fontSize: "14px",
+                  lineHeight: "20px",
                   color: "rgb(220, 220, 220)",
-                  marginTop: "clamp(6px, 1vw, 10px)",
+                  marginTop: "10px",
                   textAlign: "center",
                   width: "100%",
-                  padding: "0 clamp(4px, 1vw, 0)",
                 }}
               >
                 <span style={{ color: "rgb(255, 255, 255)" }}>
@@ -719,8 +708,8 @@ export default function Demoframe() {
             {mode === "contribution" && (
               <div
                 style={{
-                  marginTop: "clamp(8px, 1.5vw, 12px)",
-                  paddingTop: "clamp(8px, 1.5vw, 12px)",
+                  marginTop: "12px",
+                  paddingTop: "12px",
                   borderTop: "1px solid rgba(255,255,255,0.12)",
                 }}
               >
@@ -728,16 +717,16 @@ export default function Demoframe() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "clamp(70px, 14vw, 140px) 1fr clamp(70px, 14vw, 120px)",
+                    gridTemplateColumns: "140px 1fr 120px",
                     alignItems: "center",
-                    gap: "clamp(6px, 1.2vw, 12px)",
-                    marginBottom: "clamp(6px, 1vw, 10px)",
+                    gap: "12px",
+                    marginBottom: "10px",
                   }}
                 >
                   <div
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "clamp(10px, 1.8vw, 14px)",
+                      fontSize: "14px",
                       color: "rgb(255, 255, 255)",
                     }}
                   >
@@ -764,7 +753,7 @@ export default function Demoframe() {
                   <div
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "clamp(10px, 1.8vw, 14px)",
+                      fontSize: "14px",
                       color: "rgba(255,255,255,0.75)",
                       textAlign: "right",
                     }}
@@ -777,15 +766,15 @@ export default function Demoframe() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "clamp(70px, 14vw, 140px) 1fr clamp(70px, 14vw, 120px)",
+                    gridTemplateColumns: "140px 1fr 120px",
                     alignItems: "center",
-                    gap: "clamp(6px, 1.2vw, 12px)",
+                    gap: "12px",
                   }}
                 >
                   <div
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "clamp(10px, 1.8vw, 14px)",
+                      fontSize: "14px",
                       color: "rgb(255, 255, 255)",
                     }}
                   >
@@ -815,7 +804,7 @@ export default function Demoframe() {
                   <div
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "clamp(10px, 1.8vw, 14px)",
+                      fontSize: "14px",
                       color: "rgba(255,255,255,0.75)",
                       textAlign: "right",
                     }}
@@ -834,9 +823,9 @@ export default function Demoframe() {
               className="endSummary"
               style={{
                 position: "absolute",
-                top: "clamp(60px, 8vh, 120px)",
-                left: "clamp(16px, 2vw, 60px)",
-                right: "clamp(16px, 2vw, 60px)",
+                top: "120px",
+                left: "60px",
+                right: "60px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -846,7 +835,7 @@ export default function Demoframe() {
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(11px, 1.8vw, 14px)",
+                  fontSize: "14px",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "rgba(255,255,255,0.55)",
@@ -860,7 +849,7 @@ export default function Demoframe() {
                 style={{
                   fontFamily:
                     "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                  fontSize: "clamp(48px, 10vw, 96px)",
+                  fontSize: "96px",
                   lineHeight: "1",
                   fontWeight: 500,
                   color: "rgb(204, 255, 0)",
@@ -873,7 +862,7 @@ export default function Demoframe() {
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(16px, 3vw, 22px)",
+                  fontSize: "22px",
                   lineHeight: "32px",
                   color: "rgba(255,255,255,0.9)",
                   marginTop: "10px",
@@ -884,7 +873,7 @@ export default function Demoframe() {
 
               <div
                 style={{
-                  width: "clamp(120px, 25vw, 180px)",
+                  width: "180px",
                   height: "1px",
                   background: "rgba(255,255,255,0.18)",
                   marginTop: "22px",
@@ -896,7 +885,7 @@ export default function Demoframe() {
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "clamp(24px, 4vw, 40px)",
+                  fontSize: "40px",
                   lineHeight: "46px",
                   color: "rgba(255,255,255,0.9)",
                 }}
@@ -908,7 +897,7 @@ export default function Demoframe() {
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "clamp(24px, 4vw, 40px)",
+                  fontSize: "40px",
                   lineHeight: "46px",
                   fontWeight: 700,
                   color: "rgb(255,255,255)",
@@ -921,7 +910,7 @@ export default function Demoframe() {
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "clamp(12px, 2vw, 16px)",
+                  fontSize: "16px",
                   lineHeight: "24px",
                   color: "rgba(255,255,255,0.45)",
                   marginTop: "22px",
@@ -939,17 +928,12 @@ export default function Demoframe() {
         <div
           style={{
             position: "absolute",
-            top: "clamp(calc(12% + 300px), calc(15vh + 40vh), calc(18% + 730px))",
+            top: "calc(18% + 730px)",
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 3,
             display: "flex",
-            gap: "clamp(8px, 2vw, 14px)",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            padding: "0 clamp(12px, 3vw, 0)",
-            width: "calc(100% - 32px)",
-            maxWidth: "600px",
+            gap: "14px",
           }}
         >
           <button
@@ -1036,13 +1020,13 @@ export default function Demoframe() {
           <div
             style={{
               position: "absolute",
-              top: "clamp(calc(12% + 300px), calc(15vh + 40vh), calc(18% + 730px))",
+              top: "calc(18% + 730px)",
               left: "50%",
               transform: "translateX(-50%)",
               zIndex: 3,
-              width: "clamp(280px, calc(100% - 32px), auto)",
-              padding: "0 clamp(12px, 3vw, 0)",
-              maxWidth: "600px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <button
@@ -1141,6 +1125,20 @@ export default function Demoframe() {
                 {mode === "contribution" ? "Contribute" : "Preview demo cube"}
               </span>
             </button>
+
+            {/* Vertical dashed line with gradient (matches `Preview.tsx`) */}
+            <div
+              style={{
+                marginTop: "clamp(90px, 12vh, 160px)",
+                width: "1px",
+                height: "45vh",
+                background: "linear-gradient(to bottom, #ffffff, #000000)",
+                maskImage:
+                  "repeating-linear-gradient(to bottom, transparent, transparent 4px, black 4px, black 12px)",
+                WebkitMaskImage:
+                  "repeating-linear-gradient(to bottom, transparent, transparent 4px, black 4px, black 12px)",
+              }}
+            />
           </div>
         )
       )}
