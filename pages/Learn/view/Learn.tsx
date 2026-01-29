@@ -1049,6 +1049,13 @@ export default function Learn() {
         </div>
       </div>
     </div>
+    {/* Spacer between library and video */}
+    <div
+      style={{
+        backgroundColor: "#fcfaf7",
+        height: "120px",
+      }}
+    />
     <LearnWaitlistSection />
     </>
   );

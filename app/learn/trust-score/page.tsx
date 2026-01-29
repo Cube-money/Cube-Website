@@ -774,6 +774,99 @@ export default function TrustScorePage() {
               </div>
             </div>
           </div>
+
+          {/* Third Row - Create cube & Join cube */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div>
+              <Link href="/learn/create-cube">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#FF9DB6", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/create-cube.png"
+                      alt="Create a cube"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How to create a cube?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Creating a Cube is about defining structure upfront so everything runs smoothly later. Cube walks you through the process step by step, with clear guardrails to keep things fair, simple, and predictable for everyone involved.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/join-cube">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#34D457", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/join-cube.png"
+                      alt="Join a cube"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How to join a cube?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Joining a Cube is designed to be fast and intentional. Every Cube is private by default, and access is controlled through an invitation code so groups stay focused and trusted.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
