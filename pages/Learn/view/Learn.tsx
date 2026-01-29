@@ -112,6 +112,7 @@ export default function Learn() {
                       alt="Wallet management illustration"
                       width={900}
                       height={900}
+                      placeholder="empty"
                       style={{
                         maxWidth: '400px',
                         width: '65%',
@@ -189,6 +190,7 @@ export default function Learn() {
                     alt="Trust Score"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '320px',
                       width: '55%',
@@ -269,6 +271,7 @@ export default function Learn() {
                     alt="Choosing winner"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '520px',
                       width: '85%',
@@ -344,6 +347,7 @@ export default function Learn() {
                     alt="Contributions"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '440px',
                       width: '75%',
@@ -497,6 +501,7 @@ export default function Learn() {
                     alt="Badge system"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '380px',
                       width: '68%',
@@ -575,6 +580,7 @@ export default function Learn() {
                     alt="Receipt submission"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '310px',
                       width: '58%',
@@ -650,6 +656,7 @@ export default function Learn() {
                     alt="Send payment"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '400px',
                       width: '72%',
@@ -739,6 +746,7 @@ export default function Learn() {
                     alt="Payouts"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
@@ -814,6 +822,7 @@ export default function Learn() {
                     alt="Safety and securities"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
@@ -892,6 +901,7 @@ export default function Learn() {
                     alt="Create cube"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '360px',
                       width: '65%',
@@ -967,6 +977,7 @@ export default function Learn() {
                     alt="Join cube"
                     width={900}
                     height={900}
+                    placeholder="empty"
                     style={{
                       maxWidth: '420px',
                       width: '72%',
