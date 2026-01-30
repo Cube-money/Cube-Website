@@ -1,8 +1,71 @@
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Preview() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
+    <>
+      <style jsx>{`
+        @keyframes glideFromLeft {
+          0% {
+            opacity: 0;
+            transform: translateX(-60px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes glideFromRight {
+          0% {
+            opacity: 0;
+            transform: translateX(60px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .glide-left {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        .glide-left.visible {
+          animation: glideFromLeft 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .glide-right {
+          opacity: 0;
+          transform: translateX(60px);
+        }
+        .glide-right.visible {
+          animation: glideFromRight 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation-delay: 0.15s;
+        }
+      `}</style>
     <section
+      ref={sectionRef}
       style={{
         position: "relative",
         width: "100%",
@@ -29,6 +92,7 @@ export default function Preview() {
       />
       {/* Left-positioned image */}
       <div
+        className={`glide-left ${isVisible ? 'visible' : ''}`}
         style={{
           position: "absolute",
           left: "5%",
@@ -38,6 +102,8 @@ export default function Preview() {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
+          opacity: isVisible ? undefined : 0,
+          transform: isVisible ? undefined : 'translateX(-60px)',
         }}
       >
         <Image
@@ -130,6 +196,7 @@ export default function Preview() {
 
       {/* Right-positioned image */}
       <div
+        className={`glide-right ${isVisible ? 'visible' : ''}`}
         style={{
           position: "absolute",
           right: "5%",
@@ -139,6 +206,8 @@ export default function Preview() {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
+          opacity: isVisible ? undefined : 0,
+          transform: isVisible ? undefined : 'translateX(60px)',
         }}
       >
         <Image
@@ -156,5 +225,6 @@ export default function Preview() {
         />
       </div>
     </section>
+    </>
   );
 }

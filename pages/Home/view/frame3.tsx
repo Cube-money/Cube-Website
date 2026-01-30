@@ -140,7 +140,7 @@ export default function FeaturesSection() {
           alignItems: "center",
         }}
       >
-        <GlowingStarsBackgroundCard imageSrc="/AbstractSymbols/Create2.png">
+        <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Create2.png">
           <GlowingStarsTitle>Create a Cube</GlowingStarsTitle>
           <div className="flex justify-between items-end">
             <GlowingStarsDescription>
@@ -152,7 +152,7 @@ export default function FeaturesSection() {
           </div>
         </GlowingStarsBackgroundCard>
 
-        <GlowingStarsBackgroundCard imageSrc="/AbstractSymbols/Join2.png">
+        <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Join2.png">
           <GlowingStarsTitle>Join a Cube</GlowingStarsTitle>
           <div className="flex justify-between items-end">
             <GlowingStarsDescription>
