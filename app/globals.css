@@ -14,6 +14,27 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* Safari-friendly viewport heights (dvh = dynamic viewport; avoids address bar jump) */
+  .h-screen-dvh {
+    height: 100vh;
+    height: 100dvh;
+  }
+  .h-120-dvh {
+    height: 120vh;
+    height: 120dvh;
+  }
+  .h-140-dvh {
+    height: 140vh;
+    height: 140dvh;
+  }
+  .min-h-140-dvh {
+    min-height: 140vh;
+    min-height: 140dvh;
+  }
+  .min-h-screen-dvh {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
 }
 
 /* Shorter Learn page cards on short viewports (e.g. iPhone 13 landscape 844×390) */

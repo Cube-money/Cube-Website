@@ -11,11 +11,10 @@ import BentoGridDemo from "@/components/bento-grid-demo";
 export default function HowItWorksSection() {
   return (
     <section
+      className="h-140-dvh min-h-140-dvh"
       style={{
         position: "relative",
         width: "100%",
-        height: "140vh",
-        minHeight: "140vh",
         paddingBottom: "80px",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",

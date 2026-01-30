@@ -118,6 +118,7 @@ export default function Learn() {
                         objectFit: 'contain',
                         transition: 'transform 0.5s ease-out',
                         transform: 'scale(1)',
+                        willChange: 'transform',
                         backfaceVisibility: 'hidden'
                       }}
                       onMouseEnter={(e) => {
@@ -195,6 +196,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -275,6 +277,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -350,6 +353,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -415,11 +419,11 @@ export default function Learn() {
                   }}
                 >
                   <Image
+                    loading="lazy"
                     src="/learn/invites.png"
                     alt="Invites"
                     width={900}
                     height={900}
-                    loading="lazy"
                     style={{
                       maxWidth: '460px',
                       width: '78%',
@@ -427,6 +431,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -502,6 +507,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -580,6 +586,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -655,6 +662,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -744,6 +752,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -819,6 +828,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -897,6 +907,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {
@@ -972,6 +983,7 @@ export default function Learn() {
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
                       transform: 'scale(1)',
+                      willChange: 'transform',
                       backfaceVisibility: 'hidden'
                     }}
                     onMouseEnter={(e) => {

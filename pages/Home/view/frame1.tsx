@@ -1,10 +1,10 @@
 export default function WhatIsCubeSection() {
   return (
     <section
+      className="h-screen-dvh"
       style={{
         position: "relative",
         width: "100%",
-        height: "100vh",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
       }}

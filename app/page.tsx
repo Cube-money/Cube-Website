@@ -6,7 +6,7 @@ import Home from "@/pages/Home/view/Home";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen-dvh bg-black">
       <Header />
       <Home />
       <Footer />

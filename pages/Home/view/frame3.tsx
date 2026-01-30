@@ -24,10 +24,10 @@ export default function FeaturesSection() {
         }
       `}</style>
     <section
+      className="h-120-dvh"
       style={{
         position: "relative",
         width: "100%",
-        height: "120vh",
         overflow: "hidden",
       }}
     >

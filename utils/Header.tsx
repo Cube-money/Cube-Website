@@ -24,11 +24,14 @@ export default function Header() {
   return (
     <header
       style={{
-        padding: "0px 24px 0px 36px",
+        paddingTop: "env(safe-area-inset-top)",
+        paddingRight: "24px",
+        paddingBottom: "0px",
+        paddingLeft: "36px",
         alignItems: "center",
         borderBottom: "1px solid rgb(128, 128, 128)",
         display: "flex",
-        height: "64px",
+        minHeight: "64px",
         zIndex: 9999,
         WebkitFontSmoothing: "antialiased",
         position: "fixed",

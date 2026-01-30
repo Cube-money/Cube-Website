@@ -30,6 +30,7 @@ export default function Footer() {
         width: "100%",
         position: "relative",
         overflow: "hidden",
+        paddingBottom: "env(safe-area-inset-bottom)",
       }}
     >
       <style dangerouslySetInnerHTML={{
