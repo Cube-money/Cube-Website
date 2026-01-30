@@ -13,7 +13,7 @@ export default function InvitesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 items-start">
             {/* Left Section - Text */}
-            <div style={{ display: "flex", flexDirection: "column", minHeight: "500px" }}>
+            <div className="flex flex-col min-h-0 md:min-h-[500px]">
               <div>
                 <p
                   className="text-xs mb-8 uppercase"
@@ -40,21 +40,11 @@ export default function InvitesPage() {
                 </h1>
               </div>
 
-              <div className="flex items-center justify-start" style={{ marginTop: "auto" }}>
+              <div className="flex items-center justify-start mt-auto">
                 <a
                   href="#how-invites-work"
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
-                    border: "1px solid #999999",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    transition: "opacity 0.2s",
-                  }}
+                  className="flex items-center justify-center w-12 h-12 rounded-full border border-[#999999] cursor-pointer no-underline transition-opacity duration-200"
+                  style={{ textDecoration: "none" }}
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -82,11 +72,10 @@ export default function InvitesPage() {
             </div>
 
             {/* Right Section - Image Container */}
-            <div>
+            <div className="max-w-[85vw] md:max-w-none mx-auto w-full">
               <div
-                className="overflow-hidden"
+                className="overflow-hidden min-h-[240px] max-h-[45vh] md:min-h-[500px] md:max-h-none"
                 style={{
-                  minHeight: "500px",
                   borderRadius: "0",
                   position: "relative",
                   backgroundColor: "#FFCADB",
@@ -98,8 +87,9 @@ export default function InvitesPage() {
                     alt="Invites illustration"
                     width={900}
                     height={900}
+                    className="max-h-full w-auto object-contain"
                     style={{
-                      maxWidth: "460px",
+                      maxWidth: "min(460px, 85vw)",
                       width: "78%",
                       height: "auto",
                       objectFit: "contain",

@@ -1,4 +1,16 @@
+"use client";
+
+import { useRef, useEffect } from "react";
+
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.play().catch(() => {});
+  }, []);
+
   return (
     <section
       style={{
@@ -10,10 +22,12 @@ export default function HeroSection() {
     >
       {/* Full-screen Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
@@ -42,9 +56,9 @@ export default function HeroSection() {
 
       {/* Left-aligned Text Container */}
       <div
+        className="top-[78%] md:top-[65%]"
         style={{
           position: "absolute",
-          top: "clamp(60%, 65vh, 72%)",
           left: "clamp(5%, 4vw, 5%)",
           transform: "translateY(-50%)",
           zIndex: 3,

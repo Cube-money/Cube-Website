@@ -34,27 +34,15 @@ export default function PayoutsPage() {
                     fontWeight: 400,
                   }}
                 >
-                  How money is
-                  <br />
-                  received on Cube
+                  Learn about payouts
                 </h1>
               </div>
 
-              <div className="flex items-center justify-start" style={{ marginTop: "auto" }}>
+              <div className="flex items-center justify-start mt-auto">
                 <a
                   href="#payouts-content"
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
-                    border: "1px solid #999999",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    transition: "opacity 0.2s",
-                  }}
+                  className="flex items-center justify-center w-12 h-12 rounded-full border border-[#999999] cursor-pointer no-underline transition-opacity duration-200"
+                  style={{ textDecoration: "none" }}
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -82,11 +70,10 @@ export default function PayoutsPage() {
             </div>
 
             {/* Right Section - Image Container */}
-            <div>
+            <div className="max-w-[85vw] md:max-w-none mx-auto w-full">
               <div
-                className="overflow-hidden"
+                className="overflow-hidden min-h-[240px] max-h-[45vh] md:min-h-[500px] md:max-h-none"
                 style={{
-                  minHeight: "500px",
                   borderRadius: "0",
                   position: "relative",
                   backgroundColor: "#D2C1FF",
@@ -98,8 +85,9 @@ export default function PayoutsPage() {
                     alt="Payouts illustration"
                     width={900}
                     height={900}
+                    className="max-h-full w-auto object-contain"
                     style={{
-                      maxWidth: "420px",
+                      maxWidth: "min(420px, 85vw)",
                       width: "72%",
                       height: "auto",
                       objectFit: "contain",
@@ -730,6 +718,99 @@ export default function PayoutsPage() {
                 </h3>
                 <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
                   When a winner is selected in a Cube, contributions happen user to user, directly between members. Cube coordinates the process, but the money always moves on your terms.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Third Row - Create cube & Join cube */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div>
+              <Link href="/learn/create-cube">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#FF9DB6", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/create-cube.png"
+                      alt="Create a cube"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How to create a cube?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Creating a Cube is about defining structure upfront so everything runs smoothly later. Cube walks you through the process step by step, with clear guardrails to keep things fair, simple, and predictable for everyone involved.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <Link href="/learn/join-cube">
+                <div
+                  className="overflow-hidden cursor-pointer"
+                  style={{ minHeight: "300px", borderRadius: "0", backgroundColor: "#34D457", position: "relative" }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <Image
+                      src="/learn/join-cube.png"
+                      alt="Join a cube"
+                      width={900}
+                      height={900}
+                      style={{
+                        maxWidth: "280px",
+                        width: "80%",
+                        height: "auto",
+                        objectFit: "contain",
+                        transition: "transform 0.5s ease-out",
+                        transform: "scale(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="pt-6">
+                <p className="text-xs mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400, letterSpacing: "0.05em" }}>
+                  CUBE LIBRARY · JAN 26, 2026
+                </p>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "var(--font-instrument-serif), serif", color: "#222222", fontWeight: 600 }}>
+                  How to join a cube?
+                </h3>
+                <p className="text-sm" style={{ fontFamily: "Inter, sans-serif", color: "#666666", fontWeight: 400 }}>
+                  Joining a Cube is designed to be fast and intentional. Every Cube is private by default, and access is controlled through an invitation code so groups stay focused and trusted.
                 </p>
               </div>
             </div>

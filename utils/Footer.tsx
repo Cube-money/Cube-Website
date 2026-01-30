@@ -476,7 +476,7 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            © 2026 Cube Technologies, Inc. All rights reserved.
+            © 2026 Cube Money. All rights reserved.
           </p>
         </div>
 
@@ -491,23 +491,17 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            CUBE® is operated by Cube Technologies, Inc., a company registered in the United States under the laws of the State of Delaware (Registration No. DE-XXXXXX). The company conducts its operations in accordance with applicable federal and state regulations. Cube is not a bank. Banking services are provided by our partner banks, Members FDIC. Cube adheres to industry best practices for security, transparency, and responsible financial technology. Investment products are not FDIC insured, have no bank guarantee, and may lose value. By using our services, you agree to our Terms of Service and Privacy Policy.
+            CUBE® is operated by Cube Money, a company registered in the United States under the laws of the State of Delaware. The company conducts its operations in accordance with applicable federal and state regulations. Cube is not a bank. Banking services are provided by our partner banks, Members FDIC. Cube adheres to industry best practices for security, transparency, and responsible financial technology. Investment products are not FDIC insured, have no bank guarantee, and may lose value. By using our services, you agree to our Terms of Service and Privacy Policy.
           </p>
         </div>
       </div>
 
       {/* Giant CUBE Text */}
-      <div
-        style={{
-          width: "100%",
-          overflow: "hidden",
-          padding: "0 0 20px",
-        }}
-      >
+      <div className="w-full overflow-hidden pb-5 px-4 md:px-0 box-border">
         <h1
+          className="text-[120px] sm:text-[160px] md:text-[150px] lg:text-[clamp(150px,30vw,500px)]"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(150px, 30vw, 500px)",
             fontWeight: 800,
             letterSpacing: "-0.04em",
             lineHeight: "0.85",
