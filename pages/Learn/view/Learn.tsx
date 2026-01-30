@@ -8,11 +8,9 @@ export default function Learn() {
     <div className="min-h-screen flex flex-col">
       {/* Top Section - Lime Green (38%) */}
       <div 
-        className="flex flex-col justify-start items-start pt-20 sm:pt-24 lg:pt-32"
+        className="flex flex-col justify-start items-start pt-20 sm:pt-24 lg:pt-32 h-[28vh] min-h-[260px] md:h-[38vh] md:min-h-[380px]"
         style={{ 
           backgroundColor: 'rgb(204, 255, 0)',
-          height: '38vh',
-          minHeight: '380px',
           position: 'relative'
         }}
       >
@@ -50,7 +48,7 @@ export default function Learn() {
           
           {/* Cube Library Heading */}
           <h1 
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
+            className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl"
             style={{
               fontFamily: 'var(--font-instrument-serif), serif',
               color: '#222222',
@@ -98,9 +96,8 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/wallet-management">
                 <div 
-                  className="overflow-hidden cursor-pointer"
+                  className="learn-card overflow-hidden cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
-                    minHeight: '500px',
                     borderRadius: '0',
                     position: 'relative',
                     backgroundColor: '#B6E0E5'
@@ -177,10 +174,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/trust-score">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#FFDDAA',
-                    minHeight: '500px',
                     borderRadius: '0',
                     position: 'relative',
                     overflow: 'hidden'
@@ -258,10 +254,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/choosing-winner">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#008BF2',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px',
                     position: 'relative',
@@ -337,10 +332,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/contributions">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#C68CC0',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -417,10 +411,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/invites">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#FFCADB',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -492,10 +485,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/badge-system">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#F3EAD6',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -572,10 +564,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/submit-receipt">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#FFCADB',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -649,10 +640,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/send-payment">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#CFE2FE',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -740,10 +730,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/payouts">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#D2C1FF',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -817,10 +806,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/safety-securities">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#A0C5B5',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -897,10 +885,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/create-cube">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#FF9DB6',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}
@@ -974,10 +961,9 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/join-cube">
                 <div 
-                  className="flex items-center justify-center p-12 cursor-pointer"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
                   style={{
                     backgroundColor: '#34D457',
-                    minHeight: '500px',
                     borderRadius: '0',
                     marginTop: '40px'
                   }}

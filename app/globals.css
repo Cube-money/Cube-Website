@@ -14,4 +14,12 @@
   }
 }
 
+/* Shorter Learn page cards on short viewports (e.g. iPhone 13 landscape 844×390) */
+@media (max-height: 500px) {
+  .learn-card {
+    min-height: 200px !important;
+    max-height: 240px;
+  }
+}
+
 

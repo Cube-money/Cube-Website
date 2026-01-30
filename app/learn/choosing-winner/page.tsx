@@ -13,7 +13,7 @@ export default function ChoosingWinnerPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 items-start">
             {/* Left Section - Text */}
-            <div style={{ display: "flex", flexDirection: "column", minHeight: "500px" }}>
+            <div className="flex flex-col min-h-0 md:min-h-[500px]">
               <div>
                 <p
                   className="text-xs mb-8 uppercase"
@@ -37,21 +37,11 @@ export default function ChoosingWinnerPage() {
                   How are winners<br />chosen?
                 </h1>
               </div>
-              <div className="flex items-center justify-start" style={{ marginTop: "auto" }}>
+              <div className="flex items-center justify-start mt-auto">
                 <a
                   href="#how-cube-chooses"
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
-                    border: "1px solid #999999",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    transition: "opacity 0.2s",
-                  }}
+                  className="flex items-center justify-center w-12 h-12 rounded-full border border-[#999999] cursor-pointer no-underline transition-opacity duration-200"
+                  style={{ textDecoration: "none" }}
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -79,11 +69,10 @@ export default function ChoosingWinnerPage() {
             </div>
 
             {/* Right Section - Image Container */}
-            <div>
+            <div className="max-w-[85vw] md:max-w-none mx-auto w-full">
               <div
-                className="overflow-hidden"
+                className="overflow-hidden min-h-[240px] max-h-[45vh] md:min-h-[500px] md:max-h-none"
                 style={{
-                  minHeight: "500px",
                   borderRadius: "0",
                   position: "relative",
                   backgroundColor: "#008BF2",
@@ -95,8 +84,9 @@ export default function ChoosingWinnerPage() {
                     alt="Choosing winner illustration"
                     width={900}
                     height={900}
+                    className="max-h-full w-auto object-contain"
                     style={{
-                      maxWidth: "520px",
+                      maxWidth: "min(520px, 85vw)",
                       width: "85%",
                       height: "auto",
                       objectFit: "contain",

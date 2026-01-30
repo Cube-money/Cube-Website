@@ -13,7 +13,7 @@ export default function BadgeSystemPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 items-start">
             {/* Left Section - Text */}
-            <div style={{ display: "flex", flexDirection: "column", minHeight: "500px" }}>
+            <div className="flex flex-col min-h-0 md:min-h-[500px]">
               <div>
                 <p
                   className="text-xs mb-8 uppercase"
@@ -82,11 +82,10 @@ export default function BadgeSystemPage() {
             </div>
 
             {/* Right Section - Image Container */}
-            <div>
+            <div className="max-w-[85vw] md:max-w-none mx-auto w-full">
               <div
-                className="overflow-hidden"
+                className="overflow-hidden min-h-[240px] max-h-[45vh] md:min-h-[500px] md:max-h-none"
                 style={{
-                  minHeight: "500px",
                   borderRadius: "0",
                   position: "relative",
                   backgroundColor: "#F3EAD6",
@@ -98,8 +97,9 @@ export default function BadgeSystemPage() {
                     alt="Badge system illustration"
                     width={900}
                     height={900}
+                    className="max-h-full w-auto object-contain"
                     style={{
-                      maxWidth: "380px",
+                      maxWidth: "min(380px, 85vw)",
                       width: "68%",
                       height: "auto",
                       objectFit: "contain",

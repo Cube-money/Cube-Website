@@ -17,6 +17,7 @@ export default function WaitlistSection() {
         loop
         muted
         playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,

@@ -6,7 +6,8 @@ export default function LearnWaitlistSection() {
       style={{
         position: "relative",
         width: "100%",
-        height: "42vh",
+        height: "52vh",
+        minHeight: "320px",
         overflow: "hidden",
         borderTop: "1px solid rgb(255, 255, 255)",
       }}
@@ -17,6 +18,7 @@ export default function LearnWaitlistSection() {
         loop
         muted
         playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
@@ -64,7 +66,7 @@ export default function LearnWaitlistSection() {
             padding: "6px 16px",
             borderRadius: "999px",
             border: "1px solid rgba(255, 255, 255, 0.6)",
-            marginBottom: "16px",
+            marginBottom: "20px",
             backgroundColor: "rgba(0, 0, 0, 0.4)",
           }}
         >
@@ -99,7 +101,7 @@ export default function LearnWaitlistSection() {
             display: "block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "24px",
+            marginBottom: "32px",
           }}
         >
           Your turn is now!
