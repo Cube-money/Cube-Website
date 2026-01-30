@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
     @apply antialiased;
+    background-color: #000;
   }
 }
 
