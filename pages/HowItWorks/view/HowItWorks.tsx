@@ -122,7 +122,12 @@ export default function HowItWorks() {
             display: "block",
           }}
         >
-         Cube helps groups save together by pooling contributions and rotating access to funds across agreed cycles , transparently and without lenders.
+          Groups save together by pooling contributions and rotating access to funds across agreed cycles — transparently and without lenders.
+          <br />
+          <br />
+          That&apos;s it.
+          <br />
+          A faster way to save, built on coordination.
         </span>
         
         {/* Sign up Button */}

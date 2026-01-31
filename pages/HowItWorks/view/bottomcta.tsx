@@ -3,7 +3,7 @@ export default function BottomCta() {
     <>
       <style jsx>{`
         .cta-section {
-          background: linear-gradient(180deg, #fafbfc 0%, #f0f2f5 100%);
+          background: #ffffff;
         }
         .cta-container {
           flex-direction: column-reverse;
@@ -40,26 +40,9 @@ export default function BottomCta() {
           transform: translateY(-2px);
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
-        .feature-card {
-          transition: all 0.2s ease;
-        }
-        .feature-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
       `}</style>
       
       <section className="cta-section relative w-full overflow-hidden">
-        {/* Subtle background pattern */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "radial-gradient(circle at 20% 50%, rgba(204, 255, 0, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(204, 255, 0, 0.05) 0%, transparent 40%)",
-            zIndex: 0,
-          }}
-        />
-        
         <div
           style={{
             position: "relative",
@@ -91,35 +74,6 @@ export default function BottomCta() {
                 maxWidth: "540px",
               }}
             >
-              {/* Badge */}
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "8px 16px",
-                  backgroundColor: "rgba(204, 255, 0, 0.15)",
-                  borderRadius: "100px",
-                  marginBottom: "24px",
-                  width: "fit-content",
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#1a1a1a"/>
-                </svg>
-                <span
-                  style={{
-                    fontFamily: "Inter, sans-serif",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#1a1a1a",
-                    letterSpacing: "0.02em",
-                  }}
-                >
-                  Built for transparency
-                </span>
-              </div>
-
               {/* Main Heading */}
               <h2
                 style={{
@@ -164,41 +118,29 @@ export default function BottomCta() {
                 }}
               >
                 {[
-                  { icon: "✓", text: "No hidden fees or interest" },
-                  { icon: "✓", text: "Group-verified contributions" },
-                  { icon: "✓", text: "Transparent payout schedule" },
+                  { text: "No hidden fees or interest" },
+                  { text: "Group-verified contributions" },
+                  { text: "Transparent payout schedule" },
                 ].map((feature, i) => (
                   <div
                     key={i}
-                    className="feature-card"
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      gap: "12px",
-                      padding: "14px 18px",
-                      backgroundColor: "#ffffff",
-                      borderRadius: "12px",
-                      boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
-                      border: "1px solid rgba(0, 0, 0, 0.04)",
+                      gap: "10px",
                     }}
                   >
-                    <div
+                    <span
                       style={{
-                        width: "24px",
-                        height: "24px",
-                        borderRadius: "50%",
-                        backgroundColor: "rgba(204, 255, 0, 0.3)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "12px",
-                        fontWeight: 700,
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: "15px",
+                        fontWeight: 500,
                         color: "#1a1a1a",
                         flexShrink: 0,
                       }}
                     >
-                      {feature.icon}
-                    </div>
+                      ✓
+                    </span>
                     <span
                       style={{
                         fontFamily: "Inter, sans-serif",
@@ -213,61 +155,47 @@ export default function BottomCta() {
                 ))}
               </div>
 
-              {/* CTA Buttons */}
-              <div
+              {/* CTA Button */}
+              <a
+                href="/stories"
+                className="cta-button self-center min-[900px]:self-start"
                 style={{
-                  display: "flex",
-                  gap: "12px",
-                  flexWrap: "wrap",
+                  opacity: 0.85,
+                  textDecoration: "none",
+                  alignItems: "center",
+                  borderRadius: "clamp(28px, 3vw, 36px)",
+                  boxSizing: "border-box",
+                  display: "inline-flex",
+                  height: "clamp(40px, 5vh, 44px)",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                  padding: "0px clamp(20px, 3vw, 32px)",
+                  position: "relative",
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                  backgroundColor: "rgb(204, 255, 0)",
+                  border: "1px solid rgb(204, 255, 0)",
+                  color: "rgb(17, 14, 8)",
+                  cursor: "pointer",
+                  WebkitFontSmoothing: "antialiased",
+                  outline: "rgb(17, 14, 8) none 0px",
                 }}
               >
-                <a
-                  href="#waitlist"
-                  className="cta-button"
+                <span
                   style={{
-                    textDecoration: "none",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "8px",
-                    padding: "16px 32px",
-                    backgroundColor: "#1a1a1a",
-                    borderRadius: "12px",
-                    color: "#ffffff",
-                    fontFamily: "Inter, sans-serif",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    border: "none",
-                    cursor: "pointer",
+                    fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+                    fontSize: "clamp(16px, 2vw, 18px)",
+                    fontWeight: 400,
+                    letterSpacing: "-0.25px",
+                    lineHeight: "clamp(20px, 3vw, 24px)",
+                    margin: 0,
+                    fontStyle: "normal",
+                    WebkitFontSmoothing: "antialiased",
                   }}
                 >
-                  Join the waitlist
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-                <a
-                  href="/stories"
-                  className="cta-button"
-                  style={{
-                    textDecoration: "none",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "16px 28px",
-                    backgroundColor: "transparent",
-                    borderRadius: "12px",
-                    color: "#1a1a1a",
-                    fontFamily: "Inter, sans-serif",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    border: "1px solid rgba(0, 0, 0, 0.12)",
-                    cursor: "pointer",
-                  }}
-                >
-                  Read stories
-                </a>
-              </div>
+                  Create my cube
+                </span>
+              </a>
             </div>
 
             {/* Right - Phone mockup */}
@@ -279,21 +207,6 @@ export default function BottomCta() {
                 position: "relative",
               }}
             >
-              {/* Glow effect behind phone */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  width: "80%",
-                  height: "80%",
-                  background: "radial-gradient(circle, rgba(204, 255, 0, 0.2) 0%, transparent 70%)",
-                  borderRadius: "50%",
-                  filter: "blur(40px)",
-                  zIndex: 0,
-                }}
-              />
               <img
                 src="/Home/Frame4/phoneframe4.png"
                 alt="Cube app interface"
