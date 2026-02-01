@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import DemoCard from "./DemoCard";
+import DemoCard from "@/components/Preview/DemoCard";
 
 export default function Demoframe() {
   const [mode, setMode] = useState<"participants" | "contribution">(

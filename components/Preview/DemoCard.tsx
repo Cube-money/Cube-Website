@@ -661,7 +661,6 @@ export default function DemoCard({
           transform: translateX(-50%) scale(0.94);
           transform-origin: 50% 0;
         }
-        /* Shorter viewports: scale down so card + "Preview demo cube" button fit */
         @media (max-height: 900px) {
           .demoCardWrapper {
             transform: translateX(-50%) scale(0.88);
@@ -677,7 +676,6 @@ export default function DemoCard({
             transform: translateX(-50%) scale(0.68);
           }
         }
-        /* Narrower viewports (width-based scale wins when both apply) */
         @media (max-width: 1400px) {
           .demoCardWrapper {
             transform: translateX(-50%) scale(0.88);
@@ -694,7 +692,6 @@ export default function DemoCard({
           }
         }
 
-        /* Larger fonts on smaller screens (no scaling change) */
         @media (max-width: 1200px), (max-height: 800px) {
           .demoCardAmount {
             font-size: clamp(26px, 3.8vw, 48px) !important;
@@ -781,7 +778,6 @@ export default function DemoCard({
           animation: pop 450ms ease-out;
           will-change: transform, opacity;
         }
-
         .pendingIn,
         .pendingOut,
         .contribIn,
@@ -789,14 +785,12 @@ export default function DemoCard({
           display: inline-block;
           will-change: transform, opacity, filter;
         }
-
         .pendingIn {
           opacity: 1;
           transform: translateY(0);
           filter: blur(0);
           transition: opacity 350ms ease, transform 350ms ease, filter 350ms ease;
         }
-
         .pendingOut {
           opacity: 0;
           transform: translateY(-6px);
@@ -805,7 +799,6 @@ export default function DemoCard({
           position: absolute;
           pointer-events: none;
         }
-
         .contribOut {
           opacity: 0;
           transform: translateY(6px);
@@ -814,14 +807,12 @@ export default function DemoCard({
           position: absolute;
           pointer-events: none;
         }
-
         .contribIn {
           opacity: 1;
           transform: translateY(0);
           filter: blur(0);
           transition: opacity 450ms ease, transform 450ms ease, filter 450ms ease;
         }
-
         @keyframes pop {
           0% {
             opacity: 0.7;
@@ -832,12 +823,10 @@ export default function DemoCard({
             transform: translateY(0) scale(1);
           }
         }
-
         .winnerRow {
           background-size: 220% 220%;
           animation: winnerShimmer 2200ms ease-in-out infinite;
         }
-
         @keyframes winnerShimmer {
           0% {
             background-position: 0% 40%;
@@ -849,12 +838,10 @@ export default function DemoCard({
             background-position: 0% 40%;
           }
         }
-
         .winnerNotice {
           animation: winnerNoticeIn 520ms ease-out both;
           will-change: transform, opacity, filter;
         }
-
         @keyframes winnerNoticeIn {
           from {
             opacity: 0;
@@ -867,12 +854,10 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
-
         .endSummary {
           animation: endSummaryIn 620ms ease-out both;
           will-change: transform, opacity, filter;
         }
-
         @keyframes endSummaryIn {
           from {
             opacity: 0;
@@ -885,12 +870,10 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
-
         .shuffleRow {
           will-change: transform, filter;
           animation: shuffleJitter 260ms ease-in-out infinite;
         }
-
         @keyframes shuffleJitter {
           0% {
             filter: blur(0px);
@@ -909,18 +892,15 @@ export default function DemoCard({
             opacity: 1;
           }
         }
-
         .turnNotice {
           will-change: transform, opacity, filter;
           animation: turnIn 520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
         }
-
         .turnNoticeStrong {
           color: rgba(255, 255, 255, 0.96);
           text-shadow: 0 0 0 rgba(193, 255, 53, 0);
           animation: turnGlow 1400ms ease-in-out infinite;
         }
-
         .turnNoticeRest {
           display: inline-block;
           opacity: 0;
@@ -928,7 +908,6 @@ export default function DemoCard({
           filter: blur(2px);
           animation: turnRestIn 520ms ease-out 180ms forwards;
         }
-
         @keyframes turnIn {
           0% {
             opacity: 0;
@@ -941,7 +920,6 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
-
         @keyframes turnRestIn {
           to {
             opacity: 1;
@@ -949,7 +927,6 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
-
         @keyframes turnGlow {
           0%,
           100% {
@@ -961,7 +938,6 @@ export default function DemoCard({
             transform: translateY(-0.5px);
           }
         }
-
         @media (prefers-reduced-motion: reduce) {
           .turnNotice,
           .turnNoticeStrong,
