@@ -2,13 +2,13 @@
 
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
-import Explore from "@/pages/Explore/view/Explore";
+import TrustMain from "@/pages/Trust/view/TrustMain";
 
-export default function ExplorePage() {
+export default function TrustPage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <Explore />
+      <TrustMain />
       <Footer />
     </main>
   );
