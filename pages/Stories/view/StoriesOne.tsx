@@ -4,7 +4,7 @@ export default function StoriesOne() {
   return (
     <>
     <section
-      className="h-screen"
+      className="min-h-screen md:h-screen"
       style={{
         position: "relative",
         width: "100%",
@@ -12,18 +12,11 @@ export default function StoriesOne() {
         backgroundColor: "#000000",
       }}
     >
-      {/* Editorial Story Text */}
+      {/* Editorial Story Text - stacked on mobile, absolute on desktop */}
       <div
+        className="relative z-[2] mx-auto w-[calc(100%-32px)] max-w-[680px] px-4 pt-[clamp(32px,8vh,80px)] pb-6 md:absolute md:left-1/2 md:top-[clamp(6%,8vh,10%)] md:-translate-x-1/2 md:pt-0 md:pb-0"
         style={{
-          position: "absolute",
-          top: "clamp(6%, 8vh, 10%)",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 2,
           textAlign: "center",
-          width: "calc(100% - 32px)",
-          maxWidth: "680px",
-          padding: "0 clamp(16px, 3vw, 0)",
         }}
       >
         {/* Editorial label */}
@@ -108,18 +101,10 @@ export default function StoriesOne() {
         </span>
       </div>
 
-      {/* Image below text - rounded corners, edge gradients blend into black */}
+      {/* Image - below text on mobile, centered overlay on desktop */}
       <div
+        className="relative z-[1] mx-auto w-[calc(100%-32px)] max-w-[min(95vw,780px)] rounded-2xl overflow-hidden md:absolute md:left-1/2 md:top-[68%] md:-translate-x-1/2 md:-translate-y-1/2"
         style={{
-          position: "absolute",
-          top: "68%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          zIndex: 1,
-          width: "calc(100% - 32px)",
-          maxWidth: "min(95vw, 780px)",
-          borderRadius: "24px",
-          overflow: "hidden",
           boxShadow: "0 24px 48px rgba(0, 0, 0, 0.4)",
         }}
       >

@@ -4,7 +4,7 @@ export default function StoriesThree() {
 
   return (
     <section
-      className="relative w-full h-screen overflow-hidden flex flex-row items-stretch"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col md:flex-row md:h-screen items-center justify-center md:items-stretch"
       style={{
         borderTop: "1px solid rgb(128, 128, 128)",
         backgroundColor: "#000000",
@@ -13,24 +13,17 @@ export default function StoriesThree() {
         boxSizing: "border-box",
       }}
     >
-      {/* Image - 30% - left - editorial: thin stroke, soft shadow, refined crop */}
+      {/* Image - on mobile above text, on desktop left 30% */}
       <div
-        style={{
-          flex: "3 1 0",
-          minWidth: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          boxSizing: "border-box",
-        }}
+        className="w-full flex shrink-0 justify-center items-center order-1 md:flex-[3] md:min-w-0"
+        style={{ boxSizing: "border-box" }}
       >
         <div
+          className="w-full max-w-[200px] md:max-w-none"
           style={{
             padding: "1px",
             borderRadius: "20px",
             background: "linear-gradient(135deg, #ffffff 0%, #888888 50%, #000000 100%)",
-            width: "100%",
-            maxHeight: "100%",
             boxSizing: "border-box",
             boxShadow: "0 24px 48px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.08)",
           }}
@@ -40,17 +33,15 @@ export default function StoriesThree() {
               borderRadius: "19px",
               overflow: "hidden",
               width: "100%",
-              height: "100%",
             }}
           >
             <img
               src="/stories/storyhero1.png"
               alt="Story"
-              className="w-full object-cover object-center"
+              className="w-full object-cover object-center max-h-[50vh] md:max-h-[calc(100vh-120px)]"
               style={{
                 display: "block",
                 height: "auto",
-                maxHeight: "calc(100vh - 120px)",
                 objectPosition: "center 20%",
               }}
             />
@@ -58,17 +49,13 @@ export default function StoriesThree() {
         </div>
       </div>
 
-      {/* Text frame - 70% - right - warm off-white for editorial feel */}
+      {/* Text frame - full width on mobile, 70% on desktop */}
       <div
+        className="w-full max-w-full md:flex-[7] md:min-w-0 md:max-w-none flex flex-col justify-center order-2"
         style={{
-          flex: "7 1 0",
-          minWidth: 0,
           backgroundColor: "#f8f6f3",
           borderRadius: "16px",
-          padding: "clamp(40px, 6vw, 72px)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          padding: "clamp(24px, 5vw, 72px)",
           boxSizing: "border-box",
           boxShadow: "0 4px 24px rgba(0, 0, 0, 0.08)",
           border: "1px solid rgba(0, 0, 0, 0.06)",

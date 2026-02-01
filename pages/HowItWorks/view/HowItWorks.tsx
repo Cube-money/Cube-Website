@@ -73,17 +73,16 @@ export default function HowItWorks() {
           padding: "clamp(24px, 5vh, 64px) clamp(16px, 4vw, 64px)",
         }}
       >
-        <div className="w-full max-w-[1200px] flex flex-col min-[900px]:flex-row items-center justify-between gap-[clamp(28px,7vw,84px)]">
-          <div className="w-full min-[900px]:w-auto min-[900px]:basis-[55%] max-w-[680px] flex items-end justify-center min-[900px]:justify-start min-[900px]:min-h-[60vh] min-[900px]:-translate-x-1/4 min-[900px]:translate-y-[20%]">
-            <div className={`image-reveal ${isVisible ? 'visible' : ''}`}>
+        <div className="mx-auto w-full max-w-[1200px] flex flex-col min-[900px]:flex-row items-center justify-between gap-[clamp(28px,7vw,84px)]">
+          <div className="w-full min-[900px]:w-auto min-[900px]:basis-[55%] max-w-[680px] flex items-center justify-center min-[900px]:items-end min-[900px]:justify-start min-[900px]:min-h-[60vh] min-[900px]:-translate-x-1/4 min-[900px]:translate-y-[20%]">
+            <div className={`image-reveal flex justify-center min-[900px]:justify-start ${isVisible ? 'visible' : ''}`}>
               <Image
                 src="/howitworks/howitworksframe1.png"
                 alt="Columns"
                 width={800}
                 height={1200}
+                className="h-auto w-auto object-contain max-w-[72%] max-h-[58vh] min-[900px]:max-w-full min-[900px]:max-h-[95vh]"
                 style={{
-                  maxWidth: "100%",
-                  maxHeight: "95vh",
                   height: "auto",
                   width: "auto",
                   objectFit: "contain",
