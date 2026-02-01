@@ -28,6 +28,9 @@ export default function PreviewFrame2() {
   const DEMO_HEIGHT_PX = 1100;
   const MIN_SCALE = 0.53;
   const MAX_SCALE = 0.9;
+  const MOBILE_MIN_SCALE = 0.66;
+  const MOBILE_MAX_SCALE = 0.86;
+  const MOBILE_SCALE_BOOST = 1.14;
   const MOBILE_BREAKPOINT = 768;
   const [demoScale, setDemoScale] = useState(MIN_SCALE);
   const [isMobile, setIsMobile] = useState(false);
@@ -36,9 +39,15 @@ export default function PreviewFrame2() {
     const updateScale = () => {
       const viewportH = typeof window !== "undefined" ? window.innerHeight : 800;
       const viewportW = typeof window !== "undefined" ? window.innerWidth : 1024;
+      const isNowMobile = viewportW < MOBILE_BREAKPOINT;
       const fitScale = (viewportH * 0.92) / DEMO_HEIGHT_PX;
-      setDemoScale(Math.max(MIN_SCALE, Math.min(MAX_SCALE, fitScale)));
-      setIsMobile(viewportW < MOBILE_BREAKPOINT);
+      if (isNowMobile) {
+        const boosted = fitScale * MOBILE_SCALE_BOOST;
+        setDemoScale(Math.max(MOBILE_MIN_SCALE, Math.min(MOBILE_MAX_SCALE, boosted)));
+      } else {
+        setDemoScale(Math.max(MIN_SCALE, Math.min(MAX_SCALE, fitScale)));
+      }
+      setIsMobile(isNowMobile);
     };
     updateScale();
     window.addEventListener("resize", updateScale);
