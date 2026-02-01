@@ -40,7 +40,7 @@ export type DemoCardProps = {
   isMobile?: boolean;
 };
 
-export default function DemoCard({
+export function DemoCard({
   showEndSummary,
   isContributeBusy,
   displayTotal,
@@ -1062,4 +1062,14 @@ export default function DemoCard({
       `}</style>
     </>
   );
+}
+
+// Default export for Next.js page route /Preview/view/DemoCard — redirect to /preview
+// so the route does not try to render DemoCard without props (which causes "s is not a function").
+export default function DemoCardPage() {
+  return null;
+}
+
+export function getServerSideProps() {
+  return { redirect: { destination: "/preview", permanent: false } };
 }

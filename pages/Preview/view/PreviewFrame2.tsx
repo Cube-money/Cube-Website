@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import DemoCard from "./DemoCard";
+import { DemoCard } from "./DemoCard";
 
 /**
  * Frame 2: Car down payment demo — title, DemoCard, one viewport.
