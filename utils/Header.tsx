@@ -152,7 +152,7 @@ export default function Header() {
           </li>
           <li style={{ marginLeft: "36px", display: "block", padding: 0, position: "relative", whiteSpace: "nowrap" }}>
             <a
-              href="/explore"
+              href="/trust"
               style={{
                 textDecoration: "none",
                 color: "rgb(255, 255, 255)",
@@ -165,7 +165,7 @@ export default function Header() {
                 fontFamily: "Inter, sans-serif",
               }}
             >
-              Explore
+              Trust
             </a>
           </li>
           <li style={{ marginLeft: "36px", display: "block", padding: 0, position: "relative", whiteSpace: "nowrap" }}>
@@ -292,7 +292,7 @@ export default function Header() {
             <a href="/how-it-works" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>How It Works</a>
             <a href="/preview" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Preview</a>
             <a href="/stories" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Stories</a>
-            <a href="/explore" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Explore</a>
+            <a href="/trust" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Trust</a>
             <a href="/learn" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Learn</a>
             <a href="/support" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Support</a>
           </div>
