@@ -6,20 +6,28 @@ export default function TrustCta() {
           align-items: center;
           text-align: center;
         }
+        @media (max-width: 767px) {
+          .trust-cta-bg {
+            object-position: 80% center;
+          }
+        }
       `}</style>
       <section
         className="relative w-full overflow-hidden border-t border-gray-500"
         style={{
-          height: "clamp(780px, 95vh, 1040px)",
+          minHeight: "clamp(560px, 85vh, 1040px)",
+          height: "auto",
           borderTop: "1px solid rgb(128, 128, 128)",
           position: "relative",
+          padding: "clamp(48px, 10vh, 80px) 20px",
         }}
       >
-        {/* Background image */}
+        {/* Background image — on phone, focal point right */}
         <img
           src="/Trust/trustcta1.png"
           alt=""
           aria-hidden
+          className="trust-cta-bg object-cover"
           style={{
             position: "absolute",
             top: 0,
@@ -53,9 +61,9 @@ export default function TrustCta() {
             zIndex: 3,
             display: "flex",
             flexDirection: "column",
-            width: "calc(100% - 32px)",
-            maxWidth: "min(640px, 90%)",
-            padding: "0 clamp(16px, 3vw, 0)",
+            width: "100%",
+            maxWidth: "min(640px, calc(100% - 24px))",
+            padding: "0 8px",
           }}
         >
           {/* Small Label */}

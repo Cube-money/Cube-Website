@@ -6,13 +6,15 @@ export default function Basics() {
       <style jsx>{`
         .frame4-text-container {
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translateX(-50%);
+          top: 12%;
           align-items: center;
           text-align: center;
         }
         @media (min-width: 900px) {
           .frame4-text-container {
             left: 5%;
+            top: 50%;
             transform: translateY(-50%);
             align-items: flex-start;
             text-align: left;
@@ -50,21 +52,44 @@ export default function Basics() {
             align-self: flex-start;
           }
         }
+        .frame4-image-container {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 5%;
+          top: auto;
+          right: auto;
+          height: auto;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (min-width: 900px) {
+          .frame4-image-container {
+            left: auto;
+            bottom: auto;
+            transform: none;
+            right: 16%;
+            top: 0;
+            height: 100%;
+            justify-content: flex-end;
+          }
+        }
       `}</style>
       <section
         className="relative w-full overflow-hidden border-t border-gray-500"
         style={{
-          height: "clamp(680px, 82vh, 860px)",
+          minHeight: "clamp(520px, 80vh, 860px)",
           borderTop: "1px solid rgb(128, 128, 128)",
           backgroundColor: "#000000",
         }}
       >
-        {/* Text Container - left-aligned on desktop, centered on mobile (same as Frame4Section) */}
+        {/* Text Container - upper area on mobile, left side on desktop */}
         <div
           className="frame4-text-container"
           style={{
             position: "absolute",
-            top: "50%",
             zIndex: 3,
             display: "flex",
             flexDirection: "column",
@@ -162,27 +187,15 @@ export default function Basics() {
           </a>
         </div>
 
-        {/* Right-positioned image (same as Preview.tsx right flow image) */}
-        <div
-          style={{
-            position: "absolute",
-            right: "16%",
-            top: 0,
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-          }}
-        >
+        {/* Image: below text on mobile, right side on desktop */}
+        <div className="frame4-image-container">
           <Image
             src="/howitworks/cyclehow2.png"
             alt="Cycle"
             width={800}
             height={800}
+            className="max-w-[min(280px,70vw)] max-h-[40vh] md:max-w-[min(560px,48vw)] md:max-h-[85vh]"
             style={{
-              maxWidth: "min(560px, 48vw)",
-              maxHeight: "85vh",
               height: "auto",
               width: "auto",
               objectFit: "contain",

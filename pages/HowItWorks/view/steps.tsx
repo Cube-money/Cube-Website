@@ -26,16 +26,16 @@ export default function Steps() {
     <>
       <style jsx>{`
         .steps-section {
-          padding: clamp(60px, 10vh, 100px) clamp(20px, 5vw, 80px);
+          padding: clamp(32px, 6vh, 100px) clamp(20px, 5vw, 80px);
         }
         .steps-header {
           text-align: center;
-          margin-bottom: clamp(40px, 6vh, 60px);
+          margin-bottom: clamp(24px, 4vh, 60px);
         }
         .steps-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: clamp(40px, 5vw, 60px);
+          gap: clamp(28px, 4vh, 60px);
           max-width: 1200px;
           margin: 0 auto;
         }
@@ -55,13 +55,19 @@ export default function Steps() {
         .step-image-container {
           width: 100%;
           aspect-ratio: 1;
-          max-width: 220px;
-          min-height: 200px;
+          max-width: 200px;
+          min-height: 160px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: clamp(16px, 2vh, 24px);
+          margin-bottom: clamp(12px, 1.5vh, 24px);
           position: relative;
+        }
+        @media (min-width: 768px) {
+          .step-image-container {
+            max-width: 220px;
+            min-height: 200px;
+          }
         }
         .step-title {
           font-family: var(--font-instrument-serif), "Instrument Serif", serif;
@@ -80,9 +86,9 @@ export default function Steps() {
         }
       `}</style>
       <section
-        className="steps-section relative w-full overflow-hidden"
+        className="steps-section relative w-full overflow-visible md:overflow-hidden"
         style={{
-          height: "clamp(680px, 85vh, 900px)",
+          minHeight: "clamp(680px, 85vh, 900px)",
           borderTop: "1px solid #000000",
           backgroundColor: "#ffffff",
         }}

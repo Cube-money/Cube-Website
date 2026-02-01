@@ -6,7 +6,7 @@ import TrustMain from "@/pages/Trust/view/TrustMain";
 
 export default function TrustPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen overflow-x-hidden bg-black">
       <Header />
       <TrustMain />
       <Footer />

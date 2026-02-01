@@ -39,7 +39,7 @@ export default function Guard() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        padding: "clamp(48px, 6vw, 80px) clamp(32px, 5vw, 64px)",
+        padding: "clamp(32px, 5vw, 80px) clamp(20px, 4vw, 64px)",
         boxSizing: "border-box",
       }}
     >
@@ -47,7 +47,7 @@ export default function Guard() {
       <div
         style={{
           textAlign: "center",
-          marginBottom: "clamp(48px, 6vh, 72px)",
+          marginBottom: "clamp(32px, 4vh, 72px)",
           maxWidth: "700px",
         }}
       >
@@ -58,7 +58,7 @@ export default function Guard() {
             alignItems: "center",
             justifyContent: "center",
             gap: "12px",
-            marginBottom: "clamp(16px, 2.5vh, 24px)",
+            marginBottom: "clamp(12px, 2vh, 24px)",
           }}
         >
           <div
@@ -71,7 +71,7 @@ export default function Guard() {
           <span
             style={{
               fontFamily: "Inter, sans-serif",
-              fontSize: "11px",
+              fontSize: "10px",
               fontWeight: 500,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
@@ -94,7 +94,7 @@ export default function Guard() {
         <h2
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
-            fontSize: "clamp(36px, 5vw, 56px)",
+            fontSize: "clamp(24px, 4.5vw, 56px)",
             fontWeight: 400,
             letterSpacing: "-0.02em",
             lineHeight: 1.15,
@@ -107,18 +107,9 @@ export default function Guard() {
         </h2>
       </div>
 
-      {/* 2x2 grid — premium layout */}
+      {/* 2x2 grid on md+, single column on mobile */}
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gridTemplateRows: "1fr 1fr",
-          width: "100%",
-          maxWidth: "1000px",
-          flex: 1,
-          gap: "clamp(48px, 8vw, 80px)",
-          boxSizing: "border-box",
-        }}
+        className="grid w-full max-w-[1000px] flex-1 grid-cols-1 gap-6 box-border md:grid-cols-2 md:gap-[clamp(48px,8vw,80px)]"
       >
         {blocks.map((block, i) => (
           <div
@@ -144,7 +135,7 @@ export default function Guard() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "clamp(32px, 5vw, 56px) clamp(24px, 4vw, 40px)",
+                padding: "clamp(20px, 4vw, 56px) clamp(16px, 3vw, 40px)",
                 boxSizing: "border-box",
                 WebkitFontSmoothing: "antialiased",
                 position: "relative",
@@ -171,7 +162,7 @@ export default function Guard() {
                   position: "relative",
                   zIndex: 1,
                   width: "100%",
-                  maxWidth: "340px",
+                  maxWidth: "min(100%, 340px)",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -181,12 +172,12 @@ export default function Guard() {
                 <div
                   style={{
                     width: "100%",
-                    minHeight: "clamp(200px, 28vh, 260px)",
+                    minHeight: "clamp(100px, 14vh, 260px)",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "flex-start",
-                    gap: "clamp(12px, 2vh, 20px)",
+                    gap: "clamp(8px, 1.5vh, 20px)",
                     textAlign: "center",
                   }}
                 >
@@ -208,7 +199,7 @@ export default function Guard() {
                     <span
                       style={{
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "11px",
+                        fontSize: "clamp(10px, 2vw, 11px)",
                         fontWeight: 500,
                         letterSpacing: "0.15em",
                         textTransform: "uppercase",
@@ -231,7 +222,7 @@ export default function Guard() {
                   <h3
                     style={{
                       fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
-                      fontSize: "clamp(26px, 3.5vw, 36px)",
+                      fontSize: "clamp(20px, 3vw, 36px)",
                       fontWeight: 400,
                       letterSpacing: "-0.02em",
                       lineHeight: 1.2,
@@ -247,10 +238,10 @@ export default function Guard() {
                   <p
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "clamp(14px, 1.6vw, 16px)",
+                      fontSize: "clamp(13px, 1.5vw, 16px)",
                       fontWeight: 400,
                       letterSpacing: "-0.01em",
-                      lineHeight: 1.65,
+                      lineHeight: 1.55,
                       margin: 0,
                       color: "rgba(255, 255, 255, 0.6)",
                       WebkitFontSmoothing: "antialiased",
@@ -261,13 +252,13 @@ export default function Guard() {
                   </p>
                 </div>
 
-                {/* Card image — same size on all cards */}
+                {/* Card image — smaller on mobile */}
                 <div
                   style={{
                     width: "100%",
-                    maxWidth: "300px",
-                    minHeight: "clamp(160px, 22vh, 220px)",
-                    marginTop: "clamp(12px, 2vh, 20px)",
+                    maxWidth: "min(240px, 65vw)",
+                    minHeight: "clamp(80px, 12vh, 220px)",
+                    marginTop: "clamp(8px, 1.5vh, 20px)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -278,7 +269,7 @@ export default function Guard() {
                     alt={block.label}
                     style={{
                       maxWidth: "100%",
-                      maxHeight: "220px",
+                      maxHeight: "clamp(120px, 22vw, 220px)",
                       height: "auto",
                       objectFit: "contain",
                     }}

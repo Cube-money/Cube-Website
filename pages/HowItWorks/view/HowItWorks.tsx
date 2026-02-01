@@ -36,16 +36,32 @@ export default function HowItWorks() {
             transform: translateY(0);
           }
         }
+        @keyframes slideUpFromAboveText {
+          0% {
+            transform: translateY(10%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
         .image-reveal {
           transform: translateY(120%);
         }
         .image-reveal.visible {
           animation: slideUpFromBottom 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
+        @media (max-width: 899px) {
+          .image-reveal {
+            transform: translateY(10%);
+          }
+          .image-reveal.visible {
+            animation: slideUpFromAboveText 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+        }
       `}</style>
     <section
       ref={imageRef}
-      className="relative w-full h-screen overflow-hidden border-t border-gray-500"
+      className="relative w-full h-screen overflow-hidden border-t border-gray-500 pt-24 md:pt-24"
       style={{
         borderTop: "1px solid rgb(128, 128, 128)",
         backgroundColor: "#C8D1D6",
@@ -59,12 +75,7 @@ export default function HowItWorks() {
       >
         <div className="w-full max-w-[1200px] flex flex-col min-[900px]:flex-row items-center justify-between gap-[clamp(28px,7vw,84px)]">
           <div className="w-full min-[900px]:w-auto min-[900px]:basis-[55%] max-w-[680px] flex items-end justify-center min-[900px]:justify-start min-[900px]:min-h-[60vh] min-[900px]:-translate-x-1/4 min-[900px]:translate-y-[20%]">
-            <div 
-              className={`image-reveal ${isVisible ? 'visible' : ''}`}
-              style={{
-                transform: isVisible ? undefined : 'translateY(120%)',
-              }}
-            >
+            <div className={`image-reveal ${isVisible ? 'visible' : ''}`}>
               <Image
                 src="/howitworks/howitworksframe1.png"
                 alt="Columns"

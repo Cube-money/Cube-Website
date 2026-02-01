@@ -38,23 +38,24 @@ export default function Trust() {
       />
 
       {/* Headline + Subhead */}
-      <div
-        style={{
-          position: "absolute",
-          top: "clamp(100px, 15vh, 140px)",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 4,
-          textAlign: "center",
-          width: "calc(100% - 32px)",
-          maxWidth: "min(95vw, 960px)",
-        }}
+        <div
+          style={{
+            position: "absolute",
+            top: "clamp(60px, 12vh, 140px)",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 4,
+            textAlign: "center",
+            width: "calc(100% - 24px)",
+            maxWidth: "min(95vw, 960px)",
+            padding: "0 12px",
+          }}
       >
         {/* Headline */}
         <div
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", serif',
-            fontSize: "clamp(40px, 7vw, 80px)",
+            fontSize: "clamp(28px, 8vw, 80px)",
             fontWeight: 400,
             color: "#fff",
             letterSpacing: "-0.02em",
@@ -70,13 +71,13 @@ export default function Trust() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(16px, 2.2vw, 22px)",
+            fontSize: "clamp(14px, 3.5vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.01em",
             lineHeight: 1.5,
             color: "rgba(255, 255, 255, 0.85)",
             display: "block",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
             WebkitFontSmoothing: "antialiased",
           }}
         >
@@ -90,11 +91,11 @@ export default function Trust() {
         alt="Trust"
         style={{
           position: "absolute",
-          top: "65%",
+          top: "60%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           zIndex: 2,
-          maxWidth: "min(70vw, 680px)",
+          maxWidth: "min(90vw, 680px)",
           width: "auto",
           height: "auto",
           objectFit: "contain",
@@ -105,17 +106,18 @@ export default function Trust() {
       <div
         style={{
           position: "absolute",
-          bottom: "clamp(40px, 8vh, 80px)",
+          bottom: "clamp(24px, 5vh, 80px)",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 4,
           textAlign: "center",
+          width: "calc(100% - 24px)",
         }}
       >
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 1.8vw, 18px)",
+            fontSize: "clamp(12px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "0.02em",
             color: "rgba(255, 255, 255, 0.6)",

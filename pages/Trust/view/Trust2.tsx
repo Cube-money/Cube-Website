@@ -16,18 +16,7 @@ export default function Trust2() {
     >
       {/* Main layout — two columns, shifted left */}
       <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "clamp(72px, 14vw, 200px)",
-          width: "100%",
-          maxWidth: "1200px",
-          padding: "0 clamp(24px, 4vw, 48px)",
-          marginRight: "clamp(64px, 12vw, 160px)",
-        }}
+        className="relative z-[2] flex w-full max-w-[1200px] flex-col items-center justify-center gap-8 px-5 py-10 md:mr-[12vw] md:flex-row md:gap-[clamp(72px,14vw,200px)] md:px-12 md:py-0"
       >
         {/* LEFT: Member List Component — premium Robinhood Gold style */}
         <div
@@ -184,16 +173,10 @@ export default function Trust2() {
           </div>
         </div>
 
-        {/* RIGHT: Text content — left aligned */}
+        {/* RIGHT: Text content — centered on mobile, left on md */}
         <div
-          style={{
-            flex: "1 1 auto",
-            maxWidth: "480px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            textAlign: "left",
-          }}
+          className="flex max-w-[480px] flex-1 flex-col items-center text-center md:items-start md:text-left"
+          style={{ flex: "1 1 auto" }}
         >
           {/* Section Label */}
           <div
@@ -230,7 +213,7 @@ export default function Trust2() {
           <h2
             style={{
               fontFamily: 'var(--font-instrument-serif), "Instrument Serif", serif',
-              fontSize: "clamp(36px, 5vw, 56px)",
+              fontSize: "clamp(28px, 6vw, 56px)",
               fontWeight: 400,
               color: "#fff",
               letterSpacing: "-0.02em",
@@ -253,7 +236,7 @@ export default function Trust2() {
               lineHeight: 1.7,
               color: "rgba(255, 255, 255, 0.7)",
               margin: 0,
-              maxWidth: "420px",
+              maxWidth: "100%",
               WebkitFontSmoothing: "antialiased",
             }}
           >
