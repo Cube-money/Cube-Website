@@ -15,8 +15,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Cube - Smart Rotational Savings & Checking",
-  description: "Join the future of community finance. Save together, prosper together with Cube's rotational savings accounts.",
+  title: "Cube Money - Smart Rotational Savings & Checking",
+  description: "Join the future of community finance. Save together, prosper together with Cube Money's rotational savings accounts.",
 };
 
 export const viewport: Viewport = {

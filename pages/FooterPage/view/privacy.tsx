@@ -3,7 +3,7 @@ export default function Privacy() {
     <div className="pt-48 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <p className="text-2xl text-black mb-8 uppercase font-bold text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-          CUBE TECHNOLOGIES, INC.
+          CUBE MONEY
         </p>
         <h1 className="text-8xl font-sans font-bold text-black mb-4 uppercase text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
           Privacy Policy
@@ -16,10 +16,10 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              This Privacy Policy describes how Cube collects, uses, shares, and protects information when you use our iPhone application and our website (collectively, the "Services").
+              This Privacy Policy describes how Cube Money collects, uses, shares, and protects information when you use our iPhone application and our website (collectively, the "Services").
             </p>
             <p className="text-base leading-relaxed text-gray-800 mt-4">
-              Cube helps groups operate savings circles by automating contribution tracking and coordinating transparent payout schedules. At this time, when a payout is ready, users are notified and instructed to send funds through their Zelle or Venmo accounts. Users are required to upload a payment receipt, which is shared with the payout recipient to help verify authenticity.
+              Cube Money helps groups operate savings circles by automating contribution tracking and coordinating transparent payout schedules. At this time, when a payout is ready, users are notified and instructed to send funds through their Zelle or Venmo accounts. Users are required to upload a payment receipt, which is shared with the payout recipient to help verify authenticity.
             </p>
           </section>
 
@@ -40,7 +40,7 @@ export default function Privacy() {
                 <h3 className="text-lg font-semibold mb-3">B. Financial and Transaction Information</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-800">
                   <li><strong>Payout details:</strong> Zelle email address or phone number, or Venmo username</li>
-                  <li><strong>Transaction records within Cube:</strong> contributions marked as paid, missed, late, or rescheduled; payout confirmations; timestamps; and associated notes</li>
+                  <li><strong>Transaction records within Cube Money:</strong> contributions marked as paid, missed, late, or rescheduled; payout confirmations; timestamps; and associated notes</li>
                 </ul>
               </div>
 
@@ -76,7 +76,7 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">How We Share Information</h2>
             <p className="text-base leading-relaxed text-gray-800 mb-4">
-              Cube does not sell your personal information. We share information only as necessary, as described below.
+              Cube Money does not sell your personal information. We share information only as necessary, as described below.
             </p>
             
             <div className="space-y-6">
@@ -91,7 +91,7 @@ export default function Privacy() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">B. With Service Providers</h3>
                 <p className="text-gray-800">
-                  We use third-party vendors to support the operation of the Services, including cloud hosting and analytics providers. These providers process information only to perform services on Cube's behalf.
+                  We use third-party vendors to support the operation of the Services, including cloud hosting and analytics providers. These providers process information only to perform services on Cube Money's behalf.
                 </p>
               </div>
 
@@ -101,14 +101,14 @@ export default function Privacy() {
                 <ul className="list-disc list-inside space-y-2 text-gray-800">
                   <li>Comply with applicable laws, regulations, or court orders</li>
                   <li>Investigate fraud, security issues, or abuse</li>
-                  <li>Protect the rights, safety, and property of Cube, our users, or others</li>
+                  <li>Protect the rights, safety, and property of Cube Money, our users, or others</li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold mb-3">D. Business Transfers</h3>
                 <p className="text-gray-800">
-                  If Cube is involved in a merger, acquisition, or sale of assets, information may be transferred as part of that transaction, subject to appropriate safeguards.
+                  If Cube Money is involved in a merger, acquisition, or sale of assets, information may be transferred as part of that transaction, subject to appropriate safeguards.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Children's Privacy</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              The Services are not intended for children under the age of 13 (or under 16 in certain jurisdictions). Cube does not knowingly collect personal information from children.
+              The Services are not intended for children under the age of 13 (or under 16 in certain jurisdictions). Cube Money does not knowingly collect personal information from children.
             </p>
           </section>
 
@@ -161,7 +161,7 @@ export default function Privacy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">International Users</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              If you access the Services from outside the United States, your information may be processed in the United States, where Cube and its service providers operate.
+              If you access the Services from outside the United States, your information may be processed in the United States, where Cube Money and its service providers operate.
             </p>
           </section>
 

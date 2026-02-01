@@ -6,7 +6,7 @@ import Security from "@/pages/Security/view/Security";
 
 export default function SecurityPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <Header />
       <Security />
       <Footer />
