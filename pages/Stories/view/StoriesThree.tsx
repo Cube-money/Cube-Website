@@ -82,7 +82,7 @@ export default function StoriesThree() {
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "#888",
-            marginBottom: "clamp(16px, 2vh, 24px)",
+            marginBottom: "clamp(12px, 1.5vh, 18px)",
             display: "block",
           }}
         >
@@ -91,12 +91,12 @@ export default function StoriesThree() {
         <div
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-            fontStyle: "normal",
+            fontStyle: "italic",
             fontWeight: 400,
             color: "#0a0a0a",
-            fontSize: "clamp(32px, 4.5vw, 56px)",
-            letterSpacing: "-0.03em",
-            lineHeight: "1.1",
+            fontSize: "clamp(26px, 3.5vw, 42px)",
+            letterSpacing: "-0.02em",
+            lineHeight: "1.15",
             textAlign: "left",
             whiteSpace: "normal",
             boxSizing: "border-box",
@@ -107,16 +107,17 @@ export default function StoriesThree() {
             overflowWrap: "break-word",
           }}
         >
-          Placeholder heading
+          "I moved out without falling into debt."
         </div>
-        <span
+        <div
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(16px, 2vw, 19px)",
+            fontSize: "clamp(14px, 1.6vw, 16px)",
             fontWeight: 400,
             letterSpacing: "-0.01em",
-            lineHeight: "1.7",
+            lineHeight: "1.75",
             margin: 0,
+            marginBottom: "clamp(20px, 3vh, 28px)",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "#444",
@@ -124,8 +125,45 @@ export default function StoriesThree() {
             display: "block",
           }}
         >
-          Placeholder text for leading copy. Replace with your story content.
-        </span>
+          <p style={{ margin: "0 0 1em 0" }}>
+            Moving out was supposed to feel exciting. Instead, it felt like math.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            First month. Deposit. Utilities. Thousands of dollars up front, all at once.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            I could&apos;ve put it on a credit card. I could&apos;ve taken a loan. But I didn&apos;t want my first step forward to start with something hanging over me.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            So I started a Cube.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            A few people I trust. A simple cycle. Everyone contributing, everyone taking their turn.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            When my payout came, I signed the lease that week.
+          </p>
+          <p style={{ margin: 0 }}>
+            No interest. No scrambling. Just a plan that moved as fast as life does.
+          </p>
+        </div>
+        {/* Attribution */}
+        <div
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "13px",
+            fontWeight: 500,
+            letterSpacing: "0.02em",
+            color: "#666",
+            display: "block",
+          }}
+        >
+          <span style={{ color: "#333" }}>Ethan</span> · Austin
+          <br />
+          <span style={{ fontSize: "12px", color: "#888", marginTop: "4px", display: "inline-block" }}>
+            5 people · 6 week cycle · Move-out fund
+          </span>
+        </div>
       </div>
     </section>
   );

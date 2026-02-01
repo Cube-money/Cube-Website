@@ -12,62 +12,99 @@ export default function StoriesOne() {
         backgroundColor: "#000000",
       }}
     >
-      {/* Header Text */}
+      {/* Editorial Story Text */}
       <div
         style={{
           position: "absolute",
-          top: "clamp(16%, 18vh, 22%)",
+          top: "clamp(6%, 8vh, 10%)",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
           textAlign: "center",
           width: "calc(100% - 32px)",
-          maxWidth: "800px",
+          maxWidth: "680px",
           padding: "0 clamp(16px, 3vw, 0)",
         }}
       >
+        {/* Editorial label */}
+        <span
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "11px",
+            fontWeight: 600,
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "rgba(255, 255, 255, 0.5)",
+            marginBottom: "clamp(12px, 1.5vh, 18px)",
+            display: "block",
+          }}
+        >
+          Story
+        </span>
+
+        {/* Main quote headline */}
         <div
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-            fontStyle: "normal",
+            fontStyle: "italic",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 4vw, 56px)",
+            fontSize: "clamp(26px, 3.2vw, 40px)",
             letterSpacing: "-0.02em",
-            lineHeight: "100%",
+            lineHeight: "1.15",
             textAlign: "center",
             whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
-            display: "inline-block",
+            display: "block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "clamp(14px, 2vh, 22px)",
           }}
         >
-          How does zero debt, zero interest sounds?
+          "Cube replaced the credit card I almost used."
         </div>
         
-        {/* Subtext */}
-        <span
+        {/* Story body */}
+        <div
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.2vw, 18px)",
+            fontSize: "clamp(15px, 1.7vw, 17px)",
             fontWeight: 400,
-            letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3vw, 26px)",
+            letterSpacing: "-0.01em",
+            lineHeight: "1.7",
             margin: "0 auto",
-            marginBottom: "clamp(28px, 5vh, 48px)",
+            marginBottom: "clamp(14px, 2vh, 20px)",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
-            color: "rgb(255, 255, 255)",
-            maxWidth: "600px",
+            color: "rgba(255, 255, 255, 0.85)",
+            maxWidth: "640px",
             display: "block",
             textAlign: "center",
             width: "100%",
           }}
         >
-          Save without debt or interest, and move way faster than traditional saving by pooling together instead of waiting months for slow, solo progress.
+          <p style={{ margin: "0 0 1em 0" }}>
+            My car repair was $1,300. I was ready to finance it. Instead, my Cube payout arrived that week. I covered it immediately.
+          </p>
+          <p style={{ margin: 0 }}>
+            No balance carried forward. Just the cycle doing its job.
+          </p>
+        </div>
+
+        {/* Attribution */}
+        <span
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "13px",
+            fontWeight: 500,
+            letterSpacing: "0.05em",
+            color: "rgba(255, 255, 255, 0.4)",
+            display: "block",
+            textAlign: "center",
+          }}
+        >
+          Sarah · Los Angeles
         </span>
       </div>
 

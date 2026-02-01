@@ -37,7 +37,7 @@ export default function StoriesTwo() {
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "#888",
-            marginBottom: "clamp(16px, 2vh, 24px)",
+            marginBottom: "clamp(12px, 1.5vh, 18px)",
             display: "block",
           }}
         >
@@ -46,12 +46,12 @@ export default function StoriesTwo() {
         <div
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-            fontStyle: "normal",
+            fontStyle: "italic",
             fontWeight: 400,
             color: "#0a0a0a",
-            fontSize: "clamp(32px, 4.5vw, 56px)",
-            letterSpacing: "-0.03em",
-            lineHeight: "1.1",
+            fontSize: "clamp(26px, 3.5vw, 42px)",
+            letterSpacing: "-0.02em",
+            lineHeight: "1.15",
             textAlign: "left",
             whiteSpace: "normal",
             boxSizing: "border-box",
@@ -62,16 +62,17 @@ export default function StoriesTwo() {
             overflowWrap: "break-word",
           }}
         >
-          Placeholder heading
+          "I needed something more reliable than a loan."
         </div>
-        <span
+        <div
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(16px, 2vw, 19px)",
+            fontSize: "clamp(14px, 1.6vw, 16px)",
             fontWeight: 400,
             letterSpacing: "-0.01em",
-            lineHeight: "1.7",
+            lineHeight: "1.75",
             margin: 0,
+            marginBottom: "clamp(20px, 3vh, 28px)",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "#444",
@@ -79,8 +80,42 @@ export default function StoriesTwo() {
             display: "block",
           }}
         >
-          Placeholder text for leading copy. Replace with your story content.
-        </span>
+          <p style={{ margin: "0 0 1em 0" }}>
+            Running a small business means the numbers never stop moving. Inventory, rent, payroll, equipment. Something always comes first.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            I used to rely on credit whenever cash got tight. Not because I wanted to, but because it was the only system that moved fast enough.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            Cube gave me another option.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            I started a cycle with a few people I trust. We contributed on schedule, rotated access, and kept everything clear. When my payout came, it wasn&apos;t a bailout. It was planned.
+          </p>
+          <p style={{ margin: "0 0 1em 0" }}>
+            That&apos;s what changed everything.
+          </p>
+          <p style={{ margin: 0 }}>
+            Not debt. Not waiting. Just a structure that let me keep building without falling behind.
+          </p>
+        </div>
+        {/* Attribution */}
+        <div
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "13px",
+            fontWeight: 500,
+            letterSpacing: "0.02em",
+            color: "#666",
+            display: "block",
+          }}
+        >
+          <span style={{ color: "#333" }}>Omar</span> · Washington, D.C.
+          <br />
+          <span style={{ fontSize: "12px", color: "#888", marginTop: "4px", display: "inline-block" }}>
+            6 people · Monthly cycle · Working capital
+          </span>
+        </div>
       </div>
 
       {/* Image - 30% - editorial: thin stroke, soft shadow, refined crop */}
