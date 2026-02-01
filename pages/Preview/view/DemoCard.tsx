@@ -35,6 +35,9 @@ export type DemoCardProps = {
   contributionPct: number;
   accessedPct: number;
   rowElsRef: React.MutableRefObject<Map<string, HTMLDivElement>>;
+  onMainButtonClick: () => void;
+  onPreviewAgainClick: () => void;
+  isMobile?: boolean;
 };
 
 export default function DemoCard({
@@ -63,15 +66,75 @@ export default function DemoCard({
   contributionPct,
   accessedPct,
   rowElsRef,
+  onMainButtonClick,
+  onPreviewAgainClick,
+  isMobile = false,
 }: DemoCardProps) {
   return (
     <>
+      {/* Title + subtext above card */}
       <div
-        className="demoCardWrapper"
         style={{
           position: "absolute",
           top: "18%",
           left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 3,
+          textAlign: "center",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: isMobile ? "16px" : "22.5px",
+            fontWeight: 400,
+            letterSpacing: "-0.25px",
+            lineHeight: isMobile ? "22px" : "26px",
+            margin: "0 auto",
+            fontStyle: "normal",
+            WebkitFontSmoothing: "antialiased",
+            color: "rgb(255, 255, 255)",
+            maxWidth: "600px",
+            display: "block",
+            textAlign: "center",
+            width: "100%",
+            marginBottom: "120px",
+          }}
+        >
+          Inside a Cube, that same goal can arrive much sooner through
+          coordinated contributions.{" "}
+          <span style={{ color: "#C1FF35" }}>lets see how!</span>
+        </span>
+        <div
+          style={{
+            fontFamily:
+              'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
+            fontStyle: "normal",
+            fontWeight: 400,
+            color: "rgb(255, 255, 255)",
+            fontSize: "clamp(24.5px, 3.5vw, 46.5px)",
+            letterSpacing: "-0.02em",
+            lineHeight: "100%",
+            textAlign: "center",
+            whiteSpace: "pre-line",
+            boxSizing: "border-box",
+            WebkitFontSmoothing: "antialiased",
+            display: "block",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
+          }}
+        >
+          Car down payment cube
+        </div>
+      </div>
+
+      {/* Card box */}
+      <div
+        style={{
+          position: "absolute",
+          top: "30%",
+          left: "50%",
+          transform: "translateX(-50%)",
           maxWidth: "1000px",
           width: "75%",
           padding: "1px",
@@ -94,7 +157,6 @@ export default function DemoCard({
           {!showEndSummary && (
             <>
               <div
-                className="demoCardAmount"
                 style={{
                   position: "absolute",
                   top: "40px",
@@ -104,7 +166,7 @@ export default function DemoCard({
                   fontStyle: "normal",
                   fontWeight: 400,
                   color: "rgb(255, 255, 255)",
-                  fontSize: "clamp(24px, 3.5vw, 48px)",
+                  fontSize: "clamp(28.5px, 3.5vw, 52.5px)",
                   letterSpacing: "-0.02em",
                   lineHeight: "100%",
                 }}
@@ -115,13 +177,12 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardSubtext"
                 style={{
                   position: "absolute",
                   top: "90px",
                   left: "60px",
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "16px",
+                  fontSize: "20.5px",
                   fontWeight: 400,
                   letterSpacing: "-0.25px",
                   lineHeight: "24px",
@@ -132,13 +193,12 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardSubtext"
                 style={{
                   position: "absolute",
                   top: "90px",
                   right: "60px",
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "16px",
+                  fontSize: "20.5px",
                   fontWeight: 400,
                   letterSpacing: "-0.25px",
                   lineHeight: "24px",
@@ -150,7 +210,6 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardHeading"
                 style={{
                   position: "absolute",
                   top: "150px",
@@ -160,7 +219,7 @@ export default function DemoCard({
                   fontStyle: "normal",
                   fontWeight: 400,
                   color: "rgb(255, 255, 255)",
-                  fontSize: "clamp(24px, 3.5vw, 36px)",
+                  fontSize: "clamp(28.5px, 3.5vw, 40.5px)",
                   letterSpacing: "-0.02em",
                   lineHeight: "100%",
                   marginBottom: "20px",
@@ -180,6 +239,7 @@ export default function DemoCard({
                   gap: "12px",
                   opacity: isShuffling ? 0.5 : 1,
                   transition: "opacity 260ms ease",
+                  overflow: "hidden",
                 }}
               >
                 {order
@@ -246,7 +306,6 @@ export default function DemoCard({
                           className={isWinner ? "winnerRow" : undefined}
                         >
                           <div
-                            className="demoCardParticipantText"
                             style={{
                               width: "40px",
                               height: "40px",
@@ -259,7 +318,7 @@ export default function DemoCard({
                               justifyContent: "center",
                               marginRight: "12px",
                               color: isWinner ? "rgb(17, 14, 8)" : "white",
-                              fontSize: "16px",
+                              fontSize: "20.5px",
                               fontWeight: 500,
                             }}
                           >
@@ -277,11 +336,10 @@ export default function DemoCard({
                             />
                           ) : (
                             <div
-                              className="demoCardParticipantText"
                               style={{
                                 flex: 1,
                                 fontFamily: "Inter, sans-serif",
-                                fontSize: "16px",
+                                fontSize: "20.5px",
                                 color: nameColor,
                               }}
                             >
@@ -290,10 +348,9 @@ export default function DemoCard({
                           )}
 
                           <div
-                            className="demoCardParticipantText"
                             style={{
                               fontFamily: "Inter, sans-serif",
-                              fontSize: "16px",
+                              fontSize: "20.5px",
                               color: rightColor,
                               position:
                                 participant.type === "you" ? "relative" : "static",
@@ -359,16 +416,16 @@ export default function DemoCard({
                   !userHasContributed &&
                   !isContributeBusy && (
                     <div
-                      className="turnNotice demoCardNotice"
                       style={{
                         fontFamily: "Inter, sans-serif",
-                        fontSize: "14px",
+                        fontSize: "18.5px",
                         lineHeight: "20px",
                         color: "rgb(200, 200, 200)",
                         marginTop: "8px",
                         textAlign: "center",
                         width: "100%",
                       }}
+                      className="turnNotice"
                     >
                       <span className="turnNoticeStrong">It&apos;s your turn</span>
                       <span className="turnNoticeRest">
@@ -380,10 +437,10 @@ export default function DemoCard({
 
                 {winnerRevealed && (
                   <div
-                    className="winnerNotice demoCardNotice"
+                    className="winnerNotice"
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontSize: "14px",
+                      fontSize: "18.5px",
                       lineHeight: "20px",
                       color: "rgb(220, 220, 220)",
                       marginTop: "10px",
@@ -437,7 +494,6 @@ export default function DemoCard({
                     }}
                   >
                     <div
-                      className="demoCardProgressRow"
                       style={{
                         display: "grid",
                         gridTemplateColumns: "140px 1fr 120px",
@@ -447,10 +503,9 @@ export default function DemoCard({
                       }}
                     >
                       <div
-                        className="demoCardProgressLabel"
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "14px",
+                          fontSize: "18.5px",
                           color: "rgb(255, 255, 255)",
                         }}
                       >
@@ -475,10 +530,9 @@ export default function DemoCard({
                         />
                       </div>
                       <div
-                        className="demoCardProgressLabel"
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "14px",
+                          fontSize: "18.5px",
                           color: "rgba(255,255,255,0.75)",
                           textAlign: "right",
                         }}
@@ -488,7 +542,6 @@ export default function DemoCard({
                     </div>
 
                     <div
-                      className="demoCardProgressRow"
                       style={{
                         display: "grid",
                         gridTemplateColumns: "140px 1fr 120px",
@@ -497,10 +550,9 @@ export default function DemoCard({
                       }}
                     >
                       <div
-                        className="demoCardProgressLabel"
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "14px",
+                          fontSize: "18.5px",
                           color: "rgb(255, 255, 255)",
                         }}
                       >
@@ -528,10 +580,9 @@ export default function DemoCard({
                         />
                       </div>
                       <div
-                        className="demoCardProgressLabel"
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "14px",
+                          fontSize: "18.5px",
                           color: "rgba(255,255,255,0.75)",
                           textAlign: "right",
                         }}
@@ -547,7 +598,7 @@ export default function DemoCard({
 
           {showEndSummary && (
             <div
-              className="endSummary demoCardEndSummary"
+              className="endSummary"
               style={{
                 position: "absolute",
                 top: "120px",
@@ -560,10 +611,9 @@ export default function DemoCard({
               }}
             >
               <div
-                className="demoCardEndSummaryLabel"
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "14px",
+                  fontSize: "18.5px",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "rgba(255,255,255,0.55)",
@@ -574,11 +624,10 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardEndSummaryAmount"
                 style={{
                   fontFamily:
                     "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                  fontSize: "96px",
+                  fontSize: "100.5px",
                   lineHeight: "1",
                   fontWeight: 500,
                   color: "rgb(204, 255, 0)",
@@ -589,10 +638,9 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardEndSummarySub"
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "22px",
+                  fontSize: "26.5px",
                   lineHeight: "32px",
                   color: "rgba(255,255,255,0.9)",
                   marginTop: "10px",
@@ -612,11 +660,10 @@ export default function DemoCard({
               />
 
               <div
-                className="demoCardEndSummaryTitle"
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "40px",
+                  fontSize: "44.5px",
                   lineHeight: "46px",
                   color: "rgba(255,255,255,0.9)",
                 }}
@@ -625,11 +672,10 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardEndSummaryTitle"
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "40px",
+                  fontSize: "44.5px",
                   lineHeight: "46px",
                   fontWeight: 700,
                   color: "rgb(255,255,255)",
@@ -640,10 +686,9 @@ export default function DemoCard({
               </div>
 
               <div
-                className="demoCardEndSummaryCaption"
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "16px",
+                  fontSize: "20.5px",
                   lineHeight: "24px",
                   color: "rgba(255,255,255,0.45)",
                   marginTop: "22px",
@@ -656,128 +701,170 @@ export default function DemoCard({
         </div>
       </div>
 
+      {/* Buttons below card */}
+      {showEndSummary ? (
+        <div
+          style={{
+            position: "absolute",
+            top: "calc(30% + 730px)",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 3,
+            display: "flex",
+            gap: "14px",
+          }}
+        >
+          <button
+            type="button"
+            onClick={onPreviewAgainClick}
+            style={{
+              opacity: 0.95,
+              alignItems: "center",
+              alignSelf: "center",
+              borderRadius: "36px",
+              boxSizing: "border-box",
+              display: "inline-flex",
+              height: "44px",
+              justifyContent: "center",
+              overflow: "hidden",
+              padding: "0px 26px",
+              position: "relative",
+              textAlign: "center",
+              whiteSpace: "nowrap",
+              backgroundColor: "rgb(0, 0, 0)",
+              border: "1px solid rgba(255,255,255,0.85)",
+              color: "rgb(255, 255, 255)",
+              cursor: "pointer",
+              WebkitFontSmoothing: "antialiased",
+              userSelect: "none",
+            }}
+          >
+            <span
+              style={{
+                fontFamily:
+                  "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+                fontSize: "20.5px",
+                fontWeight: 400,
+                letterSpacing: "-0.25px",
+                lineHeight: "24px",
+              }}
+            >
+              Preview again
+            </span>
+          </button>
+          <a
+            href="/signup"
+            style={{
+              textDecoration: "none",
+              opacity: 0.95,
+              alignItems: "center",
+              alignSelf: "center",
+              borderRadius: "36px",
+              boxSizing: "border-box",
+              display: "inline-flex",
+              height: "44px",
+              justifyContent: "center",
+              overflow: "hidden",
+              padding: "0px 26px",
+              position: "relative",
+              textAlign: "center",
+              whiteSpace: "nowrap",
+              backgroundColor: "rgb(204, 255, 0)",
+              border: "1px solid rgb(204, 255, 0)",
+              color: "rgb(17, 14, 8)",
+              cursor: "pointer",
+              WebkitFontSmoothing: "antialiased",
+              userSelect: "none",
+            }}
+          >
+            <span
+              style={{
+                fontFamily:
+                  "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+                fontSize: "20.5px",
+                fontWeight: 400,
+                letterSpacing: "-0.25px",
+                lineHeight: "24px",
+              }}
+            >
+              Create a cube
+            </span>
+          </a>
+        </div>
+      ) : (
+        (mode === "participants" || !isContributeBusy) &&
+        !(cycle === totalCycles && winnerRevealed) && (
+          <div
+            style={{
+              position: "absolute",
+              top: "calc(30% + 730px)",
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 3,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <button
+              type="button"
+              onClick={onMainButtonClick}
+              style={{
+                opacity: 0.85,
+                alignItems: "center",
+                alignSelf: "center",
+                borderRadius: "36px",
+                boxSizing: "border-box",
+                display: "inline-flex",
+                height: "44px",
+                justifyContent: "center",
+                overflow: "hidden",
+                padding: "0px 32px",
+                position: "relative",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+                backgroundColor:
+                  mode === "contribution"
+                    ? "rgb(255, 255, 255)"
+                    : "rgb(204, 255, 0)",
+                border:
+                  mode === "contribution"
+                    ? "1px solid rgb(0, 0, 0)"
+                    : "1px solid rgb(204, 255, 0)",
+                color: "rgb(17, 14, 8)",
+                cursor: "pointer",
+                WebkitFontSmoothing: "antialiased",
+                outline: "rgb(17, 14, 8) none 0px",
+                userSelect: "none",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily:
+                    "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+                  fontSize: "20.5px",
+                  fontWeight: 400,
+                  letterSpacing: "-0.25px",
+                  lineHeight: "24px",
+                  margin: 0,
+                  fontStyle: "normal",
+                  WebkitFontSmoothing: "antialiased",
+                }}
+              >
+                {mode === "contribution" ? "Contribute" : "Preview demo cube"}
+              </span>
+            </button>
+          </div>
+        )
+      )}
+
       <style jsx>{`
-        .demoCardWrapper {
-          transform: translateX(-50%) scale(0.94);
-          transform-origin: 50% 0;
-        }
-        @media (max-height: 900px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.88);
-          }
-        }
-        @media (max-height: 800px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.78);
-          }
-        }
-        @media (max-height: 700px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.68);
-          }
-        }
-        @media (max-width: 1400px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.88);
-          }
-        }
-        @media (max-width: 1200px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.76);
-          }
-        }
-        @media (max-width: 1024px) {
-          .demoCardWrapper {
-            transform: translateX(-50%) scale(0.65);
-          }
-        }
-
-        @media (max-width: 1200px), (max-height: 800px) {
-          .demoCardAmount {
-            font-size: clamp(26px, 3.8vw, 48px) !important;
-          }
-          .demoCardSubtext {
-            font-size: 17px !important;
-            line-height: 26px !important;
-          }
-          .demoCardHeading {
-            font-size: clamp(26px, 3.8vw, 38px) !important;
-          }
-          .demoCardParticipantText {
-            font-size: 17px !important;
-          }
-          .demoCardNotice {
-            font-size: 15px !important;
-            line-height: 22px !important;
-          }
-          .demoCardProgressLabel {
-            font-size: 15px !important;
-          }
-          .demoCardEndSummaryLabel {
-            font-size: 15px !important;
-          }
-          .demoCardEndSummaryAmount {
-            font-size: 102px !important;
-          }
-          .demoCardEndSummarySub {
-            font-size: 24px !important;
-            line-height: 34px !important;
-          }
-          .demoCardEndSummaryTitle {
-            font-size: 42px !important;
-            line-height: 48px !important;
-          }
-          .demoCardEndSummaryCaption {
-            font-size: 17px !important;
-            line-height: 26px !important;
-          }
-        }
-        @media (max-width: 1024px), (max-height: 700px) {
-          .demoCardAmount {
-            font-size: clamp(28px, 4vw, 48px) !important;
-          }
-          .demoCardSubtext {
-            font-size: 18px !important;
-            line-height: 27px !important;
-          }
-          .demoCardHeading {
-            font-size: clamp(28px, 4vw, 38px) !important;
-          }
-          .demoCardParticipantText {
-            font-size: 18px !important;
-          }
-          .demoCardNotice {
-            font-size: 16px !important;
-            line-height: 23px !important;
-          }
-          .demoCardProgressLabel {
-            font-size: 16px !important;
-          }
-          .demoCardEndSummaryLabel {
-            font-size: 16px !important;
-          }
-          .demoCardEndSummaryAmount {
-            font-size: 108px !important;
-          }
-          .demoCardEndSummarySub {
-            font-size: 26px !important;
-            line-height: 36px !important;
-          }
-          .demoCardEndSummaryTitle {
-            font-size: 44px !important;
-            line-height: 50px !important;
-          }
-          .demoCardEndSummaryCaption {
-            font-size: 18px !important;
-            line-height: 27px !important;
-          }
-        }
-
         .countUp {
           display: inline-block;
           animation: pop 450ms ease-out;
           will-change: transform, opacity;
         }
+
         .pendingIn,
         .pendingOut,
         .contribIn,
@@ -785,12 +872,14 @@ export default function DemoCard({
           display: inline-block;
           will-change: transform, opacity, filter;
         }
+
         .pendingIn {
           opacity: 1;
           transform: translateY(0);
           filter: blur(0);
           transition: opacity 350ms ease, transform 350ms ease, filter 350ms ease;
         }
+
         .pendingOut {
           opacity: 0;
           transform: translateY(-6px);
@@ -799,6 +888,7 @@ export default function DemoCard({
           position: absolute;
           pointer-events: none;
         }
+
         .contribOut {
           opacity: 0;
           transform: translateY(6px);
@@ -807,12 +897,14 @@ export default function DemoCard({
           position: absolute;
           pointer-events: none;
         }
+
         .contribIn {
           opacity: 1;
           transform: translateY(0);
           filter: blur(0);
           transition: opacity 450ms ease, transform 450ms ease, filter 450ms ease;
         }
+
         @keyframes pop {
           0% {
             opacity: 0.7;
@@ -823,10 +915,12 @@ export default function DemoCard({
             transform: translateY(0) scale(1);
           }
         }
+
         .winnerRow {
           background-size: 220% 220%;
           animation: winnerShimmer 2200ms ease-in-out infinite;
         }
+
         @keyframes winnerShimmer {
           0% {
             background-position: 0% 40%;
@@ -838,10 +932,12 @@ export default function DemoCard({
             background-position: 0% 40%;
           }
         }
+
         .winnerNotice {
           animation: winnerNoticeIn 520ms ease-out both;
           will-change: transform, opacity, filter;
         }
+
         @keyframes winnerNoticeIn {
           from {
             opacity: 0;
@@ -854,10 +950,12 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
+
         .endSummary {
           animation: endSummaryIn 620ms ease-out both;
           will-change: transform, opacity, filter;
         }
+
         @keyframes endSummaryIn {
           from {
             opacity: 0;
@@ -870,10 +968,12 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
+
         .shuffleRow {
           will-change: transform, filter;
           animation: shuffleJitter 260ms ease-in-out infinite;
         }
+
         @keyframes shuffleJitter {
           0% {
             filter: blur(0px);
@@ -892,15 +992,18 @@ export default function DemoCard({
             opacity: 1;
           }
         }
+
         .turnNotice {
           will-change: transform, opacity, filter;
           animation: turnIn 520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
         }
+
         .turnNoticeStrong {
           color: rgba(255, 255, 255, 0.96);
           text-shadow: 0 0 0 rgba(193, 255, 53, 0);
           animation: turnGlow 1400ms ease-in-out infinite;
         }
+
         .turnNoticeRest {
           display: inline-block;
           opacity: 0;
@@ -908,6 +1011,7 @@ export default function DemoCard({
           filter: blur(2px);
           animation: turnRestIn 520ms ease-out 180ms forwards;
         }
+
         @keyframes turnIn {
           0% {
             opacity: 0;
@@ -920,6 +1024,7 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
+
         @keyframes turnRestIn {
           to {
             opacity: 1;
@@ -927,6 +1032,7 @@ export default function DemoCard({
             filter: blur(0);
           }
         }
+
         @keyframes turnGlow {
           0%,
           100% {
@@ -938,6 +1044,7 @@ export default function DemoCard({
             transform: translateY(-0.5px);
           }
         }
+
         @media (prefers-reduced-motion: reduce) {
           .turnNotice,
           .turnNoticeStrong,

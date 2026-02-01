@@ -29,25 +29,31 @@ const protectionFeatures = [
   },
 ];
 
-export default function PreviewProtection() {
+/**
+ * Frame 3: How Cube protects every member — title, 4 cards, See how it works button.
+ */
+export default function PreviewFrame3() {
   return (
     <section
       style={{
         position: "relative",
         width: "100%",
         minHeight: "clamp(420px, 80vh, 900px)",
+        flexShrink: 0,
         overflow: "hidden",
+        marginTop: "clamp(80px, 15vh, 180px)",
         borderTop: "1px solid rgb(128, 128, 128)",
         backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: "clamp(40px, 6vh, 80px)",
+        paddingTop: "clamp(80px, 12vh, 140px)",
         paddingBottom: "clamp(40px, 6vh, 80px)",
+        zIndex: 2,
+        isolation: "isolate",
       }}
     >
-      {/* Caption text (moved from Demoframe.tsx, black text for white background) */}
       <div
         style={{
           width: "min(560px, calc(100vw - 32px))",
@@ -69,7 +75,7 @@ export default function PreviewProtection() {
             WebkitFontSmoothing: "antialiased",
           }}
         >
-          {"How Cube protects every member"}
+          How Cube protects every member
         </div>
 
         <span
@@ -85,17 +91,19 @@ export default function PreviewProtection() {
             WebkitFontSmoothing: "antialiased",
           }}
         >
-          Cube is designed with safeguards that keep groups fair, predictable, and transparent at every step.
+          Cube is designed with safeguards that keep groups fair, predictable,
+          and transparent at every step.
         </span>
       </div>
 
-      {/* 4 Glowing Star Cards - 1x4 grid */}
       <div
         className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 px-4 w-full max-w-6xl"
       >
         {protectionFeatures.map((feature, index) => (
           <GlowingStarsBackgroundCard key={index} className="max-w-none">
-            <GlowingStarsTitle className="text-base">{feature.title}</GlowingStarsTitle>
+            <GlowingStarsTitle className="text-base">
+              {feature.title}
+            </GlowingStarsTitle>
             <div className="mt-2">
               <GlowingStarsDescription className="text-xs max-w-none">
                 {feature.description}
@@ -105,7 +113,6 @@ export default function PreviewProtection() {
         ))}
       </div>
 
-      {/* Black button */}
       <div
         style={{
           display: "flex",
@@ -114,12 +121,7 @@ export default function PreviewProtection() {
           marginTop: "clamp(32px, 6vh, 60px)",
         }}
       >
-        <a
-          href="/how-it-works"
-          style={{
-            textDecoration: "none",
-          }}
-        >
+        <a href="/how-it-works" style={{ textDecoration: "none" }}>
           <button
             type="button"
             style={{
