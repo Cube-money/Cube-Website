@@ -6,7 +6,7 @@ import Disclosures from "@/pages/Disclosures/view/Disclosures";
 
 export default function DisclosuresPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <Header />
       <Disclosures />
       <Footer />

@@ -3,7 +3,7 @@ export default function Terms() {
     <div className="pt-48 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <p className="text-2xl text-black mb-8 uppercase font-bold text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-          CUBE TECHNOLOGIES, INC.
+          CUBE MONEY
         </p>
         <h1 className="text-8xl font-sans font-bold text-black mb-4 uppercase text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
           Terms of Service
@@ -21,15 +21,15 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">What Cube Is (and Is Not)</h2>
+            <h2 className="text-2xl font-bold mb-4">What Cube Money Is (and Is Not)</h2>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              Cube provides software tools that help groups operate savings circles by tracking contributions and coordinating transparent payout schedules.
+              Cube Money provides software tools that help groups operate savings circles by tracking contributions and coordinating transparent payout schedules.
             </p>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              Cube is not a bank, is not a lender, and does not provide interest, credit, financial, or investment advice.
+              Cube Money is not a bank, is not a lender, and does not provide interest, credit, financial, or investment advice.
             </p>
             <p className="text-base leading-relaxed text-gray-800">
-              Payouts are handled through user-to-user transfers. When a cycle winner is selected, other members receive reminders to send their contributions directly to the winner using their own Zelle or Venmo accounts. Cube does not hold, process, or transmit funds and is limited to coordinating timing, reminders, and confirmation of payments.
+              Payouts are handled through user-to-user transfers. When a cycle winner is selected, other members receive reminders to send their contributions directly to the winner using their own Zelle or Venmo accounts. Cube Money does not hold, process, or transmit funds and is limited to coordinating timing, reminders, and confirmation of payments.
             </p>
           </section>
 
@@ -48,7 +48,7 @@ export default function Terms() {
               <li>All activity that occurs under your account</li>
             </ul>
             <p className="text-base leading-relaxed text-gray-800 mt-4">
-              You agree to notify Cube immediately if you suspect unauthorized access or use of your account.
+              You agree to notify Cube Money immediately if you suspect unauthorized access or use of your account.
             </p>
           </section>
 
@@ -90,20 +90,20 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Payments, Payouts, and Transfer Limitations</h2>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              Cube does not process, hold, or transmit funds. Payouts occur directly between users through third-party services such as Zelle or Venmo, in accordance with the cycle rules you accept.
+              Cube Money does not process, hold, or transmit funds. Payouts occur directly between users through third-party services such as Zelle or Venmo, in accordance with the cycle rules you accept.
             </p>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              Cube is not responsible for failed, delayed, reversed, or disputed transfers, including issues caused by third-party payment platforms, financial institutions, insufficient funds, or incorrect recipient information.
+              Cube Money is not responsible for failed, delayed, reversed, or disputed transfers, including issues caused by third-party payment platforms, financial institutions, insufficient funds, or incorrect recipient information.
             </p>
             <p className="text-base leading-relaxed text-gray-800">
-              Cube may send reminders, track confirmations, and limit or restrict app features to reduce fraud or enforce circle rules, but Cube does not control or guarantee payment completion.
+              Cube Money may send reminders, track confirmations, and limit or restrict app features to reduce fraud or enforce circle rules, but Cube Money does not control or guarantee payment completion.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Fees and Future Pricing</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              Cube may offer free access during beta or early access periods. If fees are introduced in the future, advance notice will be provided through the app or by email. All fees will be disclosed before you are charged.
+              Cube Money may offer free access during beta or early access periods. If fees are introduced in the future, advance notice will be provided through the app or by email. All fees will be disclosed before you are charged.
             </p>
           </section>
 
@@ -122,7 +122,7 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Compliance, Verification, and Enforcement</h2>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              Cube may request identity verification or additional information. We may suspend or terminate accounts, remove circles, or restrict access if we believe that:
+              Cube Money may request identity verification or additional information. We may suspend or terminate accounts, remove circles, or restrict access if we believe that:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-800">
               <li>Activity is suspicious or fraudulent</li>
@@ -134,14 +134,14 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">User Content</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              You may submit text, updates, and other content through the Services. You retain ownership of your content, but grant Cube a license to host, display, and use it solely to operate and provide the Services. You are responsible for ensuring you have the right to share any content you submit.
+              You may submit text, updates, and other content through the Services. You retain ownership of your content, but grant Cube Money a license to host, display, and use it solely to operate and provide the Services. You are responsible for ensuring you have the right to share any content you submit.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Third-Party Services</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              The Services rely on third-party platforms, including Zelle, Venmo, and analytics providers, which operate under their own terms and policies. Cube does not control and is not responsible for third-party outages, payment issues, service interruptions, or failures.
+              The Services rely on third-party platforms, including Zelle, Venmo, and analytics providers, which operate under their own terms and policies. Cube Money does not control and is not responsible for third-party outages, payment issues, service interruptions, or failures.
             </p>
           </section>
 
@@ -151,17 +151,17 @@ export default function Terms() {
               THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE."
             </p>
             <p className="text-base leading-relaxed text-gray-800 mb-3">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, CUBE DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, CUBE MONEY DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
             </p>
             <p className="text-base leading-relaxed text-gray-800">
-              CUBE DOES NOT GUARANTEE THAT A SAVINGS CIRCLE WILL SUCCESSFULLY COMPLETE, THAT MEMBERS WILL MAKE PAYMENTS, OR THAT PAYOUTS WILL OCCUR ON A SPECIFIC DATE.
+              CUBE MONEY DOES NOT GUARANTEE THAT A SAVINGS CIRCLE WILL SUCCESSFULLY COMPLETE, THAT MEMBERS WILL MAKE PAYMENTS, OR THAT PAYOUTS WILL OCCUR ON A SPECIFIC DATE.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Limitation of Liability</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, CUBE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO YOUR USE OF THE SERVICES.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, CUBE MONEY WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO YOUR USE OF THE SERVICES.
             </p>
           </section>
 
@@ -172,7 +172,7 @@ export default function Terms() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">A. Informal Resolution</h3>
                 <p className="text-gray-800">
-                  Before initiating a claim related to the Services, you agree to contact support@cubemoney.io with a description of the issue and the requested resolution. Cube will attempt to resolve disputes informally.
+                  Before initiating a claim related to the Services, you agree to contact support@cubemoney.io with a description of the issue and the requested resolution. Cube Money will attempt to resolve disputes informally.
                 </p>
               </div>
 
@@ -186,7 +186,7 @@ export default function Terms() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">C. No Class Actions</h3>
                 <p className="text-gray-800">
-                  You agree to bring claims against Cube only on an individual basis and not as part of any class, collective, or representative action.
+                  You agree to bring claims against Cube Money only on an individual basis and not as part of any class, collective, or representative action.
                 </p>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function Terms() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Changes to These Terms</h2>
             <p className="text-base leading-relaxed text-gray-800">
-              Cube may update these Terms from time to time. If changes are material, notice will be provided. Continued use of the Services after the effective date constitutes acceptance of the updated Terms.
+              Cube Money may update these Terms from time to time. If changes are material, notice will be provided. Continued use of the Services after the effective date constitutes acceptance of the updated Terms.
             </p>
           </section>
         </div>

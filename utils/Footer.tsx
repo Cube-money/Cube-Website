@@ -477,7 +477,7 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            © 2026 Cube Money. All rights reserved.
+            © 2026 Cube. All rights reserved.
           </p>
         </div>
 
@@ -492,7 +492,7 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            CUBE® is operated by Cube Money, a company registered in the United States under the laws of the State of Delaware. The company conducts its operations in accordance with applicable federal and state regulations. Cube is not a bank. Banking services are provided by our partner banks, Members FDIC. Cube adheres to industry best practices for security, transparency, and responsible financial technology. Investment products are not FDIC insured, have no bank guarantee, and may lose value. By using our services, you agree to our Terms of Service and Privacy Policy.
+            CUBE® is operated by Cube Money, a company registered in the United States under the laws of the State of Delaware. The company conducts its operations in accordance with applicable federal and state regulations. Cube Money is not a bank. Banking services are provided by our partner banks, Members FDIC. Cube Money adheres to industry best practices for security, transparency, and responsible financial technology. Investment products are not FDIC insured, have no bank guarantee, and may lose value. By using our services, you agree to our Terms of Service and Privacy Policy.
           </p>
         </div>
       </div>
