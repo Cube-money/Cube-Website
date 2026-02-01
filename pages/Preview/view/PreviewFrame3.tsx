@@ -1,10 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   GlowingStarsBackgroundCard,
   GlowingStarsDescription,
   GlowingStarsTitle,
 } from "@/components/ui/glowing-stars";
+
+const MOBILE_BREAKPOINT = 768;
 
 const protectionFeatures = [
   {
@@ -33,32 +36,45 @@ const protectionFeatures = [
  * Frame 3: How Cube protects every member — title, 4 cards, See how it works button.
  */
 export default function PreviewFrame3() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () =>
+      setIsMobile(typeof window !== "undefined" && window.innerWidth < MOBILE_BREAKPOINT);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <section
       style={{
         position: "relative",
         width: "100%",
-        minHeight: "clamp(420px, 80vh, 900px)",
+        minHeight: isMobile ? "auto" : "clamp(420px, 80vh, 900px)",
         flexShrink: 0,
         overflow: "hidden",
-        marginTop: "clamp(80px, 15vh, 180px)",
+        marginTop: isMobile ? "clamp(32px, 6vh, 48px)" : "clamp(80px, 15vh, 180px)",
         borderTop: "1px solid rgb(128, 128, 128)",
         backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: "clamp(80px, 12vh, 140px)",
-        paddingBottom: "clamp(40px, 6vh, 80px)",
+        paddingTop: isMobile ? "clamp(32px, 6vh, 48px)" : "clamp(80px, 12vh, 140px)",
+        paddingBottom: isMobile ? "clamp(24px, 4vh, 40px)" : "clamp(40px, 6vh, 80px)",
+        paddingLeft: isMobile ? "20px" : undefined,
+        paddingRight: isMobile ? "20px" : undefined,
         zIndex: 2,
         isolation: "isolate",
       }}
     >
       <div
         style={{
-          width: "min(560px, calc(100vw - 32px))",
+          width: "min(560px, calc(100vw - 40px))",
+          maxWidth: "100%",
           textAlign: "center",
-          padding: "0 clamp(16px, 3vw, 0)",
+          padding: isMobile ? "0 8px" : "0 clamp(16px, 3vw, 0)",
         }}
       >
         <div
@@ -68,7 +84,7 @@ export default function PreviewFrame3() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(0, 0, 0)",
-            fontSize: "clamp(18px, 3.2vw, 34px)",
+            fontSize: isMobile ? "clamp(22px, 5.5vw, 28px)" : "clamp(18px, 3.2vw, 34px)",
             letterSpacing: "-0.02em",
             lineHeight: "115%",
             whiteSpace: "pre-line",
@@ -81,12 +97,12 @@ export default function PreviewFrame3() {
         <span
           style={{
             display: "block",
-            marginTop: "clamp(10px, 1.8vh, 14px)",
+            marginTop: isMobile ? "10px" : "clamp(10px, 1.8vh, 14px)",
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(12px, 2.1vw, 16px)",
+            fontSize: isMobile ? "14px" : "clamp(12px, 2.1vw, 16px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(18px, 2.6vw, 24px)",
+            lineHeight: isMobile ? "22px" : "clamp(18px, 2.6vw, 24px)",
             color: "rgb(0, 0, 0)",
             WebkitFontSmoothing: "antialiased",
           }}
@@ -97,15 +113,20 @@ export default function PreviewFrame3() {
       </div>
 
       <div
-        className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 px-4 w-full max-w-6xl"
+        className={isMobile ? "grid grid-cols-1 gap-3 mt-8 w-full max-w-md" : "grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 px-4 w-full max-w-6xl"}
       >
         {protectionFeatures.map((feature, index) => (
-          <GlowingStarsBackgroundCard key={index} className="max-w-none">
-            <GlowingStarsTitle className="text-base">
+          <GlowingStarsBackgroundCard
+            key={index}
+            className={isMobile ? "max-w-none p-3" : "max-w-none"}
+          >
+            <GlowingStarsTitle className={isMobile ? "text-sm" : "text-base"}>
               {feature.title}
             </GlowingStarsTitle>
-            <div className="mt-2">
-              <GlowingStarsDescription className="text-xs max-w-none">
+            <div className={isMobile ? "mt-1.5" : "mt-2"}>
+              <GlowingStarsDescription
+                className={isMobile ? "text-xs max-w-none leading-snug" : "text-xs max-w-none"}
+              >
                 {feature.description}
               </GlowingStarsDescription>
             </div>
@@ -118,7 +139,9 @@ export default function PreviewFrame3() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          marginTop: "clamp(32px, 6vh, 60px)",
+          marginTop: isMobile ? "clamp(20px, 4vh, 32px)" : "clamp(32px, 6vh, 60px)",
+          paddingLeft: isMobile ? "16px" : 0,
+          paddingRight: isMobile ? "16px" : 0,
         }}
       >
         <a href="/how-it-works" style={{ textDecoration: "none" }}>
@@ -131,10 +154,10 @@ export default function PreviewFrame3() {
               borderRadius: "36px",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "44px",
+              height: isMobile ? "40px" : "44px",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px 32px",
+              padding: isMobile ? "0px 24px" : "0px 32px",
               position: "relative",
               textAlign: "center",
               whiteSpace: "nowrap",
@@ -150,7 +173,7 @@ export default function PreviewFrame3() {
               style={{
                 fontFamily:
                   "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "16px",
+                fontSize: isMobile ? "14px" : "16px",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",

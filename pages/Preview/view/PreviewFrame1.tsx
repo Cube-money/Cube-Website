@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const MOBILE_BREAKPOINT = 768;
-const MOBILE_FLOWER_SCALE = 0.55;
+const MOBILE_FLOWER_SCALE = 0.48;
 
 /**
  * Frame 1: Hero section — lilies, "This is what cube coordination looks like",
@@ -127,7 +127,7 @@ export default function PreviewFrame1() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
-              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-10%)` : `scale(${flowerScale})`,
+              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-38%)` : `scale(${flowerScale})`,
               transformOrigin: "left center",
             }}
           >
@@ -160,7 +160,7 @@ export default function PreviewFrame1() {
           <div
             style={{
               position: "absolute",
-              top: flowerScale < 1 ? "62%" : "44%",
+              top: "46%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               zIndex: 3,
@@ -174,7 +174,7 @@ export default function PreviewFrame1() {
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(255, 255, 255)",
-                fontSize: flowerScale < 1 ? "clamp(20px, 3.5vw, 40px)" : "clamp(28px, 4.5vw, 56px)",
+                fontSize: "clamp(24px, 4vw, 48px)",
                 letterSpacing: "-0.02em",
                 lineHeight: "100%",
                 textAlign: "center",
@@ -194,10 +194,10 @@ export default function PreviewFrame1() {
             <span
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: flowerScale < 1 ? "15px" : "18px",
+                fontSize: "14px",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: flowerScale < 1 ? "22px" : "26px",
+                lineHeight: "22px",
                 margin: "0 auto",
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
@@ -219,10 +219,10 @@ export default function PreviewFrame1() {
             style={{
               position: "absolute",
               left: "50%",
-              top: flowerScale < 1 ? "72%" : "66%",
+              top: "60%",
               transform: "translateX(-50%)",
               width: "1px",
-              height: "38vh",
+              height: flowerScale < 1 ? "32vh" : "45vh",
               zIndex: 3,
               background: "linear-gradient(to bottom, #ffffff, #000000)",
               maskImage:
@@ -241,7 +241,7 @@ export default function PreviewFrame1() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
-              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-10%)` : `scale(${flowerScale})`,
+              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-38%)` : `scale(${flowerScale})`,
               transformOrigin: "right center",
             }}
           >

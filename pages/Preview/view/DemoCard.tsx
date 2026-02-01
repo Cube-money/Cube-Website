@@ -76,7 +76,7 @@ export function DemoCard({
       <div
         style={{
           position: "absolute",
-          top: "18%",
+          top: isMobile ? "11%" : "18%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           zIndex: 3,
@@ -132,24 +132,24 @@ export function DemoCard({
       <div
         style={{
           position: "absolute",
-          top: "30%",
+          top: isMobile ? "28%" : "30%",
           left: "50%",
           transform: "translateX(-50%)",
           maxWidth: "1000px",
-          width: "75%",
+          width: isMobile ? "92%" : "75%",
           padding: "1px",
           background:
             "linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 0%, rgba(144, 144, 144, 0.6) 50%, rgba(255, 255, 255, 0.6) 100%)",
-          borderRadius: "22px",
+          borderRadius: isMobile ? "16px" : "22px",
           zIndex: 3,
           overflow: "hidden",
         }}
       >
         <div
           style={{
-            padding: "300px 120px 390px 120px",
+            padding: isMobile ? "280px 20px 320px 20px" : "300px 120px 390px 120px",
             background: "linear-gradient(to bottom, #181818, #000000)",
-            borderRadius: "22px",
+            borderRadius: isMobile ? "15px" : "22px",
             position: "relative",
             overflow: "hidden",
           }}
@@ -160,13 +160,13 @@ export function DemoCard({
                 style={{
                   position: "absolute",
                   top: "40px",
-                  left: "60px",
+                  left: isMobile ? "20px" : "60px",
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                   fontStyle: "normal",
                   fontWeight: 400,
                   color: "rgb(255, 255, 255)",
-                  fontSize: "clamp(28.5px, 3.5vw, 52.5px)",
+                  fontSize: isMobile ? "clamp(22px, 5vw, 36px)" : "clamp(28.5px, 3.5vw, 52.5px)",
                   letterSpacing: "-0.02em",
                   lineHeight: "100%",
                 }}
@@ -180,12 +180,13 @@ export function DemoCard({
                 style={{
                   position: "absolute",
                   top: "90px",
-                  left: "60px",
+                  left: isMobile ? "20px" : "60px",
+                  right: isMobile ? "20px" : undefined,
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "20.5px",
+                  fontSize: isMobile ? "14px" : "20.5px",
                   fontWeight: 400,
                   letterSpacing: "-0.25px",
-                  lineHeight: "24px",
+                  lineHeight: "20px",
                   color: "rgb(200, 200, 200)",
                 }}
               >
@@ -195,15 +196,15 @@ export function DemoCard({
               <div
                 style={{
                   position: "absolute",
-                  top: "90px",
-                  right: "60px",
+                  top: isMobile ? "118px" : "90px",
+                  ...(isMobile ? { left: "20px" } : { right: "60px" }),
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "20.5px",
+                  fontSize: isMobile ? "14px" : "20.5px",
                   fontWeight: 400,
                   letterSpacing: "-0.25px",
-                  lineHeight: "24px",
+                  lineHeight: "20px",
                   color: "rgb(200, 200, 200)",
-                  textAlign: "right",
+                  textAlign: isMobile ? "left" : "right",
                 }}
               >
                 Cycle {cycle} out of {totalCycles}
@@ -212,14 +213,14 @@ export function DemoCard({
               <div
                 style={{
                   position: "absolute",
-                  top: "150px",
-                  left: "60px",
+                  top: isMobile ? "155px" : "150px",
+                  left: isMobile ? "20px" : "60px",
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                   fontStyle: "normal",
                   fontWeight: 400,
                   color: "rgb(255, 255, 255)",
-                  fontSize: "clamp(28.5px, 3.5vw, 40.5px)",
+                  fontSize: isMobile ? "clamp(20px, 4vw, 28px)" : "clamp(28.5px, 3.5vw, 40.5px)",
                   letterSpacing: "-0.02em",
                   lineHeight: "100%",
                   marginBottom: "20px",
@@ -231,12 +232,12 @@ export function DemoCard({
               <div
                 style={{
                   position: "absolute",
-                  top: "200px",
-                  left: "60px",
-                  right: "60px",
+                  top: isMobile ? "200px" : "200px",
+                  left: isMobile ? "20px" : "60px",
+                  right: isMobile ? "20px" : "60px",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "12px",
+                  gap: isMobile ? "8px" : "12px",
                   opacity: isShuffling ? 0.5 : 1,
                   transition: "opacity 260ms ease",
                   overflow: "hidden",
@@ -257,7 +258,7 @@ export function DemoCard({
                       background:
                         "linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 0%, rgba(144, 144, 144, 0.6) 50%, rgba(255, 255, 255, 0.6) 100%)",
                       borderRadius: "8px",
-                      height: "55px",
+                      height: isMobile ? "48px" : "55px",
                       opacity: isWon && !isGold ? 0.55 : 1,
                     };
 
@@ -296,7 +297,7 @@ export function DemoCard({
                             borderRadius: "7px",
                             display: "flex",
                             alignItems: "center",
-                            padding: "0 16px",
+                            padding: isMobile ? "0 10px" : "0 16px",
                             transition:
                               "background 650ms ease, box-shadow 650ms ease, color 650ms ease",
                             boxShadow: isWinner
@@ -307,8 +308,8 @@ export function DemoCard({
                         >
                           <div
                             style={{
-                              width: "40px",
-                              height: "40px",
+                              width: isMobile ? "32px" : "40px",
+                              height: isMobile ? "32px" : "40px",
                               borderRadius: "50%",
                               backgroundColor: isWinner
                                 ? "rgba(0, 0, 0, 0.12)"
@@ -316,10 +317,11 @@ export function DemoCard({
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
-                              marginRight: "12px",
+                              marginRight: isMobile ? "8px" : "12px",
                               color: isWinner ? "rgb(17, 14, 8)" : "white",
-                              fontSize: "20.5px",
+                              fontSize: isMobile ? "15px" : "20.5px",
                               fontWeight: 500,
+                              flexShrink: 0,
                             }}
                           >
                             {isCovered && !isWon ? "" : participant.initial}
@@ -339,8 +341,12 @@ export function DemoCard({
                               style={{
                                 flex: 1,
                                 fontFamily: "Inter, sans-serif",
-                                fontSize: "20.5px",
+                                fontSize: isMobile ? "15px" : "20.5px",
                                 color: nameColor,
+                                minWidth: 0,
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
                               }}
                             >
                               {participant.name}
@@ -350,12 +356,13 @@ export function DemoCard({
                           <div
                             style={{
                               fontFamily: "Inter, sans-serif",
-                              fontSize: "20.5px",
+                              fontSize: isMobile ? "13px" : "20.5px",
                               color: rightColor,
                               position:
                                 participant.type === "you" ? "relative" : "static",
-                              minWidth: "170px",
+                              minWidth: isMobile ? "88px" : "170px",
                               textAlign: "right",
+                              flexShrink: 0,
                             }}
                           >
                             {isCovered && !isWon ? (
@@ -496,9 +503,9 @@ export function DemoCard({
                     <div
                       style={{
                         display: "grid",
-                        gridTemplateColumns: "140px 1fr 120px",
+                        gridTemplateColumns: isMobile ? "90px 1fr 70px" : "140px 1fr 120px",
                         alignItems: "center",
-                        gap: "12px",
+                        gap: isMobile ? "8px" : "12px",
                         marginBottom: "10px",
                       }}
                     >
@@ -544,15 +551,15 @@ export function DemoCard({
                     <div
                       style={{
                         display: "grid",
-                        gridTemplateColumns: "140px 1fr 120px",
+                        gridTemplateColumns: isMobile ? "90px 1fr 70px" : "140px 1fr 120px",
                         alignItems: "center",
-                        gap: "12px",
+                        gap: isMobile ? "8px" : "12px",
                       }}
                     >
                       <div
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "18.5px",
+                          fontSize: isMobile ? "14px" : "18.5px",
                           color: "rgb(255, 255, 255)",
                         }}
                       >
@@ -582,7 +589,7 @@ export function DemoCard({
                       <div
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "18.5px",
+                          fontSize: isMobile ? "14px" : "18.5px",
                           color: "rgba(255,255,255,0.75)",
                           textAlign: "right",
                         }}
@@ -601,9 +608,9 @@ export function DemoCard({
               className="endSummary"
               style={{
                 position: "absolute",
-                top: "120px",
-                left: "60px",
-                right: "60px",
+                top: isMobile ? "80px" : "120px",
+                left: isMobile ? "20px" : "60px",
+                right: isMobile ? "20px" : "60px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -613,7 +620,7 @@ export function DemoCard({
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "18.5px",
+                  fontSize: isMobile ? "14px" : "18.5px",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "rgba(255,255,255,0.55)",
@@ -627,7 +634,7 @@ export function DemoCard({
                 style={{
                   fontFamily:
                     "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                  fontSize: "100.5px",
+                  fontSize: isMobile ? "56px" : "100.5px",
                   lineHeight: "1",
                   fontWeight: 500,
                   color: "rgb(204, 255, 0)",
@@ -640,8 +647,8 @@ export function DemoCard({
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "26.5px",
-                  lineHeight: "32px",
+                  fontSize: isMobile ? "18px" : "26.5px",
+                  lineHeight: isMobile ? "24px" : "32px",
                   color: "rgba(255,255,255,0.9)",
                   marginTop: "10px",
                 }}
@@ -663,8 +670,8 @@ export function DemoCard({
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "44.5px",
-                  lineHeight: "46px",
+                  fontSize: isMobile ? "28px" : "44.5px",
+                  lineHeight: isMobile ? "32px" : "46px",
                   color: "rgba(255,255,255,0.9)",
                 }}
               >
@@ -675,8 +682,8 @@ export function DemoCard({
                 style={{
                   fontFamily:
                     'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "44.5px",
-                  lineHeight: "46px",
+                  fontSize: isMobile ? "28px" : "44.5px",
+                  lineHeight: isMobile ? "32px" : "46px",
                   fontWeight: 700,
                   color: "rgb(255,255,255)",
                   marginTop: "8px",
@@ -688,7 +695,7 @@ export function DemoCard({
               <div
                 style={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "20.5px",
+                  fontSize: isMobile ? "14px" : "20.5px",
                   lineHeight: "24px",
                   color: "rgba(255,255,255,0.45)",
                   marginTop: "22px",
