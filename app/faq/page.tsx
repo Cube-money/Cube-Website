@@ -2,13 +2,13 @@
 
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
-import FAQ from "@/pages/FAQ/view/FAQ";
+import FAQMain from "@/pages/FAQ/view/FAQMain";
 
 export default function FAQPage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <FAQ />
+      <FAQMain />
       <Footer />
     </main>
   );
