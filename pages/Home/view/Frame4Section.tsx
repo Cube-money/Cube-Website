@@ -2,71 +2,83 @@ export default function Frame4Section() {
   return (
     <>
       <style jsx>{`
-        .frame4-text-container {
-          left: 50%;
-          transform: translate(-50%, -50%);
-          align-items: center;
-          text-align: center;
+        .frame4-section {
+          height: 100vh;
         }
-        @media (min-width: 900px) {
-          .frame4-text-container {
-            left: 5%;
-            transform: translateY(-50%);
-            align-items: flex-start;
-            text-align: left;
-          }
-        }
-        .frame4-heading {
-          text-align: center;
-        }
-        @media (min-width: 900px) {
-          .frame4-heading {
-            text-align: left;
-          }
-        }
-        .frame4-heading br {
-          display: none;
-        }
-        @media (min-width: 900px) {
-          .frame4-heading br {
-            display: block;
-          }
-        }
-        .frame4-subtext {
-          text-align: center;
-        }
-        @media (min-width: 900px) {
-          .frame4-subtext {
-            text-align: left;
-          }
-        }
-        .frame4-button {
-          align-self: center;
-        }
-        @media (min-width: 900px) {
-          .frame4-button {
-            align-self: flex-start;
+        @media (max-width: 480px) {
+          .frame4-section {
+            height: auto;
+            min-height: 100dvh;
           }
         }
         .frame4-phone-desktop {
-          display: none;
+          display: block;
         }
-        @media (min-width: 900px) {
+        @media (max-width: 480px) {
           .frame4-phone-desktop {
-            display: block;
+            display: none;
+          }
+        }
+        .frame4-text-container {
+          top: 50%;
+          left: 5%;
+          transform: translateY(-50%);
+          max-width: 50%;
+          align-items: flex-start;
+          text-align: left;
+        }
+        @media (max-width: 480px) {
+          .frame4-text-container {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            width: 90%;
+            align-items: center;
+            text-align: center;
+          }
+        }
+        .frame4-heading {
+          font-size: 88px;
+          text-align: left;
+        }
+        @media (max-width: 480px) {
+          .frame4-heading {
+            font-size: 36px;
+            text-align: center;
+          }
+        }
+        .frame4-subtext {
+          font-size: 22px;
+          line-height: 30px;
+          text-align: left;
+        }
+        @media (max-width: 480px) {
+          .frame4-subtext {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+        .frame4-btn {
+          align-self: flex-start;
+        }
+        @media (max-width: 480px) {
+          .frame4-btn {
+            align-self: center;
           }
         }
         .frame4-phone-mobile {
-          display: block;
+          display: none;
         }
-        @media (min-width: 900px) {
+        @media (max-width: 480px) {
           .frame4-phone-mobile {
-            display: none;
+            display: block;
           }
         }
       `}</style>
     <section
-      className="relative w-full min-h-screen min-h-[480px] overflow-hidden border-t border-gray-500 md:h-screen"
+      className="frame4-section relative w-full overflow-hidden border-t border-gray-500"
       style={{
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
@@ -99,7 +111,7 @@ export default function Frame4Section() {
         }}
       />
       
-      {/* Phone overlay - right aligned on desktop only */}
+      {/* Phone overlay - right aligned, hidden on mobile */}
       <img
         src="/Home/Frame4/phoneframe4.png"
         alt="Phone"
@@ -122,13 +134,9 @@ export default function Frame4Section() {
         className="frame4-text-container"
         style={{
           position: "absolute",
-          top: "50%",
           zIndex: 3,
           display: "flex",
           flexDirection: "column",
-          width: "calc(100% - 32px)",
-          maxWidth: "clamp(90%, 45vw, 50%)",
-          padding: "0 clamp(16px, 3vw, 0)",
         }}
       >
         {/* Main Heading */}
@@ -139,20 +147,19 @@ export default function Frame4Section() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(40px, 7vw, 88px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             whiteSpace: "normal",
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
             wordBreak: "break-word",
             overflowWrap: "break-word",
             width: "100%",
           }}
         >
-          Ditch the lenders and<span className="hidden md:inline"><br /></span> reclaim your freedom.
+          Ditch the lenders and<br /> reclaim your freedom.
         </div>
         
         {/* Subtext */}
@@ -160,16 +167,14 @@ export default function Frame4Section() {
           className="frame4-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 3vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3.5vw, 30px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "clamp(16px, 3vh, 24px)",
+            marginBottom: "24px",
             display: "block",
           }}
         >
@@ -179,18 +184,18 @@ export default function Frame4Section() {
         {/* Sign up Button */}
         <a
           href="#waitlist"
-          className="frame4-button"
+          className="frame4-btn"
           style={{
             opacity: 0.85,
             textDecoration: "none",
             alignItems: "center",
-            borderRadius: "clamp(28px, 3vw, 36px)",
+            borderRadius: "36px",
             boxSizing: "border-box",
             display: "inline-flex",
-            height: "clamp(40px, 5vh, 44px)",
+            height: "44px",
             justifyContent: "center",
             overflow: "hidden",
-            padding: "0px clamp(20px, 3vw, 32px)",
+            padding: "0px 32px",
             position: "relative",
             textAlign: "center",
             whiteSpace: "nowrap",
@@ -200,7 +205,6 @@ export default function Frame4Section() {
             cursor: "pointer",
             WebkitFontSmoothing: "antialiased",
             outline: "rgb(17, 14, 8) none 0px",
-            marginBottom: "clamp(24px, 4vh, 0)",
           }}
         >
           <span
@@ -223,12 +227,12 @@ export default function Frame4Section() {
         <img
           src="/Home/Frame4/phoneframe4.png"
           alt="Phone"
-          className="frame4-phone-mobile md:hidden"
+          className="frame4-phone-mobile"
           style={{
-            width: "clamp(280px, 70vw, 400px)",
+            width: "280px",
             height: "auto",
             objectFit: "contain",
-            marginTop: "clamp(24px, 5vh, 40px)",
+            marginTop: "32px",
             alignSelf: "center",
           }}
         />

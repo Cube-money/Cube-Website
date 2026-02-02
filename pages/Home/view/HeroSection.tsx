@@ -12,8 +12,63 @@ export default function HeroSection() {
   }, []);
 
   return (
+    <>
+      <style jsx>{`
+        .hero-text-container {
+          top: 65%;
+          left: 5%;
+          max-width: 50%;
+          width: 50%;
+        }
+        @media (max-width: 480px) {
+          .hero-text-container {
+            top: 75%;
+            left: 5%;
+            max-width: 90%;
+            width: 90%;
+          }
+        }
+        .hero-heading {
+          font-size: 72px;
+        }
+        @media (max-width: 480px) {
+          .hero-heading {
+            font-size: 40px;
+          }
+        }
+        .hero-subtext {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        @media (max-width: 480px) {
+          .hero-subtext {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        .hero-btn {
+          height: 44px;
+          padding: 0 32px;
+          border-radius: 36px;
+        }
+        @media (max-width: 480px) {
+          .hero-btn {
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 28px;
+          }
+        }
+        .hero-btn-text {
+          font-size: 14px;
+        }
+        @media (max-width: 480px) {
+          .hero-btn-text {
+            font-size: 14px;
+          }
+        }
+      `}</style>
     <section
-      className="min-h-screen-dvh pt-20 md:pt-20"
+      className="min-h-screen-dvh pt-20"
       style={{
         position: "relative",
         width: "100%",
@@ -56,29 +111,25 @@ export default function HeroSection() {
 
       {/* Left-aligned Text Container */}
       <div
-        className="top-[78%] md:top-[65%]"
+        className="hero-text-container"
         style={{
           position: "absolute",
-          left: "clamp(5%, 4vw, 5%)",
           transform: "translateY(-50%)",
           zIndex: 3,
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
           textAlign: "left",
-          maxWidth: "clamp(90%, 50vw, 50%)",
-          width: "calc(100% - clamp(10%, 8vw, 10%))",
-          padding: "0 clamp(16px, 2vw, 0)",
         }}
       >
         {/* Main Heading */}
         <div
+          className="hero-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(28px, 6vw, 72px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "left",
@@ -86,7 +137,7 @@ export default function HeroSection() {
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
             wordBreak: "break-word",
             overflowWrap: "break-word",
           }}
@@ -96,18 +147,17 @@ export default function HeroSection() {
 
         {/* Subtext */}
         <span
+          className="hero-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3.5vw, 26px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "clamp(16px, 3vh, 24px)",
+            marginBottom: "24px",
             textAlign: "left",
             display: "block",
           }}
@@ -118,19 +168,17 @@ export default function HeroSection() {
         </span>
 
         {/* Buttons */}
-        <div style={{ display: "flex", gap: "clamp(8px, 1.5vw, 12px)", alignItems: "center", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
           <a
             href="#"
+            className="hero-btn"
             style={{
               textDecoration: "none",
               alignItems: "center",
-              borderRadius: "clamp(28px, 3vw, 36px)",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "clamp(40px, 5vh, 44px)",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px clamp(20px, 3vw, 32px)",
               position: "relative",
               textAlign: "center",
               whiteSpace: "nowrap",
@@ -142,12 +190,12 @@ export default function HeroSection() {
             }}
           >
             <span
+              className="hero-btn-text"
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "clamp(16px, 1.8vw, 14px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "clamp(18px, 2.5vw, 22px)",
+                lineHeight: "22px",
                 margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
@@ -158,19 +206,17 @@ export default function HeroSection() {
           </a>
           <a
             href="#waitlist"
+            className="hero-btn"
             style={{
               opacity: 0.85,
               textDecoration: "none",
               alignItems: "center",
-              borderRadius: "clamp(28px, 3vw, 36px)",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "clamp(40px, 5vh, 44px)",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px clamp(20px, 3vw, 32px)",
               position: "relative",
-              textAlign: "left",
+              textAlign: "center",
               whiteSpace: "nowrap",
               backgroundColor: "rgb(204, 255, 0)",
               border: "1px solid rgb(204, 255, 0)",
@@ -181,12 +227,12 @@ export default function HeroSection() {
             }}
           >
             <span
+              className="hero-btn-text"
               style={{
                 fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "clamp(16px, 1.8vw, 14px)",
                 fontWeight: 400,
                 letterSpacing: "-0.25px",
-                lineHeight: "clamp(18px, 2.5vw, 22px)",
+                lineHeight: "22px",
                 margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
@@ -198,5 +244,6 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

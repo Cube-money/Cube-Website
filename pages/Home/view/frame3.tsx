@@ -12,26 +12,47 @@ export default function FeaturesSection() {
   return (
     <>
       <style jsx>{`
-        .cards-container-responsive {
-          flex-direction: column;
-          gap: 16px;
-          align-items: center;
-          width: calc(100% - 32px);
-          max-width: min(360px, 100%);
-          bottom: clamp(18%, 20vh, 26%);
+        .frame3-section {
+          min-height: 120dvh;
         }
-        @media (min-width: 900px) {
-          .cards-container-responsive {
-            flex-direction: row;
-            gap: clamp(200px, 25vw, 400px);
-            max-width: 1200px;
-            width: calc(100% - 32px);
-            bottom: clamp(12%, 16vh, 26%);
+        @media (max-width: 480px) {
+          .frame3-section {
+            min-height: 100dvh;
+          }
+        }
+        .frame3-heading {
+          font-size: 56px;
+        }
+        @media (max-width: 480px) {
+          .frame3-heading {
+            font-size: 32px;
+          }
+        }
+        .frame3-subtext {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        @media (max-width: 480px) {
+          .frame3-subtext {
+            font-size: 15px;
+            line-height: 22px;
+          }
+        }
+        .frame3-cards {
+          flex-direction: row;
+          gap: clamp(200px, 25vw, 400px);
+          bottom: clamp(24%, 28vh, 38%);
+        }
+        @media (max-width: 480px) {
+          .frame3-cards {
+            flex-direction: column;
+            gap: 16px;
+            bottom: 8%;
           }
         }
       `}</style>
     <section
-      className="min-h-[480px] min-h-[62dvh] md:min-h-[120dvh]"
+      className="frame3-section"
       style={{
         position: "relative",
         width: "100%",
@@ -76,23 +97,23 @@ export default function FeaturesSection() {
       <div
         style={{
           position: "absolute",
-          top: "clamp(10%, 12vh, 15%)",
+          top: "12%",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
           textAlign: "center",
-          width: "calc(100% - 32px)",
+          width: "calc(100% - 48px)",
           maxWidth: "800px",
-          padding: "0 clamp(16px, 3vw, 0)",
+          padding: "0 24px",
         }}
       >
         <div
+          className="frame3-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(26px, 5vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -102,7 +123,7 @@ export default function FeaturesSection() {
             display: "inline-block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
           }}
         >
           How does zero debt, zero interest sounds?
@@ -110,12 +131,11 @@ export default function FeaturesSection() {
         
         {/* Subtext */}
         <span
+          className="frame3-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3vw, 26px)",
             margin: "0 auto",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
@@ -130,18 +150,19 @@ export default function FeaturesSection() {
         </span>
       </div>
 
-      {/* Cards Container - stacked on mobile, side-by-side on desktop */}
+      {/* Cards Container - side-by-side on desktop, stacked on mobile */}
       <div
-        className="cards-container-responsive"
+        className="frame3-cards"
         style={{
           position: "absolute",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
-          padding: "0 clamp(16px, 3vw, 0)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          maxWidth: "1200px",
+          width: "calc(100% - 32px)",
         }}
       >
         <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Create2.png">

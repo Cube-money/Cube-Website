@@ -1,5 +1,38 @@
 export default function WhatIsCubeSection() {
   return (
+    <>
+      <style jsx>{`
+        .frame1-heading {
+          font-size: 88px;
+        }
+        @media (max-width: 480px) {
+          .frame1-heading {
+            font-size: 36px;
+          }
+        }
+        .frame1-subtext {
+          font-size: 22px;
+          line-height: 30px;
+        }
+        @media (max-width: 480px) {
+          .frame1-subtext {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        .frame1-btn {
+          height: 44px;
+          padding: 0 32px;
+          border-radius: 36px;
+        }
+        @media (max-width: 480px) {
+          .frame1-btn {
+            height: 40px;
+            padding: 0 24px;
+            border-radius: 28px;
+          }
+        }
+      `}</style>
     <section
       className="min-h-screen-dvh min-h-[480px]"
       style={{
@@ -49,19 +82,19 @@ export default function WhatIsCubeSection() {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          width: "calc(100% - 32px)",
+          width: "calc(100% - 48px)",
           maxWidth: "800px",
-          padding: "0 clamp(16px, 3vw, 0)",
+          padding: "0 24px",
         }}
       >
         {/* Main Heading */}
         <div
+          className="frame1-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(40px, 7vw, 88px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -69,7 +102,7 @@ export default function WhatIsCubeSection() {
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "inline-block",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
             wordBreak: "break-word",
             overflowWrap: "break-word",
           }}
@@ -79,18 +112,17 @@ export default function WhatIsCubeSection() {
         
         {/* Subtext */}
         <span
+          className="frame1-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 3vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3.5vw, 30px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "clamp(16px, 3vh, 24px)",
+            marginBottom: "24px",
           }}
         >
           When people coordinate, agree on timing, and move together, a system emerges one that's fair, predictable, and owned by the group itself.
@@ -99,18 +131,16 @@ export default function WhatIsCubeSection() {
         {/* Sign up Button */}
         <a
           href="#waitlist"
+          className="frame1-btn"
           style={{
             opacity: 0.85,
             textDecoration: "none",
             alignItems: "center",
             alignSelf: "center",
-            borderRadius: "clamp(28px, 3vw, 36px)",
             boxSizing: "border-box",
             display: "inline-flex",
-            height: "clamp(40px, 5vh, 44px)",
             justifyContent: "center",
             overflow: "hidden",
-            padding: "0px clamp(20px, 3vw, 32px)",
             position: "relative",
             textAlign: "center",
             whiteSpace: "nowrap",
@@ -125,10 +155,10 @@ export default function WhatIsCubeSection() {
           <span
             style={{
               fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-              fontSize: "clamp(16px, 2vw, 18px)",
+              fontSize: "14px",
               fontWeight: 400,
               letterSpacing: "-0.25px",
-              lineHeight: "clamp(20px, 3vw, 24px)",
+              lineHeight: "24px",
               margin: 0,
               fontStyle: "normal",
               WebkitFontSmoothing: "antialiased",
@@ -139,5 +169,6 @@ export default function WhatIsCubeSection() {
         </a>
       </div>
     </section>
+    </>
   );
 }

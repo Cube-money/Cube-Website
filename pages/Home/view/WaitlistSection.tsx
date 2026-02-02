@@ -2,12 +2,30 @@
 
 export default function WaitlistSection() {
   return (
+    <>
+      <style jsx>{`
+        .frame6-section {
+          min-height: 50vh;
+        }
+        @media (max-width: 480px) {
+          .frame6-section {
+            min-height: 40vh;
+          }
+        }
+        .frame6-heading {
+          font-size: 56px;
+        }
+        @media (max-width: 480px) {
+          .frame6-heading {
+            font-size: 32px;
+          }
+        }
+      `}</style>
     <section
-      className="min-h-[280px]"
+      className="frame6-section"
       style={{
         position: "relative",
         width: "100%",
-        minHeight: "clamp(280px, 42vh, 50vh)",
         overflow: "hidden",
         borderTop: "1px solid rgb(255, 255, 255)",
       }}
@@ -58,12 +76,12 @@ export default function WaitlistSection() {
         }}
       >
         <div
+          className="frame6-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -73,8 +91,8 @@ export default function WaitlistSection() {
             display: "block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "clamp(16px, 3vh, 24px)",
-            padding: "0 clamp(20px, 4vw, 24px)",
+            marginBottom: "24px",
+            padding: "0 24px",
           }}
         >
           Your turn is now!
@@ -123,5 +141,6 @@ export default function WaitlistSection() {
         </a>
       </div>
     </section>
+    </>
   );
 }

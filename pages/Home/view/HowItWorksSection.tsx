@@ -10,12 +10,58 @@ import BentoGridDemo from "@/components/bento-grid-demo";
 
 export default function HowItWorksSection() {
   return (
+    <>
+      <style jsx>{`
+        .frame5-section {
+          min-height: 140dvh;
+          padding-bottom: 80px;
+        }
+        @media (max-width: 480px) {
+          .frame5-section {
+            min-height: auto;
+            padding-bottom: 40px;
+            padding-top: 60px;
+          }
+        }
+        .frame5-heading {
+          font-size: 56px;
+        }
+        @media (max-width: 480px) {
+          .frame5-heading {
+            font-size: 32px;
+          }
+        }
+        .frame5-subtext {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        @media (max-width: 480px) {
+          .frame5-subtext {
+            font-size: 15px;
+            line-height: 22px;
+            padding: 0 24px;
+          }
+        }
+        .frame5-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        @media (max-width: 480px) {
+          .frame5-content {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+          }
+        }
+      `}</style>
     <section
-      className="min-h-[600px] md:min-h-140-dvh"
+      className="frame5-section"
       style={{
         position: "relative",
         width: "100%",
-        paddingBottom: "clamp(40px, 6vw, 80px)",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
@@ -48,25 +94,22 @@ export default function HowItWorksSection() {
         }}
       />
       
-      {/* Content - vertically centered */}
+      {/* Content - vertically centered on desktop, static on mobile */}
       <div
+        className="frame5-content"
         style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
           width: "100%",
           zIndex: 2,
           textAlign: "center",
         }}
       >
         <div
+          className="frame5-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 4vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -76,7 +119,7 @@ export default function HowItWorksSection() {
             display: "inline-block",
             wordBreak: "break-word",
             overflowWrap: "break-word",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
           }}
         >
           Explore the library
@@ -84,12 +127,11 @@ export default function HowItWorksSection() {
         
         {/* Subtext */}
         <span
+          className="frame5-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3vw, 26px)",
             margin: "0 auto",
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
@@ -98,7 +140,6 @@ export default function HowItWorksSection() {
             display: "block",
             textAlign: "center",
             width: "100%",
-            padding: "0 clamp(16px, 3vw, 0)",
           }}
         >
           Learn how coordination, trust, and shared timing come together to form a fair financial system.
@@ -148,10 +189,11 @@ export default function HowItWorksSection() {
         </a>
         
         {/* BentoGrid Component */}
-        <div style={{ marginTop: "clamp(32px, 6vw, 60px)", position: "relative", padding: "0 clamp(16px, 3vw, 0)" }}>
+        <div style={{ marginTop: "40px", position: "relative", padding: "0 16px" }}>
           <BentoGridDemo />
         </div>
       </div>
     </section>
+    </>
   );
 }
