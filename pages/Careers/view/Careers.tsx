@@ -12,8 +12,51 @@ export default function Careers() {
   }, []);
 
   return (
+    <>
+      <style jsx>{`
+        .careers-section {
+          height: 100svh;
+        }
+        @media (max-width: 480px) {
+          .careers-section {
+            min-height: 750px;
+          }
+        }
+        .careers-text-container {
+          top: 65%;
+          left: 5%;
+          max-width: 50%;
+          width: 50%;
+        }
+        @media (max-width: 480px) {
+          .careers-text-container {
+            top: 70%;
+            left: 5%;
+            max-width: 90%;
+            width: 90%;
+          }
+        }
+        .careers-heading {
+          font-size: 72px;
+        }
+        @media (max-width: 480px) {
+          .careers-heading {
+            font-size: 40px;
+          }
+        }
+        .careers-subtext {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        @media (max-width: 480px) {
+          .careers-subtext {
+            font-size: 17px;
+            line-height: 25px;
+          }
+        }
+      `}</style>
     <section
-      className="h-screen-dvh"
+      className="careers-section"
       style={{
         position: "relative",
         width: "100%",
@@ -57,29 +100,25 @@ export default function Careers() {
 
       {/* Left-aligned Text Container */}
       <div
-        className="top-[78%] md:top-[65%]"
+        className="careers-text-container"
         style={{
           position: "absolute",
-          left: "clamp(5%, 4vw, 5%)",
           transform: "translateY(-50%)",
           zIndex: 3,
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
           textAlign: "left",
-          maxWidth: "clamp(90%, 50vw, 50%)",
-          width: "calc(100% - clamp(10%, 8vw, 10%))",
-          padding: "0 clamp(16px, 2vw, 0)",
         }}
       >
         {/* Main Heading */}
         <div
+          className="careers-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(40px, 6vw, 72px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "left",
@@ -87,7 +126,7 @@ export default function Careers() {
             boxSizing: "border-box",
             WebkitFontSmoothing: "antialiased",
             display: "block",
-            marginBottom: "clamp(12px, 2vh, 16px)",
+            marginBottom: "16px",
             wordBreak: "break-word",
             overflowWrap: "break-word",
           }}
@@ -97,18 +136,17 @@ export default function Careers() {
 
         {/* Subtext */}
         <span
+          className="careers-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.5vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3.5vw, 26px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",
             color: "rgb(255, 255, 255)",
             maxWidth: "600px",
-            marginBottom: "clamp(16px, 3vh, 24px)",
+            marginBottom: "24px",
             textAlign: "left",
             display: "block",
           }}
@@ -156,5 +194,6 @@ export default function Careers() {
         </a>
       </div>
     </section>
+    </>
   );
 }

@@ -1,16 +1,79 @@
 export default function Press() {
   return (
+    <>
+      <style jsx>{`
+        .press-container {
+          flex-direction: row;
+          height: 100vh;
+        }
+        @media (max-width: 480px) {
+          .press-container {
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+          }
+        }
+        .press-image-container {
+          width: 35%;
+          min-height: auto;
+        }
+        @media (max-width: 480px) {
+          .press-image-container {
+            width: 100%;
+            min-height: 300px;
+          }
+        }
+        .press-content-container {
+          width: 65%;
+        }
+        @media (max-width: 480px) {
+          .press-content-container {
+            width: 100%;
+          }
+        }
+        .press-divider {
+          display: block;
+        }
+        @media (max-width: 480px) {
+          .press-divider {
+            display: none;
+          }
+        }
+        .press-heading {
+          font-size: clamp(36px, 5vw, 64px);
+        }
+        @media (max-width: 480px) {
+          .press-heading {
+            font-size: 38px;
+          }
+        }
+        .press-body {
+          font-size: clamp(16px, 1.8vw, 19px);
+        }
+        @media (max-width: 480px) {
+          .press-body {
+            font-size: 17px;
+          }
+        }
+        .press-label {
+          font-size: 11px;
+        }
+        @media (max-width: 480px) {
+          .press-label {
+            font-size: 12px;
+          }
+        }
+      `}</style>
     <section
       className="relative w-full min-h-screen overflow-hidden"
       style={{
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
     >
-      <div className="w-full h-screen flex flex-row overflow-hidden">
+      <div className="press-container w-full flex overflow-hidden">
         {/* LEFT 35% — Image */}
         <div
-          className="min-w-0 overflow-hidden relative"
-          style={{ width: "35%" }}
+          className="press-image-container min-w-0 overflow-hidden relative"
         >
           <img
             src="/Press/PressImage4.png"
@@ -34,15 +97,14 @@ export default function Press() {
 
         {/* Stroke divider */}
         <div
-          className="flex-shrink-0 w-px self-stretch"
+          className="press-divider flex-shrink-0 w-px self-stretch"
           style={{ backgroundColor: "rgb(128, 128, 128)" }}
         />
 
         {/* RIGHT 65% — Content centered within this area */}
         <div
-          className="min-w-0 overflow-hidden relative"
+          className="press-content-container min-w-0 overflow-hidden relative"
           style={{
-            width: "65%",
             backgroundColor: "#fff",
             display: "flex",
             alignItems: "center",
@@ -63,9 +125,9 @@ export default function Press() {
           >
             {/* Small Label */}
             <span
+              className="press-label"
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "11px",
                 fontWeight: 500,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
@@ -79,12 +141,12 @@ export default function Press() {
 
             {/* Headline */}
             <h1
+              className="press-heading"
               style={{
                 fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(17, 17, 17)",
-                fontSize: "clamp(36px, 5vw, 64px)",
                 letterSpacing: "-0.02em",
                 lineHeight: "105%",
                 WebkitFontSmoothing: "antialiased",
@@ -97,9 +159,9 @@ export default function Press() {
 
             {/* Body */}
             <p
+              className="press-body"
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(16px, 1.8vw, 19px)",
                 fontWeight: 400,
                 letterSpacing: "-0.01em",
                 lineHeight: 1.7,
@@ -218,5 +280,6 @@ export default function Press() {
         </div>
       </div>
     </section>
+    </>
   );
 }
