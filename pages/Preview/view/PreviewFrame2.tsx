@@ -235,7 +235,7 @@ export default function PreviewFrame2() {
         setIsShuffling(true);
         setOrder((prev) => shuffleEligible(prev));
 
-        const steps = [300, 650, 1050, 1500, 1950, 2350];
+        const steps = [450, 950, 1550, 2200, 2900, 3550];
         steps.forEach((ms) => {
           timeouts.push(
             window.setTimeout(() => setOrder((prev) => shuffleEligible(prev)), ms)
@@ -247,7 +247,7 @@ export default function PreviewFrame2() {
           window.setTimeout(() => {
             setOrder((prev) => placeWinnerInEligible(prev));
             setIsShuffling(false);
-          }, 2750)
+          }, 4100)
         );
 
         // Reveal moment: unmask, gold highlight persists until next cycle starts.

@@ -378,7 +378,7 @@ export default function DemoCard() {
           to { opacity: 1; transform: translateY(0); }
         }
         .shuffleRow {
-          animation: shuffleJitter 260ms ease-in-out infinite;
+          animation: shuffleJitter 400ms ease-in-out infinite;
         }
         @keyframes shuffleJitter {
           0% { opacity: 1; }

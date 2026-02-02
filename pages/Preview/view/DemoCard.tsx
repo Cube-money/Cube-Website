@@ -956,7 +956,7 @@ export function DemoCard({
 
         .shuffleRow {
           will-change: transform, filter;
-          animation: shuffleJitter 260ms ease-in-out infinite;
+          animation: shuffleJitter 400ms ease-in-out infinite;
         }
 
         @keyframes shuffleJitter {
