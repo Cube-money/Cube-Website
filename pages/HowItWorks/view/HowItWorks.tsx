@@ -58,6 +58,24 @@ export default function HowItWorks() {
             animation: slideUpFromAboveText 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           }
         }
+        .hiw-heading {
+          font-size: clamp(36px, 6.5vw, 80px);
+        }
+        @media (max-width: 480px) {
+          .hiw-heading {
+            font-size: 43px;
+          }
+        }
+        .hiw-subtext {
+          font-size: clamp(16px, 2.2vw, 20px);
+          line-height: clamp(20px, 3.5vw, 30px);
+        }
+        @media (max-width: 480px) {
+          .hiw-subtext {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
       `}</style>
     <section
       ref={imageRef}
@@ -94,12 +112,12 @@ export default function HowItWorks() {
           <div className="w-full max-w-[640px] flex flex-col items-center min-[900px]:items-start text-center min-[900px]:text-left min-[900px]:pl-4 min-[900px]:translate-x-[15%]">
         {/* Main Heading */}
         <div
+          className="hiw-heading"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(36px, 6.5vw, 80px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             whiteSpace: "normal",
@@ -117,12 +135,11 @@ export default function HowItWorks() {
         
         {/* Subtext */}
         <span
+          className="hiw-subtext"
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-            fontSize: "clamp(16px, 2.2vw, 20px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
-            lineHeight: "clamp(20px, 3.5vw, 30px)",
             margin: 0,
             fontStyle: "normal",
             WebkitFontSmoothing: "antialiased",

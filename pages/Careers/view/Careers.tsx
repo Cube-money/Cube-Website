@@ -41,7 +41,7 @@ export default function Careers() {
         }
         @media (max-width: 480px) {
           .careers-heading {
-            font-size: 40px;
+            font-size: 43px;
           }
         }
         .careers-subtext {
@@ -50,8 +50,8 @@ export default function Careers() {
         }
         @media (max-width: 480px) {
           .careers-subtext {
-            font-size: 17px;
-            line-height: 25px;
+            font-size: 20px;
+            line-height: 28px;
           }
         }
       `}</style>

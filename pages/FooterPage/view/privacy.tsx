@@ -1,11 +1,11 @@
 export default function Privacy() {
   return (
-    <div className="pt-48 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="pt-24 sm:pt-48 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <p className="text-2xl text-black mb-8 uppercase font-bold text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <p className="text-lg sm:text-2xl text-black mb-4 sm:mb-8 uppercase font-bold text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
           CUBE MONEY
         </p>
-        <h1 className="text-8xl font-sans font-bold text-black mb-4 uppercase text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-sans font-bold text-black mb-4 uppercase text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
           Privacy Policy
         </h1>
         <p className="text-base text-black mb-8 font-bold text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
