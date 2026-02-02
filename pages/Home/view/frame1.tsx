@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhatIsCubeSection() {
   return (
     <>
@@ -51,15 +53,12 @@ export default function WhatIsCubeSection() {
       }}
     >
       {/* Full-screen Image Background */}
-      <img
+      <Image
         src="/Home/frame2/Group 24.png"
         alt="What is Cube"
+        fill
+        priority={false}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
           objectFit: "cover",
           zIndex: 0,
         }}

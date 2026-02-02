@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);

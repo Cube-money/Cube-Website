@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Frame4Section() {
   return (
     <>
@@ -84,15 +86,12 @@ export default function Frame4Section() {
       }}
     >
       {/* Full-screen Image Background */}
-      <img
+      <Image
         src="/Home/frame2/Group 7.png"
         alt="What is Cube"
+        fill
+        priority={false}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
           objectFit: "cover",
           zIndex: 0,
         }}
@@ -112,9 +111,7 @@ export default function Frame4Section() {
       />
       
       {/* Phone overlay - right aligned, hidden on mobile */}
-      <img
-        src="/Home/Frame4/phoneframe4.png"
-        alt="Phone"
+      <div
         className="frame4-phone-desktop"
         style={{
           position: "absolute",
@@ -122,12 +119,21 @@ export default function Frame4Section() {
           right: "clamp(20px, 10vw, 200px)",
           transform: "translateY(-50%)",
           height: "80%",
-          width: "auto",
-          objectFit: "contain",
-          objectPosition: "right center",
+          width: "300px",
           zIndex: 2,
         }}
-      />
+      >
+        <Image
+          src="/Home/Frame4/phoneframe4.png"
+          alt="Phone"
+          fill
+          priority={false}
+          style={{
+            objectFit: "contain",
+            objectPosition: "right center",
+          }}
+        />
+      </div>
       
       {/* Text Container - left-aligned on desktop, centered on mobile */}
       <div
@@ -224,18 +230,26 @@ export default function Frame4Section() {
         </a>
 
         {/* Phone image - shown below text on mobile only */}
-        <img
-          src="/Home/Frame4/phoneframe4.png"
-          alt="Phone"
+        <div
           className="frame4-phone-mobile"
           style={{
             width: "280px",
-            height: "auto",
-            objectFit: "contain",
+            height: "400px",
+            position: "relative",
             marginTop: "32px",
             alignSelf: "center",
           }}
-        />
+        >
+          <Image
+            src="/Home/Frame4/phoneframe4.png"
+            alt="Phone"
+            fill
+            priority={false}
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </div>
       </div>
     </section>
     </>

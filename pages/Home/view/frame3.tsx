@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   GlowingStarsBackgroundCard,
   GlowingStarsDescription,
@@ -60,15 +61,12 @@ export default function FeaturesSection() {
       }}
     >
       {/* Background Image */}
-      <img
+      <Image
         src="/Home/frame2/Group 11.png"
         alt="Background"
+        fill
+        priority={false}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
           objectFit: "cover",
           zIndex: 0,
         }}
