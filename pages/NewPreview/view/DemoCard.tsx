@@ -461,7 +461,7 @@ export default function DemoCard() {
                 background: "linear-gradient(to bottom, #181818, #000000)",
                 borderRadius: "15px",
                 position: "relative",
-                height: isMobile ? "540px" : "470px",
+                height: isMobile ? "528px" : "460px",
                 overflow: "hidden",
               }}
             >
