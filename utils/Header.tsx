@@ -12,6 +12,14 @@ export default function Header() {
   const isDisclosuresPage = pathname === "/disclosures";
   const isSecurityPage = pathname === "/security";
   const isLearnPage = pathname === "/learn" || pathname?.startsWith("/learn/");
+  const isPressPage = pathname === "/press";
+  const isHowItWorksPage = pathname === "/how-it-works";
+
+  // On light-background pages: default state has black text, scrolled state has white text (black bg)
+  // On other pages: always white text
+  const isLightBgPage = isPressPage || isHowItWorksPage;
+  const navTextColor = isLightBgPage && !isScrolled ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)";
+  const logoSrc = isLightBgPage && !isScrolled ? "/CubeLogo/BlackLogo.png" : "/CubeLogo/WhiteLogo.png";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,9 +65,9 @@ export default function Header() {
         }}
       >
         <img
-          src="/CubeLogo/WhiteLogo.png"
+          src={logoSrc}
           alt="Cube Logo"
-          style={{ height: "42px", width: "auto" }}
+          style={{ height: "42px", width: "auto", transition: "filter 0.3s ease" }}
         />
         <span
           style={{
@@ -68,7 +76,8 @@ export default function Header() {
             letterSpacing: "-0.25px",
             lineHeight: "32px",
             fontFamily: "Inter, sans-serif",
-            color: "rgb(255, 255, 255)",
+            color: navTextColor,
+            transition: "color 0.3s ease",
           }}
         >
           Cube
@@ -101,7 +110,7 @@ export default function Header() {
               href="/how-it-works"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -109,6 +118,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               How It Works
@@ -119,7 +129,7 @@ export default function Header() {
               href="/preview"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -127,6 +137,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               Preview
@@ -137,7 +148,7 @@ export default function Header() {
               href="/stories"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -145,6 +156,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               Stories
@@ -155,7 +167,7 @@ export default function Header() {
               href="/trust"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -163,6 +175,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               Trust
@@ -173,7 +186,7 @@ export default function Header() {
               href="/learn"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -181,6 +194,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               Learn
@@ -191,7 +205,7 @@ export default function Header() {
               href="/support"
               style={{
                 textDecoration: "none",
-                color: "rgb(255, 255, 255)",
+                color: navTextColor,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "16px",
@@ -199,6 +213,7 @@ export default function Header() {
                 letterSpacing: "-0.25px",
                 lineHeight: "24px",
                 fontFamily: "Inter, sans-serif",
+                transition: "color 0.3s ease",
               }}
             >
               Support
@@ -255,14 +270,15 @@ export default function Header() {
           appearance: "none",
           WebkitTapHighlightColor: "transparent",
           border: "none",
-          color: "rgb(255, 255, 255)",
+          color: navTextColor,
           padding: 0,
           textAlign: "start",
           background: "transparent",
           cursor: "pointer",
+          transition: "color 0.3s ease",
         }}
       >
-        <svg aria-hidden="true" fill="#FFFFFF" height="30" width="30">
+        <svg aria-hidden="true" fill={isLightBgPage && !isScrolled ? "#000000" : "#FFFFFF"} height="30" width="30" style={{ transition: "fill 0.3s ease" }}>
           <g style={{ transformOrigin: "50% 50%", transition: "transform 0.3s" }}>
             <rect fill="transparent" height="30" width="30" x="0" y="0" />
             <rect height="3" width="30" x="0" y="7" />
