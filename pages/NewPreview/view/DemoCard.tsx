@@ -753,7 +753,7 @@ export default function DemoCard() {
                           marginBottom: "6px",
                         }}
                       >
-                        <div style={{ fontFamily: "Inter, sans-serif", fontSize: isMobile ? "12px" : "11px", color: "rgb(255, 255, 255)" }}>
+                        <div style={{ fontFamily: "Inter, sans-serif", fontSize: isMobile ? "11px" : "10px", color: "rgb(255, 255, 255)" }}>
                           Contribution
                         </div>
                         <div
@@ -777,7 +777,7 @@ export default function DemoCard() {
                         <div
                           style={{
                             fontFamily: "Inter, sans-serif",
-                            fontSize: isMobile ? "12px" : "11px",
+                            fontSize: isMobile ? "11px" : "10px",
                             color: "rgba(255,255,255,0.75)",
                             textAlign: "right",
                           }}
@@ -794,7 +794,7 @@ export default function DemoCard() {
                           gap: "6px",
                         }}
                       >
-                        <div style={{ fontFamily: "Inter, sans-serif", fontSize: isMobile ? "12px" : "11px", color: "rgb(255, 255, 255)" }}>
+                        <div style={{ fontFamily: "Inter, sans-serif", fontSize: isMobile ? "11px" : "10px", color: "rgb(255, 255, 255)" }}>
                           Accessed capital
                         </div>
                         <div
@@ -821,7 +821,7 @@ export default function DemoCard() {
                         <div
                           style={{
                             fontFamily: "Inter, sans-serif",
-                            fontSize: isMobile ? "12px" : "11px",
+                            fontSize: isMobile ? "11px" : "10px",
                             color: "rgba(255,255,255,0.75)",
                             textAlign: "right",
                           }}
