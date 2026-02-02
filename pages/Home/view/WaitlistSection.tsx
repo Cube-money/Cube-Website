@@ -5,11 +5,11 @@ export default function WaitlistSection() {
     <>
       <style jsx>{`
         .frame6-section {
-          min-height: 50vh;
+          min-height: 50svh;
         }
         @media (max-width: 480px) {
           .frame6-section {
-            min-height: 40vh;
+            min-height: 300px;
           }
         }
         .frame6-heading {

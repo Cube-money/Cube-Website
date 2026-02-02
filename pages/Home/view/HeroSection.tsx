@@ -22,10 +22,18 @@ export default function HeroSection() {
         }
         @media (max-width: 480px) {
           .hero-text-container {
-            top: 75%;
+            top: 70%;
             left: 5%;
             max-width: 90%;
             width: 90%;
+          }
+        }
+        .hero-section {
+          min-height: 100svh;
+        }
+        @media (max-width: 480px) {
+          .hero-section {
+            min-height: 750px;
           }
         }
         .hero-heading {
@@ -68,7 +76,7 @@ export default function HeroSection() {
         }
       `}</style>
     <section
-      className="min-h-screen-dvh pt-20"
+      className="hero-section pt-20"
       style={{
         position: "relative",
         width: "100%",

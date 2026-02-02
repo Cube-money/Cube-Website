@@ -13,12 +13,12 @@ export default function HowItWorksSection() {
     <>
       <style jsx>{`
         .frame5-section {
-          min-height: 140dvh;
+          min-height: 140svh;
           padding-bottom: 80px;
         }
         @media (max-width: 480px) {
           .frame5-section {
-            min-height: auto;
+            min-height: 900px;
             padding-bottom: 40px;
             padding-top: 60px;
           }

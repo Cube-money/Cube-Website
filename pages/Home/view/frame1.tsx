@@ -32,9 +32,17 @@ export default function WhatIsCubeSection() {
             border-radius: 28px;
           }
         }
+        .frame1-section {
+          min-height: 100svh;
+        }
+        @media (max-width: 480px) {
+          .frame1-section {
+            min-height: 700px;
+          }
+        }
       `}</style>
     <section
-      className="min-h-screen-dvh min-h-[480px]"
+      className="frame1-section"
       style={{
         position: "relative",
         width: "100%",

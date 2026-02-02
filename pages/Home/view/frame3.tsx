@@ -13,11 +13,11 @@ export default function FeaturesSection() {
     <>
       <style jsx>{`
         .frame3-section {
-          min-height: 120dvh;
+          min-height: 120svh;
         }
         @media (max-width: 480px) {
           .frame3-section {
-            min-height: 100dvh;
+            min-height: 850px;
           }
         }
         .frame3-heading {

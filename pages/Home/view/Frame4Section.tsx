@@ -3,12 +3,12 @@ export default function Frame4Section() {
     <>
       <style jsx>{`
         .frame4-section {
-          height: 100vh;
+          height: 100svh;
         }
         @media (max-width: 480px) {
           .frame4-section {
             height: auto;
-            min-height: 100dvh;
+            min-height: 850px;
           }
         }
         .frame4-phone-desktop {
