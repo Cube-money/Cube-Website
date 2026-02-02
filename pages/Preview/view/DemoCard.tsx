@@ -72,7 +72,7 @@ export function DemoCard({
 }: DemoCardProps) {
   return (
     <>
-      {/* Title + subtext above card */}
+      {/* Title above card */}
       <div
         style={{
           position: "absolute",
@@ -83,28 +83,6 @@ export function DemoCard({
           textAlign: "center",
         }}
       >
-        <span
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontSize: isMobile ? "16px" : "22.5px",
-            fontWeight: 400,
-            letterSpacing: "-0.25px",
-            lineHeight: isMobile ? "22px" : "26px",
-            margin: "0 auto",
-            fontStyle: "normal",
-            WebkitFontSmoothing: "antialiased",
-            color: "rgb(255, 255, 255)",
-            maxWidth: "600px",
-            display: "block",
-            textAlign: "center",
-            width: "100%",
-            marginBottom: "120px",
-          }}
-        >
-          Inside a Cube, that same goal can arrive much sooner through
-          coordinated contributions.{" "}
-          <span style={{ color: "#C1FF35" }}>lets see how!</span>
-        </span>
         <div
           style={{
             fontFamily:

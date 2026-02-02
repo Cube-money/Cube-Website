@@ -128,7 +128,7 @@ export default function Basics() {
             className="frame4-subtext"
             style={{
               display: "block",
-              fontFamily: "Inter, sans-serif",
+              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
               fontSize: "clamp(16px, 2.4vw, 20px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",

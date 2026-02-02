@@ -1,7 +1,7 @@
 export default function WhatIsCubeSection() {
   return (
     <section
-      className="h-screen-dvh"
+      className="min-h-screen-dvh min-h-[480px]"
       style={{
         position: "relative",
         width: "100%",
@@ -81,7 +81,7 @@ export default function WhatIsCubeSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.5vw, 22px)",
+            fontSize: "clamp(14px, 3vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 30px)",

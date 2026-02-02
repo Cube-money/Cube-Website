@@ -118,7 +118,7 @@ export default function HowItWorks() {
         {/* Subtext */}
         <span
           style={{
-            fontFamily: "Inter, sans-serif",
+            fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontSize: "clamp(16px, 2.2vw, 20px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",

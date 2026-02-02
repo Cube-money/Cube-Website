@@ -94,7 +94,7 @@ export default function BottomCta() {
               {/* Subtext */}
               <p
                 style={{
-                  fontFamily: "Inter, sans-serif",
+                  fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                   fontSize: "clamp(16px, 1.8vw, 18px)",
                   fontWeight: 400,
                   lineHeight: "1.65",
@@ -132,7 +132,7 @@ export default function BottomCta() {
                   >
                     <span
                       style={{
-                        fontFamily: "Inter, sans-serif",
+                        fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                         fontSize: "15px",
                         fontWeight: 500,
                         color: "#1a1a1a",
@@ -143,7 +143,7 @@ export default function BottomCta() {
                     </span>
                     <span
                       style={{
-                        fontFamily: "Inter, sans-serif",
+                        fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                         fontSize: "15px",
                         fontWeight: 500,
                         color: "#2d2d2d",
@@ -268,7 +268,7 @@ export default function BottomCta() {
                 </span>
                 <span
                   style={{
-                    fontFamily: "Inter, sans-serif",
+                    fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
                     fontSize: "14px",
                     fontWeight: 500,
                     color: "#8c8c8c",

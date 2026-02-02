@@ -8,7 +8,7 @@ export default function Learn() {
     <div className="min-h-screen flex flex-col">
       {/* Top Section - Lime Green (38%) */}
       <div 
-        className="flex flex-col justify-start items-start pt-20 sm:pt-24 lg:pt-32 h-[28vh] min-h-[260px] md:h-[38vh] md:min-h-[380px]"
+        className="flex flex-col justify-start items-start pt-20 sm:pt-24 lg:pt-32 h-[24vh] min-h-[220px] md:h-[32vh] md:min-h-[320px]"
         style={{ 
           backgroundColor: 'rgb(204, 255, 0)',
           position: 'relative'
@@ -96,7 +96,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/wallet-management">
                 <div 
-                  className="learn-card overflow-hidden cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card overflow-hidden cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     borderRadius: '0',
                     position: 'relative',
@@ -112,8 +112,8 @@ export default function Learn() {
                       placeholder="empty"
                       loading="lazy"
                       style={{
-                        maxWidth: '400px',
-                        width: '65%',
+                        maxWidth: '320px',
+                        width: '55%',
                         height: 'auto',
                         objectFit: 'contain',
                         transition: 'transform 0.5s ease-out',
@@ -174,7 +174,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/trust-score">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#FFDDAA',
                     borderRadius: '0',
@@ -190,8 +190,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '320px',
-                      width: '55%',
+                      maxWidth: '260px',
+                      width: '48%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -254,7 +254,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/choosing-winner">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#008BF2',
                     borderRadius: '0',
@@ -271,8 +271,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '520px',
-                      width: '85%',
+                      maxWidth: '420px',
+                      width: '72%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -332,7 +332,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/contributions">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#C68CC0',
                     borderRadius: '0',
@@ -347,8 +347,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '440px',
-                      width: '75%',
+                      maxWidth: '350px',
+                      width: '65%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -411,7 +411,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/invites">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#FFCADB',
                     borderRadius: '0',
@@ -425,8 +425,8 @@ export default function Learn() {
                     width={900}
                     height={900}
                     style={{
-                      maxWidth: '460px',
-                      width: '78%',
+                      maxWidth: '370px',
+                      width: '66%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -486,7 +486,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/badge-system">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#F3EAD6',
                     borderRadius: '0',
@@ -501,8 +501,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '380px',
-                      width: '68%',
+                      maxWidth: '300px',
+                      width: '58%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -565,7 +565,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/submit-receipt">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#FFCADB',
                     borderRadius: '0',
@@ -580,8 +580,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '310px',
-                      width: '58%',
+                      maxWidth: '250px',
+                      width: '50%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -641,7 +641,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/send-payment">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#CFE2FE',
                     borderRadius: '0',
@@ -656,8 +656,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '400px',
-                      width: '72%',
+                      maxWidth: '320px',
+                      width: '62%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -731,7 +731,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/payouts">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#D2C1FF',
                     borderRadius: '0',
@@ -807,7 +807,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/safety-securities">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#A0C5B5',
                     borderRadius: '0',
@@ -886,7 +886,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/create-cube">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#FF9DB6',
                     borderRadius: '0',
@@ -901,8 +901,8 @@ export default function Learn() {
                     placeholder="empty"
                     loading="lazy"
                     style={{
-                      maxWidth: '360px',
-                      width: '65%',
+                      maxWidth: '290px',
+                      width: '55%',
                       height: 'auto',
                       objectFit: 'contain',
                       transition: 'transform 0.5s ease-out',
@@ -962,7 +962,7 @@ export default function Learn() {
               {/* Illustration Section */}
               <Link href="/learn/join-cube">
                 <div 
-                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[280px] md:min-h-[380px] lg:min-h-[500px]"
+                  className="learn-card flex items-center justify-center p-12 cursor-pointer min-h-[220px] md:min-h-[300px] lg:min-h-[400px]"
                   style={{
                     backgroundColor: '#34D457',
                     borderRadius: '0',

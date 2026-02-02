@@ -66,7 +66,7 @@ export default function Frame4Section() {
         }
       `}</style>
     <section
-      className="relative w-full h-screen overflow-hidden border-t border-gray-500"
+      className="relative w-full min-h-screen min-h-[480px] overflow-hidden border-t border-gray-500 md:h-screen"
       style={{
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
@@ -160,7 +160,7 @@ export default function Frame4Section() {
           className="frame4-subtext"
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.5vw, 22px)",
+            fontSize: "clamp(14px, 3vw, 22px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 30px)",

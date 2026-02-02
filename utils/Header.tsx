@@ -116,7 +116,7 @@ export default function Header() {
           </li>
           <li style={{ marginLeft: "36px", display: "block", padding: 0, position: "relative", whiteSpace: "nowrap" }}>
             <a
-              href="/preview"
+              href="/new-preview"
               style={{
                 textDecoration: "none",
                 color: "rgb(255, 255, 255)",
@@ -290,7 +290,7 @@ export default function Header() {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <a href="/how-it-works" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>How It Works</a>
-            <a href="/preview" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Preview</a>
+            <a href="/new-preview" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Preview</a>
             <a href="/stories" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Stories</a>
             <a href="/trust" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Trust</a>
             <a href="/learn" style={{ color: "#fff", textDecoration: "none", fontSize: "16px", fontFamily: "Inter, sans-serif" }}>Learn</a>

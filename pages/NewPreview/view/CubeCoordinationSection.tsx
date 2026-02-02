@@ -6,11 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const MOBILE_BREAKPOINT = 768;
 const MOBILE_FLOWER_SCALE = 0.48;
 
-/**
- * Frame 1: Hero section — lilies, "This is what cube coordination looks like",
- * $10,000 subtext, vertical dashed line. One viewport, no overlap.
- */
-export default function PreviewFrame1() {
+export default function CubeCoordinationSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [flowerScale, setFlowerScale] = useState(1);
@@ -87,11 +83,10 @@ export default function PreviewFrame1() {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
-          minHeight: "100vh",
+          height: "140vh",
+          minHeight: "140vh",
           flexShrink: 0,
           overflow: "hidden",
-          borderTop: "1px solid rgb(128, 128, 128)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -106,17 +101,7 @@ export default function PreviewFrame1() {
             overflow: "hidden",
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              zIndex: 1,
-            }}
-          />
+          {/* Left lily */}
           <div
             style={{
               position: "absolute",
@@ -127,7 +112,10 @@ export default function PreviewFrame1() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
-              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-38%)` : `scale(${flowerScale})`,
+              transform:
+                flowerScale < 1
+                  ? `scale(${flowerScale}) translateY(-38%)`
+                  : `scale(${flowerScale}) translateY(-12%)`,
               transformOrigin: "left center",
             }}
           >
@@ -144,7 +132,7 @@ export default function PreviewFrame1() {
             >
               <Image
                 src="/preview/Demoflowerleft.png"
-                alt="Flower"
+                alt=""
                 width={800}
                 height={1200}
                 style={{
@@ -157,26 +145,28 @@ export default function PreviewFrame1() {
               />
             </div>
           </div>
+
+          {/* Center content */}
           <div
             style={{
               position: "absolute",
-              top: "46%",
+              top: "40%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               zIndex: 3,
               textAlign: "center",
             }}
           >
-            <div
+            <h2
               style={{
                 fontFamily:
-                  'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
+                  'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(255, 255, 255)",
-                fontSize: "clamp(24px, 4vw, 48px)",
+                fontSize: "clamp(22px, 4vw, 46px)",
                 letterSpacing: "-0.02em",
-                lineHeight: "100%",
+                lineHeight: "1.15",
                 textAlign: "center",
                 whiteSpace: "pre-line",
                 boxSizing: "border-box",
@@ -184,21 +174,22 @@ export default function PreviewFrame1() {
                 display: "block",
                 wordBreak: "break-word",
                 overflowWrap: "break-word",
+                margin: 0,
                 marginBottom: "16px",
               }}
             >
               This is what cube
               <br />
               coordination looks like.
-            </div>
-            <span
+            </h2>
+            <p
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "14px",
+                fontSize: "clamp(12px, 2vw, 16px)",
                 fontWeight: 400,
-                letterSpacing: "-0.25px",
-                lineHeight: "22px",
-                margin: "0 auto",
+                letterSpacing: "-0.02em",
+                lineHeight: "1.5",
+                margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
                 color: "rgb(255, 255, 255)",
@@ -211,48 +202,55 @@ export default function PreviewFrame1() {
               In this example Cube, imagine you&apos;re saving for a new car.
               <br />
               On your own, reaching{" "}
-              <span style={{ color: "#C1FF35" }}>$10,000</span> can take years.
-              <br />
-            </span>
+              <span style={{ color: "#C1FF35" }}>$10,000</span>{" "}
+              can take years.
+            </p>
           </div>
+
+          {/* Vertical dashed line */}
           <div
             style={{
               position: "absolute",
               left: "50%",
-              top: "60%",
+              top: "54%",
               transform: "translateX(-50%)",
               width: "1px",
               height: flowerScale < 1 ? "32vh" : "45vh",
               zIndex: 3,
-              background: "linear-gradient(to bottom, #ffffff, #000000)",
+              background:
+                "linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.3) 100%)",
               maskImage:
                 "repeating-linear-gradient(to bottom, transparent, transparent 4px, black 4px, black 12px)",
               WebkitMaskImage:
                 "repeating-linear-gradient(to bottom, transparent, transparent 4px, black 4px, black 12px)",
             }}
           />
+
+          {/* Text below the line */}
           <div
             style={{
               position: "absolute",
-              top: `calc(60% + ${flowerScale < 1 ? "32vh" : "45vh"} + 20px)`,
+              top: `calc(54% + ${flowerScale < 1 ? "32vh" : "45vh"} + 24px)`,
               left: "50%",
               transform: "translateX(-50%)",
               width: "100%",
               maxWidth: "600px",
-              paddingLeft: "12%",
-              paddingRight: "12%",
+              paddingTop: "24px",
+              paddingLeft: "24px",
+              paddingRight: "24px",
               boxSizing: "border-box",
               zIndex: 3,
-              textAlign: "left",
+              textAlign: "center",
             }}
           >
-            <span
+            <p
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(14px, 2vw, 22.5px)",
+                fontSize: "clamp(12px, 2vw, 16px)",
                 fontWeight: 400,
-                letterSpacing: "-0.25px",
-                lineHeight: "26px",
+                letterSpacing: "-0.02em",
+                lineHeight: "1.5",
+                margin: 0,
                 fontStyle: "normal",
                 WebkitFontSmoothing: "antialiased",
                 color: "rgb(255, 255, 255)",
@@ -261,8 +259,10 @@ export default function PreviewFrame1() {
               Inside a Cube, that same goal can arrive much sooner through
               coordinated contributions.{" "}
               <span style={{ color: "#C1FF35" }}>lets see how!</span>
-            </span>
+            </p>
           </div>
+
+          {/* Right lily */}
           <div
             style={{
               position: "absolute",
@@ -273,7 +273,10 @@ export default function PreviewFrame1() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
-              transform: flowerScale < 1 ? `scale(${flowerScale}) translateY(-38%)` : `scale(${flowerScale})`,
+              transform:
+                flowerScale < 1
+                  ? `scale(${flowerScale}) translateY(-38%)`
+                  : `scale(${flowerScale}) translateY(-12%)`,
               transformOrigin: "right center",
             }}
           >
@@ -290,7 +293,7 @@ export default function PreviewFrame1() {
             >
               <Image
                 src="/preview/Demoflowerright.png"
-                alt="Flower"
+                alt=""
                 width={800}
                 height={1200}
                 style={{

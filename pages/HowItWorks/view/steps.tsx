@@ -78,7 +78,7 @@ export default function Steps() {
           margin-bottom: 4px;
         }
         .step-subtitle {
-          font-family: "Inter", sans-serif;
+          font-family: var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif;
           font-size: clamp(14px, 1.8vw, 16px);
           font-weight: 400;
           color: rgba(0, 0, 0, 0.7);
@@ -98,7 +98,7 @@ export default function Steps() {
           <span
             style={{
               display: "block",
-              fontFamily: "Inter, sans-serif",
+              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
               fontSize: "clamp(11px, 1.2vw, 13px)",
               fontWeight: 600,
               letterSpacing: "0.15em",
@@ -126,7 +126,7 @@ export default function Steps() {
           </h2>
           <p
             style={{
-              fontFamily: "Inter, sans-serif",
+              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
               fontSize: "clamp(16px, 2vw, 18px)",
               fontWeight: 400,
               color: "rgba(0, 0, 0, 0.75)",

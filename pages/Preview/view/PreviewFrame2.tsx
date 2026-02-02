@@ -308,6 +308,8 @@ export default function PreviewFrame2() {
         isolation: "isolate",
         contain: "paint",
         flexShrink: 0,
+        border: "1px solid white",
+        boxSizing: "border-box",
       }}
     >
       {/* Dark overlay - 20% opacity; pointer-events: none so buttons remain clickable */}
@@ -340,11 +342,11 @@ export default function PreviewFrame2() {
         }}
       />
 
-      {/* One-frame wrapper: fixed height, scaled to fit viewport */}
+      {/* One-frame wrapper: fixed height, scaled to fit viewport; offset from top like frames below */}
       <div
         style={{
           position: "absolute",
-          top: 0,
+          top: "clamp(60px, 10vh, 120px)",
           left: 0,
           right: 0,
           bottom: 0,

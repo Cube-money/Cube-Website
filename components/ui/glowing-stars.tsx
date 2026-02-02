@@ -22,7 +22,7 @@ export const GlowingStarsBackgroundCard = ({
       onMouseEnter={() => setMouseEnter(true)}
       onMouseLeave={() => setMouseEnter(false)}
       className={cn(
-        "bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 max-w-[28rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
+        "bg-[linear-gradient(110deg,#333_0.6%,#222)] p-3 md:p-4 max-w-[28rem] h-full w-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
         className
       )}
     >
@@ -32,15 +32,15 @@ export const GlowingStarsBackgroundCard = ({
         </div>
       )}
       {imageSrc && (
-        <div className="flex justify-start items-center mb-4">
+        <div className="flex justify-start items-center mb-3 md:mb-4">
           <img 
             src={imageSrc} 
             alt="Card icon" 
-            className="w-24 h-24 object-contain"
+            className="w-16 h-16 md:w-24 md:h-24 object-contain"
           />
         </div>
       )}
-      <div className="px-2 pb-4">{children}</div>
+      <div className="px-1 md:px-2 pb-3 md:pb-4">{children}</div>
     </div>
   );
 };
@@ -54,7 +54,7 @@ export const GlowingStarsDescription = ({
 }) => {
   return (
     <p 
-      className={cn("text-sm max-w-[16rem]", className)}
+      className={cn("text-xs md:text-sm max-w-[16rem]", className)}
       style={{
         fontFamily: "Inter, sans-serif",
         color: "#999999",
@@ -74,7 +74,7 @@ export const GlowingStarsTitle = ({
 }) => {
   return (
     <h2 
-      className={cn("text-xl", className)}
+      className={cn("text-lg md:text-xl", className)}
       style={{
         fontFamily: "Inter, sans-serif",
         fontWeight: 300,

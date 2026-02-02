@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="h-screen-dvh"
+      className="min-h-screen-dvh pt-20 md:pt-20"
       style={{
         position: "relative",
         width: "100%",
@@ -78,7 +78,7 @@ export default function HeroSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(40px, 6vw, 72px)",
+            fontSize: "clamp(28px, 6vw, 72px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "left",
@@ -98,7 +98,7 @@ export default function HeroSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.5vw, 18px)",
+            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3.5vw, 26px)",

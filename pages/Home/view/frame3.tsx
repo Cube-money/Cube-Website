@@ -14,17 +14,24 @@ export default function FeaturesSection() {
       <style jsx>{`
         .cards-container-responsive {
           flex-direction: column;
-          gap: clamp(32px, 8vw, 400px);
+          gap: 16px;
+          align-items: center;
+          width: calc(100% - 32px);
+          max-width: min(360px, 100%);
+          bottom: clamp(18%, 20vh, 26%);
         }
         @media (min-width: 900px) {
           .cards-container-responsive {
             flex-direction: row;
             gap: clamp(200px, 25vw, 400px);
+            max-width: 1200px;
+            width: calc(100% - 32px);
+            bottom: clamp(12%, 16vh, 26%);
           }
         }
       `}</style>
     <section
-      className="h-120-dvh"
+      className="min-h-[480px] min-h-[62dvh] md:min-h-[120dvh]"
       style={{
         position: "relative",
         width: "100%",
@@ -85,7 +92,7 @@ export default function FeaturesSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(255, 255, 255)",
-            fontSize: "clamp(32px, 4vw, 56px)",
+            fontSize: "clamp(26px, 5vw, 56px)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
             textAlign: "center",
@@ -105,7 +112,7 @@ export default function FeaturesSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.2vw, 18px)",
+            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3vw, 26px)",
@@ -123,17 +130,14 @@ export default function FeaturesSection() {
         </span>
       </div>
 
-      {/* Cards Container - Lower Position */}
+      {/* Cards Container - stacked on mobile, side-by-side on desktop */}
       <div
         className="cards-container-responsive"
         style={{
           position: "absolute",
-          bottom: "clamp(20%, 22vh, 26%)",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 2,
-          width: "calc(100% - 32px)",
-          maxWidth: "1200px",
           padding: "0 clamp(16px, 3vw, 0)",
           display: "flex",
           justifyContent: "center",

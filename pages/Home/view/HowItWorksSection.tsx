@@ -11,11 +11,11 @@ import BentoGridDemo from "@/components/bento-grid-demo";
 export default function HowItWorksSection() {
   return (
     <section
-      className="h-140-dvh min-h-140-dvh"
+      className="min-h-[600px] md:min-h-140-dvh"
       style={{
         position: "relative",
         width: "100%",
-        paddingBottom: "80px",
+        paddingBottom: "clamp(40px, 6vw, 80px)",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
@@ -86,7 +86,7 @@ export default function HowItWorksSection() {
         <span
           style={{
             fontFamily: "Inter, sans-serif",
-            fontSize: "clamp(18px, 2.2vw, 18px)",
+            fontSize: "clamp(14px, 3vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: "clamp(20px, 3vw, 26px)",
@@ -148,7 +148,7 @@ export default function HowItWorksSection() {
         </a>
         
         {/* BentoGrid Component */}
-        <div style={{ marginTop: "60px", position: "relative" }}>
+        <div style={{ marginTop: "clamp(32px, 6vw, 60px)", position: "relative", padding: "0 clamp(16px, 3vw, 0)" }}>
           <BentoGridDemo />
         </div>
       </div>
