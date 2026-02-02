@@ -2,13 +2,13 @@
 
 import Header from "@/utils/Header";
 import Footer from "@/utils/Footer";
-import NewPreviewMain from "@/pages/NewPreview/view/NewPreviewMain";
+import PreviewMain from "@/pages/Preview/view/PreviewMain";
 
-export default function PreviewPage() {
+export default function OldPreviewPage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
-      <NewPreviewMain />
+      <PreviewMain />
       <Footer />
     </main>
   );
