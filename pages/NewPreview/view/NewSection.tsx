@@ -80,7 +80,7 @@ export default function NewSection() {
             fontStyle: "normal",
             fontWeight: 400,
             color: "rgb(0, 0, 0)",
-            fontSize: isMobile ? "clamp(22px, 5.5vw, 28px)" : "clamp(18px, 3.2vw, 34px)",
+            fontSize: isMobile ? "clamp(26px, 5.5vw, 32px)" : "clamp(22px, 3.2vw, 40px)",
             letterSpacing: "-0.02em",
             lineHeight: "115%",
             whiteSpace: "pre-line",
@@ -95,7 +95,7 @@ export default function NewSection() {
             display: "block",
             marginTop: isMobile ? "10px" : "clamp(10px, 1.8vh, 14px)",
             fontFamily: "Inter, sans-serif",
-            fontSize: isMobile ? "14px" : "clamp(12px, 2.1vw, 16px)",
+            fontSize: isMobile ? "16px" : "clamp(14px, 2.1vw, 18px)",
             fontWeight: 400,
             letterSpacing: "-0.25px",
             lineHeight: isMobile ? "22px" : "clamp(18px, 2.6vw, 24px)",
@@ -116,12 +116,12 @@ export default function NewSection() {
             key={index}
             className={isMobile ? "max-w-none p-3" : "max-w-none"}
           >
-            <GlowingStarsTitle className={isMobile ? "text-sm" : "text-base"}>
+            <GlowingStarsTitle className={isMobile ? "text-base" : "text-lg"}>
               {feature.title}
             </GlowingStarsTitle>
             <div className={isMobile ? "mt-1.5" : "mt-2"}>
               <GlowingStarsDescription
-                className={isMobile ? "text-xs max-w-none leading-snug" : "text-xs max-w-none"}
+                className={isMobile ? "text-sm max-w-none leading-snug" : "text-sm max-w-none"}
               >
                 {feature.description}
               </GlowingStarsDescription>

@@ -114,7 +114,7 @@ export default function CubeCoordinationSection() {
               justifyContent: "flex-start",
               transform:
                 flowerScale < 1
-                  ? `scale(${flowerScale}) translateY(-38%)`
+                  ? `scale(${flowerScale}) translateY(-56%)`
                   : `scale(${flowerScale}) translateY(-12%)`,
               transformOrigin: "left center",
             }}
@@ -164,7 +164,7 @@ export default function CubeCoordinationSection() {
                 fontStyle: "normal",
                 fontWeight: 400,
                 color: "rgb(255, 255, 255)",
-                fontSize: "clamp(22px, 4vw, 46px)",
+                fontSize: flowerScale < 1 ? "clamp(34px, 5vw, 58px)" : "clamp(30px, 5vw, 56px)",
                 letterSpacing: "-0.02em",
                 lineHeight: "1.15",
                 textAlign: "center",
@@ -185,7 +185,7 @@ export default function CubeCoordinationSection() {
             <p
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(12px, 2vw, 16px)",
+                fontSize: flowerScale < 1 ? "clamp(16px, 2vw, 18px)" : "clamp(12px, 2vw, 16px)",
                 fontWeight: 400,
                 letterSpacing: "-0.02em",
                 lineHeight: "1.5",
@@ -246,7 +246,7 @@ export default function CubeCoordinationSection() {
             <p
               style={{
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(12px, 2vw, 16px)",
+                fontSize: flowerScale < 1 ? "clamp(18px, 2.5vw, 22px)" : "clamp(14px, 2vw, 18px)",
                 fontWeight: 400,
                 letterSpacing: "-0.02em",
                 lineHeight: "1.5",
@@ -275,7 +275,7 @@ export default function CubeCoordinationSection() {
               justifyContent: "flex-end",
               transform:
                 flowerScale < 1
-                  ? `scale(${flowerScale}) translateY(-38%)`
+                  ? `scale(${flowerScale}) translateY(-56%)`
                   : `scale(${flowerScale}) translateY(-12%)`,
               transformOrigin: "right center",
             }}

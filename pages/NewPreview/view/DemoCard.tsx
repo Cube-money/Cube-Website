@@ -426,7 +426,7 @@ export default function DemoCard() {
         <h2
           style={{
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
-            fontSize: "clamp(22px, 4vw, 46px)",
+            fontSize: "clamp(34px, 6vw, 62px)",
             fontWeight: 400,
             letterSpacing: "-0.02em",
             lineHeight: "1.15",
