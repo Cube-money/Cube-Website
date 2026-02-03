@@ -74,52 +74,69 @@ export default function BottomCta() {
                 maxWidth: "540px",
               }}
             >
-              {/* Main Heading */}
+              {/* Small label (Inter) */}
+              <span
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "11px",
+                  fontWeight: 500,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(0, 0, 0, 0.5)",
+                  WebkitFontSmoothing: "antialiased",
+                  marginBottom: "clamp(12px, 2vh, 18px)",
+                  display: "block",
+                }}
+              >
+                Get started
+              </span>
+
+              {/* Headline (Instrument Serif only) */}
               <h2
                 style={{
                   fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
                   fontWeight: 400,
                   color: "#1a1a1a",
-                  fontSize: "clamp(32px, 5vw, 56px)",
-                  letterSpacing: "-0.025em",
-                  lineHeight: "1.1",
-                  margin: "0 0 20px 0",
+                  fontSize: "clamp(32px, 5.5vw, 64px)",
+                  letterSpacing: "-0.02em",
+                  lineHeight: "105%",
+                  margin: "0 0 clamp(14px, 2.5vh, 22px) 0",
                 }}
               >
-                Ready to save
-                <br />
-                <span style={{ color: "#2d2d2d" }}>together?</span>
+                Ready to save together?
               </h2>
 
-              {/* Subtext */}
+              {/* Body (Inter) */}
               <p
                 style={{
-                  fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                  fontSize: "clamp(16px, 1.8vw, 18px)",
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "clamp(16px, 2.4vw, 20px)",
                   fontWeight: 400,
-                  lineHeight: "1.65",
-                  color: "#5c5c5c",
-                  margin: "0 0 32px 0",
-                  maxWidth: "460px",
+                  letterSpacing: "-0.25px",
+                  lineHeight: "clamp(24px, 3.2vw, 30px)",
+                  color: "rgba(0, 0, 0, 0.7)",
+                  margin: "0 0 clamp(20px, 3vh, 28px) 0",
+                  maxWidth: "520px",
+                  WebkitFontSmoothing: "antialiased",
                 }}
               >
                 Cube is designed so expectations are clear from day one. Your group agrees on contributions, timing, and payout order before the cycle begins.
               </p>
 
-              {/* Feature highlights */}
+              {/* Feature highlights (Inter) */}
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "12px",
-                  marginBottom: "36px",
+                  gap: "10px",
+                  marginBottom: "clamp(24px, 4vh, 36px)",
                   width: "100%",
                   maxWidth: "400px",
                 }}
               >
                 {[
                   { text: "No hidden fees or interest" },
-                  { text: "Group-verified contributions" },
+                  { text: "Group verified contributions" },
                   { text: "Transparent payout schedule" },
                 ].map((feature, i) => (
                   <div
@@ -132,10 +149,10 @@ export default function BottomCta() {
                   >
                     <span
                       style={{
-                        fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                        fontSize: "15px",
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: "14px",
                         fontWeight: 500,
-                        color: "#1a1a1a",
+                        color: "#22c55e",
                         flexShrink: 0,
                       }}
                     >
@@ -143,10 +160,11 @@ export default function BottomCta() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                        fontSize: "15px",
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: "14px",
                         fontWeight: 500,
-                        color: "#2d2d2d",
+                        color: "rgba(0, 0, 0, 0.75)",
+                        WebkitFontSmoothing: "antialiased",
                       }}
                     >
                       {feature.text}
@@ -155,37 +173,35 @@ export default function BottomCta() {
                 ))}
               </div>
 
-              {/* CTA Button */}
+              {/* CTA Button (same as Frame4) */}
               <a
-                href="/stories"
+                href="/signup"
                 className="cta-button self-center min-[900px]:self-start"
                 style={{
-                  opacity: 0.85,
                   textDecoration: "none",
                   alignItems: "center",
                   borderRadius: "clamp(28px, 3vw, 36px)",
                   boxSizing: "border-box",
                   display: "inline-flex",
-                  height: "clamp(40px, 5vh, 44px)",
+                  height: "clamp(44px, 5.5vh, 50px)",
                   justifyContent: "center",
                   overflow: "hidden",
-                  padding: "0px clamp(20px, 3vw, 32px)",
+                  padding: "0px clamp(24px, 3.5vw, 36px)",
                   position: "relative",
                   textAlign: "center",
                   whiteSpace: "nowrap",
-                  backgroundColor: "rgb(204, 255, 0)",
-                  border: "1px solid rgb(204, 255, 0)",
+                  backgroundColor: "#C1FF35",
+                  border: "none",
                   color: "rgb(17, 14, 8)",
                   cursor: "pointer",
                   WebkitFontSmoothing: "antialiased",
-                  outline: "rgb(17, 14, 8) none 0px",
                 }}
               >
                 <span
                   style={{
                     fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                    fontSize: "clamp(16px, 2vw, 18px)",
-                    fontWeight: 400,
+                    fontSize: "clamp(15px, 2vw, 17px)",
+                    fontWeight: 500,
                     letterSpacing: "-0.25px",
                     lineHeight: "clamp(20px, 3vw, 24px)",
                     margin: 0,
@@ -193,9 +209,25 @@ export default function BottomCta() {
                     WebkitFontSmoothing: "antialiased",
                   }}
                 >
-                  Create my cube
+                  Start my Cube
                 </span>
               </a>
+
+              {/* Microtext (Inter) */}
+              <span
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 400,
+                  letterSpacing: "-0.01em",
+                  color: "rgba(0, 0, 0, 0.45)",
+                  WebkitFontSmoothing: "antialiased",
+                  marginTop: "clamp(12px, 2vh, 18px)",
+                  display: "block",
+                }}
+              >
+                No debt. No interest. Just structure.
+              </span>
             </div>
 
             {/* Right - Phone mockup */}
@@ -208,7 +240,7 @@ export default function BottomCta() {
               }}
             >
               <img
-                src="/Home/Frame4/phoneframe4.png"
+                src="/howitworks/howbt.png"
                 alt="Cube app interface"
                 style={{
                   position: "relative",
@@ -223,65 +255,6 @@ export default function BottomCta() {
           </div>
         </div>
 
-        {/* Bottom trust bar */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(0, 0, 0, 0.06)",
-            backgroundColor: "rgba(255, 255, 255, 0.6)",
-            backdropFilter: "blur(8px)",
-            padding: "20px clamp(20px, 5vw, 48px)",
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "clamp(24px, 5vw, 48px)",
-              flexWrap: "wrap",
-            }}
-          >
-            {[
-              { value: "0%", label: "Interest" },
-              { value: "100%", label: "Transparency" },
-              { value: "24/7", label: "Access" },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "8px",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: 'var(--font-instrument-serif), "Instrument Serif", Georgia, serif',
-                    fontSize: "clamp(24px, 3vw, 32px)",
-                    fontWeight: 400,
-                    color: "#1a1a1a",
-                  }}
-                >
-                  {stat.value}
-                </span>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    color: "#8c8c8c",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.05em",
-                  }}
-                >
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
     </>
   );

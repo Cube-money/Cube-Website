@@ -4,19 +4,19 @@ const productionSteps = [
   {
     step: "01",
     title: "Form",
-    subtitle: "Create Your Cube",
+    subtitle: "Invite your circle. Set the terms.",
     image: "/howitworks/Step1.png",
   },
   {
     step: "02",
     title: "Contribute",
-    subtitle: "Pool Together",
+    subtitle: "Everyone pays in. Every cycle.",
     image: "/howitworks/Step2.png",
   },
   {
     step: "03",
     title: "Distribute",
-    subtitle: "Receive Funds",
+    subtitle: "One member receives. Then rotate.",
     image: "/howitworks/Step3.png",
   },
 ];
@@ -70,19 +70,21 @@ export default function Steps() {
           }
         }
         .step-title {
-          font-family: var(--font-instrument-serif), "Instrument Serif", serif;
-          font-size: clamp(24px, 3vw, 32px);
+          font-family: Inter, sans-serif;
+          font-size: clamp(20px, 2.5vw, 26px);
           font-weight: 400;
           color: rgb(0, 0, 0);
           letter-spacing: -0.02em;
-          margin-bottom: 4px;
+          margin-bottom: 6px;
+          -webkit-font-smoothing: antialiased;
         }
         .step-subtitle {
-          font-family: var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif;
+          font-family: Inter, sans-serif;
           font-size: clamp(14px, 1.8vw, 16px);
           font-weight: 400;
-          color: rgba(0, 0, 0, 0.7);
+          color: rgba(0, 0, 0, 0.6);
           letter-spacing: -0.01em;
+          -webkit-font-smoothing: antialiased;
         }
       `}</style>
       <section
@@ -95,20 +97,24 @@ export default function Steps() {
       >
         {/* Header */}
         <div className="steps-header">
+          {/* Label (Inter) */}
           <span
             style={{
               display: "block",
-              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-              fontSize: "clamp(11px, 1.2vw, 13px)",
-              fontWeight: 600,
-              letterSpacing: "0.15em",
+              fontFamily: "Inter, sans-serif",
+              fontSize: "11px",
+              fontWeight: 500,
+              letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "rgba(0, 0, 0, 0.6)",
-              marginBottom: "12px",
+              color: "rgba(0, 0, 0, 0.5)",
+              marginBottom: "clamp(12px, 2vh, 18px)",
+              WebkitFontSmoothing: "antialiased",
             }}
           >
-            CUBE STEPS
+            The steps
           </span>
+
+          {/* Headline (Instrument Serif only) */}
           <h2
             style={{
               fontFamily:
@@ -116,27 +122,31 @@ export default function Steps() {
               fontStyle: "normal",
               fontWeight: 400,
               color: "rgb(0, 0, 0)",
-              fontSize: "clamp(32px, 5vw, 56px)",
+              fontSize: "clamp(32px, 5.5vw, 64px)",
               letterSpacing: "-0.02em",
-              lineHeight: "110%",
-              margin: "0 0 16px 0",
+              lineHeight: "105%",
+              margin: "0 0 clamp(14px, 2.5vh, 22px) 0",
             }}
           >
             The Core Mechanism
           </h2>
+
+          {/* Body (Inter) */}
           <p
             style={{
-              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
-              fontSize: "clamp(16px, 2vw, 18px)",
+              fontFamily: "Inter, sans-serif",
+              fontSize: "clamp(16px, 2.4vw, 20px)",
               fontWeight: 400,
-              color: "rgba(0, 0, 0, 0.75)",
-              lineHeight: "1.6",
-              maxWidth: "600px",
+              letterSpacing: "-0.25px",
+              lineHeight: "clamp(24px, 3.2vw, 30px)",
+              color: "rgba(0, 0, 0, 0.7)",
+              maxWidth: "580px",
               margin: "0 auto",
+              WebkitFontSmoothing: "antialiased",
             }}
           >
-            A Cube is a group of people who agree to save together.
-            Each cycle, one member receives the pooled funds.
+            A Cube is a group of people who agree to save together. Each cycle, one member receives the pooled funds.
+
           </p>
         </div>
 

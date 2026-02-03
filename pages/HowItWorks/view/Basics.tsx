@@ -13,7 +13,7 @@ export default function Basics() {
         }
         @media (min-width: 900px) {
           .frame4-text-container {
-            left: 5%;
+            left: 14%;
             top: 50%;
             transform: translateY(-50%);
             align-items: flex-start;
@@ -94,11 +94,28 @@ export default function Basics() {
             display: "flex",
             flexDirection: "column",
             width: "calc(100% - 32px)",
-            maxWidth: "clamp(90%, 45vw, 50%)",
+            maxWidth: "clamp(90%, 52vw, 620px)",
             padding: "0 clamp(16px, 3vw, 0)",
           }}
         >
-          {/* Main Heading */}
+          {/* Small label (Inter, same as Frame4) */}
+          <span
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "11px",
+              fontWeight: 500,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "rgb(255, 255, 255)",
+              WebkitFontSmoothing: "antialiased",
+              marginBottom: "clamp(12px, 2vh, 18px)",
+              display: "block",
+            }}
+          >
+            The cycle
+          </span>
+
+          {/* Headline (Instrument Serif, same as Frame4) */}
           <div
             className="frame4-heading"
             style={{
@@ -107,11 +124,11 @@ export default function Basics() {
               fontStyle: "normal",
               fontWeight: 400,
               color: "rgb(255, 255, 255)",
-              fontSize: "clamp(28px, 4.2vw, 48px)",
+              fontSize: "clamp(32px, 5.5vw, 64px)",
               letterSpacing: "-0.02em",
-              lineHeight: "110%",
+              lineHeight: "105%",
               WebkitFontSmoothing: "antialiased",
-              marginBottom: "clamp(10px, 1.8vh, 14px)",
+              marginBottom: "clamp(14px, 2.5vh, 22px)",
               whiteSpace: "normal",
               boxSizing: "border-box",
               display: "block",
@@ -123,58 +140,57 @@ export default function Basics() {
             A repeating financial cycle
           </div>
 
-          {/* Subtext */}
+          {/* Body (Inter, same size and look as Frame4) */}
           <span
             className="frame4-subtext"
             style={{
               display: "block",
-              fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(16px, 2.4vw, 20px)",
               fontWeight: 400,
               letterSpacing: "-0.25px",
-              lineHeight: "clamp(22px, 3vw, 28px)",
-              color: "rgb(255, 255, 255)",
+              lineHeight: "clamp(24px, 3.2vw, 30px)",
+              color: "rgba(255, 255, 255, 0.85)",
               WebkitFontSmoothing: "antialiased",
-              maxWidth: "600px",
+              maxWidth: "640px",
+              marginBottom: "clamp(20px, 3vh, 28px)",
             }}
           >
-            The process continues across cycles until everyone has
-            <br />
-            received their turn.
+            The process continues across cycles until everyone has received their turn.
           </span>
 
-          {/* CTA - same button as HowItWorks.tsx */}
+          {/* CTA button (same as Frame4 / HowItWorks) */}
           <a
-            href="/stories"
+            href="/trust"
             className="frame4-button"
             style={{
-              opacity: 0.85,
               textDecoration: "none",
               alignItems: "center",
               borderRadius: "clamp(28px, 3vw, 36px)",
               boxSizing: "border-box",
               display: "inline-flex",
-              height: "clamp(40px, 5vh, 44px)",
+              height: "clamp(44px, 5.5vh, 50px)",
               justifyContent: "center",
               overflow: "hidden",
-              padding: "0px clamp(20px, 3vw, 32px)",
+              padding: "0px clamp(24px, 3.5vw, 36px)",
               position: "relative",
               textAlign: "center",
               whiteSpace: "nowrap",
-              backgroundColor: "rgb(204, 255, 0)",
-              border: "1px solid rgb(204, 255, 0)",
+              backgroundColor: "#C1FF35",
+              border: "none",
               color: "rgb(17, 14, 8)",
               cursor: "pointer",
               WebkitFontSmoothing: "antialiased",
-              outline: "rgb(17, 14, 8) none 0px",
               marginTop: "clamp(16px, 3vh, 24px)",
+              transition: "transform 0.2s ease, box-shadow 0.2s ease",
             }}
           >
             <span
               style={{
-                fontFamily: "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
-                fontSize: "clamp(16px, 2vw, 18px)",
-                fontWeight: 400,
+                fontFamily:
+                  "Phonic, Helvetica, system-ui, -apple-system, 'system-ui', Arial, sans-serif",
+                fontSize: "clamp(15px, 2vw, 17px)",
+                fontWeight: 500,
                 letterSpacing: "-0.25px",
                 lineHeight: "clamp(20px, 3vw, 24px)",
                 margin: 0,
@@ -182,9 +198,25 @@ export default function Basics() {
                 WebkitFontSmoothing: "antialiased",
               }}
             >
-              See the stories
+              Learn more
             </span>
           </a>
+
+          {/* Microtext (Inter, same as Frame4) */}
+          <span
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "13px",
+              fontWeight: 400,
+              letterSpacing: "-0.01em",
+              color: "rgba(255, 255, 255, 0.5)",
+              WebkitFontSmoothing: "antialiased",
+              marginTop: "clamp(12px, 2vh, 18px)",
+              display: "block",
+            }}
+          >
+            Real people. Real cycles.
+          </span>
         </div>
 
         {/* Image: below text on mobile, right side on desktop */}
