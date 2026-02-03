@@ -52,15 +52,10 @@ export default function SignupMain() {
         paddingBottom: "env(safe-area-inset-bottom)",
       }}
     >
-      {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        width={1920}
-        height={1080}
+      {/* Background image */}
+      <img
+        src="/Home/frame2/Group%2016.png"
+        alt=""
         style={{
           position: "absolute",
           top: 0,
@@ -71,9 +66,7 @@ export default function SignupMain() {
           zIndex: 0,
           backgroundColor: "#0a0a0a",
         }}
-      >
-        <source src="/Home/Hero/footervideo_compressed.mp4" type="video/mp4" />
-      </video>
+      />
 
       {/* Dark overlay */}
       <div
