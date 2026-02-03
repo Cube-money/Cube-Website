@@ -8,7 +8,7 @@ export default function About3() {
         width: "100%",
         minHeight: "100vh",
         overflow: "hidden",
-        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%)",
+        background: "linear-gradient(to bottom, #7A9598 0%, #032F4B 50%, #060611 100%)",
         borderTop: "1px solid rgb(128, 128, 128)",
       }}
     >
@@ -162,9 +162,9 @@ export default function About3() {
                 left: "24px",
                 right: "-24px",
                 bottom: "-24px",
-                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)",
+                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.12) 100%)",
                 borderRadius: "24px",
-                border: "1px solid rgba(255, 255, 255, 0.05)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
               }}
             />
             
@@ -176,9 +176,9 @@ export default function About3() {
                 left: "12px",
                 right: "-12px",
                 bottom: "-12px",
-                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)",
+                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.18) 100%)",
                 borderRadius: "24px",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
+                border: "1px solid rgba(255, 255, 255, 0.25)",
               }}
             />
 
@@ -187,9 +187,9 @@ export default function About3() {
               style={{
                 position: "relative",
                 padding: "clamp(32px, 5vw, 48px)",
-                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)",
+                background: "linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.85) 100%)",
                 borderRadius: "24px",
-                border: "1px solid rgba(255, 255, 255, 0.12)",
+                border: "1px solid rgba(255, 255, 255, 0.5)",
                 backdropFilter: "blur(12px)",
               }}
             >
@@ -200,7 +200,7 @@ export default function About3() {
                   fontSize: "clamp(48px, 8vw, 72px)",
                   fontWeight: 400,
                   lineHeight: 1,
-                  color: "rgba(193, 255, 53, 0.3)",
+                  color: "rgba(0, 0, 0, 0.25)",
                   marginBottom: "clamp(16px, 2vh, 24px)",
                 }}
               >
@@ -217,7 +217,7 @@ export default function About3() {
                   letterSpacing: "-0.01em",
                   lineHeight: 1.5,
                   margin: 0,
-                  color: "rgba(255, 255, 255, 0.85)",
+                  color: "rgba(0, 0, 0, 0.85)",
                   WebkitFontSmoothing: "antialiased",
                   marginBottom: "clamp(20px, 3vh, 28px)",
                 }}
@@ -239,7 +239,7 @@ export default function About3() {
                   style={{
                     width: "32px",
                     height: "1px",
-                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                    backgroundColor: "rgba(0, 0, 0, 0.12)",
                   }}
                 />
                 <span
@@ -248,7 +248,7 @@ export default function About3() {
                     fontSize: "13px",
                     fontWeight: 500,
                     letterSpacing: "0.05em",
-                    color: "rgba(255, 255, 255, 0.4)",
+                    color: "rgba(0, 0, 0, 0.45)",
                     WebkitFontSmoothing: "antialiased",
                   }}
                 >
@@ -257,19 +257,6 @@ export default function About3() {
               </div>
             </div>
 
-            {/* Decorative elements */}
-            <div
-              style={{
-                position: "absolute",
-                top: "-40px",
-                right: "-40px",
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(193, 255, 53, 0.15) 0%, transparent 70%)",
-                pointerEvents: "none",
-              }}
-            />
           </div>
         </div>
       </div>
