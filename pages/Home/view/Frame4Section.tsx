@@ -135,6 +135,7 @@ export default function Frame4Section() {
               textTransform: "uppercase",
               color: "rgb(255, 255, 255)",
               WebkitFontSmoothing: "antialiased",
+              marginTop: "clamp(24px, 4vh, 40px)",
               marginBottom: "clamp(12px, 2vh, 18px)",
             }}
           >
