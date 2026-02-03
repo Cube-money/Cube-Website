@@ -1,24 +1,53 @@
 "use client";
 
-import {
-  GlowingStarsBackgroundCard,
-  GlowingStarsDescription,
-  GlowingStarsTitle,
-  Icon,
-} from "@/components/ui/glowing-stars";
-import BentoGridDemo from "@/components/bento-grid-demo";
+import Link from "next/link";
 
 export default function HowItWorksSection() {
+  const learnTopics = [
+    {
+      title: "What is a Trust Score?",
+      teaser: "Your actions do the talking. A simple reflection of how reliably you show up.",
+      image: "/learn/trust-score.png",
+      href: "/learn/trust-score",
+      bgColor: "#FFDDAA",
+      span: "large",
+    },
+    {
+      title: "How are winners chosen?",
+      teaser: "Rules locked in from day one. No tweaks mid-stream.",
+      image: "/learn/choosing-winner.png",
+      href: "/learn/choosing-winner",
+      bgColor: "#008BF2",
+      span: "small",
+    },
+    {
+      title: "Learn about payouts",
+      teaser: "Fast, direct, and predictable. Money moves straight to you.",
+      image: "/learn/payouts.png",
+      href: "/learn/payouts",
+      bgColor: "#D2C1FF",
+      span: "small",
+    },
+    {
+      title: "How to create a Cube?",
+      teaser: "Define structure upfront. Everything runs smoothly later.",
+      image: "/learn/create-cube.png",
+      href: "/learn/create-cube",
+      bgColor: "#FF9DB6",
+      span: "large",
+    },
+  ];
+
   return (
     <>
       <style jsx>{`
         .frame5-section {
-          min-height: 140svh;
+          min-height: 100vh;
           padding-bottom: 80px;
         }
         @media (max-width: 480px) {
           .frame5-section {
-            min-height: 900px;
+            min-height: auto;
             padding-bottom: 40px;
             padding-top: 60px;
           }
@@ -42,19 +71,164 @@ export default function HowItWorksSection() {
             padding: 0 24px;
           }
         }
-        .frame5-content {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+        .bento-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+          .bento-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+        }
+        .bento-card {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          cursor: pointer;
+        }
+        .bento-card:hover {
+          transform: translateY(-4px) scale(1.01);
+        }
+        .bento-card.large {
+          grid-column: span 1;
+        }
+        @media (min-width: 769px) {
+          .bento-card.large {
+            grid-column: span 1;
+          }
+        }
+        .bento-card-inner {
+          position: relative;
+          height: 100%;
+          min-height: 280px;
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 20px;
+          overflow: hidden;
         }
         @media (max-width: 480px) {
-          .frame5-content {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
+          .bento-card-inner {
+            min-height: 240px;
+            padding: 20px;
           }
+        }
+        .bento-card:hover .bento-card-inner {
+          border-color: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.95);
+        }
+        .bento-image-container {
+          position: absolute;
+          top: 50%;
+          right: 16px;
+          transform: translateY(-50%);
+          width: 45%;
+          max-width: 160px;
+          aspect-ratio: 1;
+          border-radius: 16px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover .bento-image-container {
+          transform: translateY(-50%) scale(1.05);
+        }
+        .bento-image-container img {
+          width: 85%;
+          height: 85%;
+          object-fit: contain;
+          transition: transform 0.4s ease;
+        }
+        .bento-card:hover .bento-image-container img {
+          transform: scale(1.1);
+        }
+        .bento-content {
+          position: relative;
+          z-index: 2;
+          max-width: 55%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex: 1;
+        }
+        @media (max-width: 480px) {
+          .bento-content {
+            max-width: 60%;
+          }
+          .bento-image-container {
+            width: 40%;
+            max-width: 120px;
+          }
+        }
+        .bento-label {
+          font-family: Inter, sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.45);
+          margin-bottom: 8px;
+        }
+        .bento-title {
+          font-family: var(--font-instrument-serif), "Instrument Serif", Georgia, serif;
+          font-size: clamp(18px, 2.5vw, 24px);
+          font-weight: 400;
+          letter-spacing: -0.02em;
+          line-height: 1.2;
+          color: #000;
+          margin-bottom: 8px;
+          -webkit-font-smoothing: antialiased;
+        }
+        .bento-teaser {
+          font-family: Inter, sans-serif;
+          font-size: clamp(13px, 1.5vw, 14px);
+          font-weight: 400;
+          letter-spacing: -0.01em;
+          line-height: 1.5;
+          color: rgba(0, 0, 0, 0.55);
+          -webkit-font-smoothing: antialiased;
+        }
+        .bento-arrow {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.06);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          opacity: 0;
+        }
+        .bento-card:hover .bento-arrow {
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.1);
+        }
+        .bento-glow {
+          position: absolute;
+          top: -50%;
+          right: -20%;
+          width: 60%;
+          height: 100%;
+          background: radial-gradient(ellipse at center, rgba(0,0,0,0.03) 0%, transparent 70%);
+          pointer-events: none;
+          transition: opacity 0.4s ease;
+          opacity: 0;
+        }
+        .bento-card:hover .bento-glow {
+          opacity: 1;
         }
       `}</style>
     <section
@@ -64,6 +238,7 @@ export default function HowItWorksSection() {
         width: "100%",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
+        padding: "clamp(60px, 10vh, 100px) clamp(16px, 4vw, 32px)",
       }}
     >
       {/* Full-screen Image Background */}
@@ -81,7 +256,7 @@ export default function HowItWorksSection() {
         }}
       />
       
-      {/* Dark overlay - 20% opacity */}
+      {/* Dark overlay */}
       <div
         style={{
           position: "absolute",
@@ -89,15 +264,15 @@ export default function HowItWorksSection() {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgba(0, 0, 0, 0.35)",
           zIndex: 1,
         }}
       />
       
-      {/* Content - vertically centered on desktop, static on mobile */}
+      {/* Content */}
       <div
-        className="frame5-content"
         style={{
+          position: "relative",
           width: "100%",
           zIndex: 2,
           textAlign: "center",
@@ -145,12 +320,11 @@ export default function HowItWorksSection() {
           Learn how coordination, trust, and shared timing come together to form a fair financial system.
         </span>
         
-        {/* Sign up Button */}
+        {/* CTA Button */}
         <a
-          href="#waitlist"
+          href="/learn"
           style={{
             marginTop: "24px",
-            opacity: 0.85,
             textDecoration: "none",
             alignItems: "center",
             alignSelf: "center",
@@ -169,7 +343,7 @@ export default function HowItWorksSection() {
             color: "rgb(17, 14, 8)",
             cursor: "pointer",
             WebkitFontSmoothing: "antialiased",
-            outline: "rgb(17, 14, 8) none 0px",
+            transition: "opacity 0.2s ease",
           }}
         >
           <span
@@ -184,13 +358,61 @@ export default function HowItWorksSection() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Sign up
+            View all
           </span>
         </a>
         
-        {/* BentoGrid Component */}
-        <div style={{ marginTop: "40px", position: "relative", padding: "0 16px" }}>
-          <BentoGridDemo />
+        {/* Premium Bento Grid */}
+        <div className="bento-grid" style={{ marginTop: "clamp(32px, 5vh, 56px)" }}>
+          {learnTopics.map((topic, index) => (
+            <Link
+              key={index}
+              href={topic.href}
+              className={`bento-card ${topic.span}`}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="bento-card-inner">
+                {/* Glow effect on hover */}
+                <div className="bento-glow" />
+                
+                {/* Arrow indicator */}
+                <div className="bento-arrow">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </div>
+                
+                {/* Image container with colored background */}
+                <div
+                  className="bento-image-container"
+                  style={{ backgroundColor: topic.bgColor }}
+                >
+                  <img
+                    src={topic.image}
+                    alt={topic.title}
+                    loading="lazy"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="bento-content">
+                  <span className="bento-label">Cube Library</span>
+                  <h3 className="bento-title">{topic.title}</h3>
+                  <p className="bento-teaser">{topic.teaser}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
