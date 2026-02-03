@@ -772,7 +772,7 @@ export function DemoCard({
                 lineHeight: "24px",
               }}
             >
-              Waitlist sign up
+              Sign up
             </span>
           </a>
         </div>

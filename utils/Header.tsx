@@ -255,7 +255,7 @@ export default function Header() {
               fontFamily: "system-ui, -apple-system, Arial, sans-serif",
             }}
           >
-            Waitlist sign up
+            Sign up
           </span>
         </a>
       </div>
@@ -330,7 +330,7 @@ export default function Header() {
                 fontFamily: "Inter, sans-serif",
               }}
             >
-              Waitlist sign up
+              Sign up
             </a>
           </div>
         </div>

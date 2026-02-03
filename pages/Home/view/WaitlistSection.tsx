@@ -171,7 +171,7 @@ export default function WaitlistSection() {
                 WebkitFontSmoothing: "antialiased",
               }}
             >
-              Start my Cube
+              Sign up
             </span>
           </a>
 
