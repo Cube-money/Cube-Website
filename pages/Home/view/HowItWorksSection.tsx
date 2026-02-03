@@ -184,7 +184,7 @@ export default function HowItWorksSection() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Sign up
+            Waitlist sign up
           </span>
         </a>
         

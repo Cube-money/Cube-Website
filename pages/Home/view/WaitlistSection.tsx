@@ -136,7 +136,7 @@ export default function WaitlistSection() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Sign up
+            Waitlist sign up
           </span>
         </a>
       </div>

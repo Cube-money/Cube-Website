@@ -60,8 +60,10 @@ export default function Careers() {
       style={{
         position: "relative",
         width: "100%",
+        height: "100svh",
         overflow: "hidden",
         borderTop: "1px solid rgb(128, 128, 128)",
+        backgroundColor: "#0a0a0a",
       }}
     >
       {/* Full-screen Video Background */}
@@ -72,6 +74,8 @@ export default function Careers() {
         muted
         playsInline
         preload="auto"
+        width={1920}
+        height={1080}
         style={{
           position: "absolute",
           top: 0,
@@ -80,6 +84,7 @@ export default function Careers() {
           height: "100%",
           objectFit: "cover",
           zIndex: 0,
+          backgroundColor: "#0a0a0a",
         }}
       >
         <source src="/Home/Hero/HomeHero2.mp4" type="video/mp4" />
@@ -103,6 +108,10 @@ export default function Careers() {
         className="careers-text-container"
         style={{
           position: "absolute",
+          top: "65%",
+          left: "5%",
+          maxWidth: "50%",
+          width: "50%",
           transform: "translateY(-50%)",
           zIndex: 3,
           display: "flex",
@@ -118,6 +127,7 @@ export default function Careers() {
             fontFamily: 'var(--font-instrument-serif), "Instrument Serif", "Instrument Serif Placeholder", serif',
             fontStyle: "normal",
             fontWeight: 400,
+            fontSize: "72px",
             color: "rgb(255, 255, 255)",
             letterSpacing: "-0.02em",
             lineHeight: "100%",
@@ -140,6 +150,8 @@ export default function Careers() {
           style={{
             fontFamily: "Inter, sans-serif",
             fontWeight: 400,
+            fontSize: "18px",
+            lineHeight: "26px",
             letterSpacing: "-0.25px",
             margin: 0,
             fontStyle: "normal",
