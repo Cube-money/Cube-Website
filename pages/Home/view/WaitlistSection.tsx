@@ -44,7 +44,7 @@ export default function WaitlistSection() {
             zIndex: 0,
           }}
         >
-          <source src="/Home/Hero/footervideo.mp4" type="video/mp4" />
+          <source src="/Home/Hero/footervideo_compressed.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay */}

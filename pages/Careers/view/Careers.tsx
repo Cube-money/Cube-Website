@@ -87,7 +87,7 @@ export default function Careers() {
           backgroundColor: "#0a0a0a",
         }}
       >
-        <source src="/Home/Hero/HomeHero2.mp4" type="video/mp4" />
+        <source src="/Home/Hero/HomeHero2_compressed.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay */}

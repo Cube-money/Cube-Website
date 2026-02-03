@@ -106,7 +106,7 @@ export default function HeroSection() {
           backgroundColor: "#0a0a0a",
         }}
       >
-        <source src="/Home/Hero/HomeHero.mp4" type="video/mp4" />
+        <source src="/Home/Hero/HomeHero_compressed.mp4" type="video/mp4" />
       </video>
       
       {/* Dark overlay - 10% opacity */}
