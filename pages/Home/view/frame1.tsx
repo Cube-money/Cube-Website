@@ -172,7 +172,7 @@ export default function WhatIsCubeSection() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Waitlist sign up
+            Sign up
           </span>
         </a>
       </div>

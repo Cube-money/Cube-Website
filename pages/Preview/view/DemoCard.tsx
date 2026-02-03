@@ -772,7 +772,7 @@ export function DemoCard({
                 lineHeight: "24px",
               }}
             >
-              Create a cube
+              Waitlist sign up
             </span>
           </a>
         </div>

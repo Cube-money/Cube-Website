@@ -219,7 +219,7 @@ export default function Frame4Section() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-            Waitlist sign up
+            Sign up
           </span>
         </a>
 

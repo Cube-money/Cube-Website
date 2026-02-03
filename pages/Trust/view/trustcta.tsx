@@ -160,7 +160,7 @@ export default function TrustCta() {
                 WebkitFontSmoothing: "antialiased",
               }}
             >
-              Start my Cube
+              Waitlist sign up
             </span>
           </a>
 

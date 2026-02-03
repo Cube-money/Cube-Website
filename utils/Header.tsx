@@ -255,7 +255,7 @@ export default function Header() {
               fontFamily: "system-ui, -apple-system, Arial, sans-serif",
             }}
           >
-            Start my Cube
+            Waitlist sign up
           </span>
         </a>
       </div>
@@ -330,7 +330,7 @@ export default function Header() {
                 fontFamily: "Inter, sans-serif",
               }}
             >
-              Start my Cube
+              Waitlist sign up
             </a>
           </div>
         </div>
