@@ -70,7 +70,7 @@ export default function Basics() {
             left: auto;
             bottom: auto;
             transform: none;
-            right: 16%;
+            right: 6%;
             top: 0;
             height: 100%;
             justify-content: flex-end;
