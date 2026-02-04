@@ -120,12 +120,14 @@ export default function TrustCta() {
               maxWidth: "560px",
             }}
           >
-            Cube makes group saving feel automatic — with clear rules, shared visibility, and scheduled access.
+            Cube makes group saving feel automatic, with clear rules, shared visibility, and scheduled access.
           </span>
 
           {/* CTA Button */}
           <a
-            href="/signup"
+            href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               alignSelf: "center",
               textDecoration: "none",
