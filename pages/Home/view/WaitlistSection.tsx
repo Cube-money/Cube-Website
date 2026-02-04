@@ -135,7 +135,9 @@ export default function WaitlistSection() {
 
           {/* CTA button */}
           <a
-            href="/signup"
+            href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               alignSelf: "center",
               textDecoration: "none",
