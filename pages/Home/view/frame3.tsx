@@ -146,7 +146,7 @@ export default function FeaturesSection() {
             width: "100%",
           }}
         >
-          Save without debt or interest, and move way faster than traditional saving by pooling together instead of waiting months for slow, solo progress.
+          Progress doesn’t have to be slow. Save together, without debt or interest.
         </span>
       </div>
 
