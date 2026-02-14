@@ -372,7 +372,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/cubemoney_official/"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -396,7 +396,7 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/search/results/all/?keywords=cube&origin=RICH_QUERY_TYPEAHEAD_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A110538783&position=0"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
