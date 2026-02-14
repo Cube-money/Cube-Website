@@ -228,7 +228,9 @@ export default function Header() {
       {/* Signup Button - Desktop */}
       <div className="hidden lg:flex" style={{ alignItems: "center" }}>
         <a
-          href="/signup"
+          href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             minWidth: "140px",
             textDecoration: "none",
@@ -314,7 +316,9 @@ export default function Header() {
           </div>
           <div style={{ marginTop: "24px" }}>
             <a
-              href="/signup"
+              href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 width: "100%",
                 textDecoration: "none",

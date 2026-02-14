@@ -190,7 +190,7 @@ export default function HeroSection() {
         {/* Buttons */}
         <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
           <a
-            href="#"
+            href="/preview"
             className="hero-btn"
             style={{
               textDecoration: "none",
@@ -229,7 +229,9 @@ export default function HeroSection() {
             </span>
           </a>
           <a
-            href="#waitlist"
+            href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hero-btn"
             style={{
               opacity: 0.85,

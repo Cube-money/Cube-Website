@@ -175,7 +175,9 @@ export default function BottomCta() {
 
               {/* CTA Button (same as Frame4) */}
               <a
-                href="/signup"
+                href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-button self-center min-[900px]:self-start"
                 style={{
                   textDecoration: "none",

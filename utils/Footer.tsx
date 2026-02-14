@@ -106,7 +106,10 @@ export default function Footer() {
         .footer-form {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 0;
+        }
+        .footer-form input::placeholder {
+          color: rgba(0, 0, 0, 0.4);
         }
         @media (min-width: 600px) {
           .footer-form {
@@ -126,13 +129,14 @@ export default function Footer() {
         <div className="footer-top-section">
           {/* Left - Logo & Newsletter */}
           <div className="footer-left">
-            {/* Logo with Text */}
+            {/* Logo with Text - matching Header style */}
             <a
               href="/"
+              aria-label="Cube Logo"
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "8px",
+                gap: "0px",
                 marginBottom: "32px",
                 textDecoration: "none",
               }}
@@ -140,14 +144,16 @@ export default function Footer() {
               <img
                 src="/CubeLogo/BlackLogo.png"
                 alt="Cube Logo"
-                style={{ height: "clamp(28px, 4vw, 36px)", width: "auto" }}
+                style={{ height: "42px", width: "auto" }}
               />
               <span
                 style={{
-                  fontSize: "clamp(20px, 3vw, 24px)",
-                  fontWeight: 600,
-                  color: "rgb(0, 0, 0)",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  letterSpacing: "-0.25px",
+                  lineHeight: "32px",
                   fontFamily: "Inter, sans-serif",
+                  color: "rgb(0, 0, 0)",
                 }}
               >
                 Cube
@@ -170,66 +176,104 @@ export default function Footer() {
               Save together. Prosper together.
             </p>
 
-            {/* Newsletter Form */}
+            {/* Newsletter Form - Premium Sharp Design */}
             <div style={{ marginBottom: "16px" }}>
               <p
                 style={{
-                  fontSize: "14px",
-                  fontWeight: 600,
-                  color: "rgb(0, 0, 0)",
-                  marginBottom: "12px",
+                  fontSize: "11px",
+                  fontWeight: 500,
+                  color: "rgba(0, 0, 0, 0.5)",
+                  marginBottom: "10px",
                   fontFamily: "Inter, sans-serif",
                   textTransform: "uppercase",
-                  letterSpacing: "0.5px",
+                  letterSpacing: "0.15em",
+                  WebkitFontSmoothing: "antialiased",
                 }}
               >
-                Stay Updated
+                Get Access
               </p>
-              <form onSubmit={handleSubmit} className="footer-form">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+              <form onSubmit={handleSubmit} className="footer-form" style={{ position: "relative" }}>
+                <div
                   style={{
+                    position: "relative",
                     flex: "1",
-                    padding: "14px 18px",
-                    border: "2px solid rgb(0, 0, 0)",
-                    borderRadius: "8px",
-                    backgroundColor: "transparent",
-                    color: "rgb(0, 0, 0)",
-                    fontSize: "14px",
-                    fontFamily: "Inter, sans-serif",
-                    outline: "none",
+                    display: "flex",
+                    alignItems: "stretch",
                   }}
-                />
-                <button
-                  type="submit"
-                  style={{
-                    padding: "14px 24px",
-                    backgroundColor: "rgb(0, 0, 0)",
-                    color: "rgb(195, 245, 60)",
-                    border: "none",
-                    borderRadius: "8px",
-                    cursor: "pointer",
-                    fontSize: "14px",
-                    fontWeight: 600,
-                    fontFamily: "Inter, sans-serif",
-                    transition: "transform 0.2s ease",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                 >
-                  Subscribe
-                </button>
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@email.com"
+                    style={{
+                      width: "100%",
+                      padding: "16px 20px",
+                      paddingRight: "140px",
+                      border: "1px solid rgba(0, 0, 0, 0.2)",
+                      borderRadius: "0",
+                      backgroundColor: "rgba(0, 0, 0, 0.03)",
+                      color: "rgb(0, 0, 0)",
+                      fontSize: "15px",
+                      fontFamily: "Inter, sans-serif",
+                      fontWeight: 400,
+                      letterSpacing: "-0.01em",
+                      outline: "none",
+                      transition: "border-color 0.2s ease, background-color 0.2s ease",
+                      WebkitFontSmoothing: "antialiased",
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.6)";
+                      e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.05)";
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.2)";
+                      e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.03)";
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    style={{
+                      position: "absolute",
+                      right: "4px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      padding: "10px 20px",
+                      backgroundColor: "rgb(0, 0, 0)",
+                      color: "rgb(195, 245, 60)",
+                      border: "none",
+                      borderRadius: "0",
+                      cursor: "pointer",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      fontFamily: "Inter, sans-serif",
+                      letterSpacing: "0.02em",
+                      textTransform: "uppercase",
+                      transition: "all 0.2s ease",
+                      WebkitFontSmoothing: "antialiased",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "rgb(30, 30, 30)";
+                      e.currentTarget.style.color = "#fff";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "rgb(0, 0, 0)";
+                      e.currentTarget.style.color = "rgb(195, 245, 60)";
+                    }}
+                  >
+                    Join →
+                  </button>
+                </div>
               </form>
               <p
                 style={{
-                  fontSize: "12px",
-                  color: "rgba(0, 0, 0, 0.6)",
+                  fontSize: "11px",
+                  color: "rgba(0, 0, 0, 0.45)",
                   fontFamily: "Inter, sans-serif",
-                  marginTop: "8px",
+                  marginTop: "10px",
+                  letterSpacing: "-0.01em",
+                  WebkitFontSmoothing: "antialiased",
                 }}
               >
                 No spam. Unsubscribe anytime.

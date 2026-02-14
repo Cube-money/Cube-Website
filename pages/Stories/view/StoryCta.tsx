@@ -85,7 +85,9 @@ export default function StoryCta() {
 
           {/* Button (Best Conversion) */}
           <a
-            href="/how-it-works"
+            href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               alignSelf: "center",
               opacity: 0.95,

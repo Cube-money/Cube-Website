@@ -146,7 +146,7 @@ export default function FeaturesSection() {
             width: "100%",
           }}
         >
-          Save without debt or interest, and move way faster than traditional saving by pooling together instead of waiting months for slow, solo progress.
+          Progress doesn’t have to be slow. Save together, without debt or interest.
         </span>
       </div>
 
@@ -165,29 +165,43 @@ export default function FeaturesSection() {
           width: "calc(100% - 32px)",
         }}
       >
-        <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Create2.png">
-          <GlowingStarsTitle>Create a Cube</GlowingStarsTitle>
-          <div className="flex justify-between items-end">
-            <GlowingStarsDescription>
-              Create your own savings circle and invite trusted members to join.
-            </GlowingStarsDescription>
-            <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
-              <Icon />
+        <a
+          href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "block", cursor: "pointer" }}
+        >
+          <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Create2.png">
+            <GlowingStarsTitle>Create a Cube</GlowingStarsTitle>
+            <div className="flex justify-between items-end">
+              <GlowingStarsDescription>
+                Create your own savings circle & invite trusted members to join.
+              </GlowingStarsDescription>
+              <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
+                <Icon />
+              </div>
             </div>
-          </div>
-        </GlowingStarsBackgroundCard>
+          </GlowingStarsBackgroundCard>
+        </a>
 
-        <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Join2.png">
-          <GlowingStarsTitle>Join a Cube</GlowingStarsTitle>
-          <div className="flex justify-between items-end">
-            <GlowingStarsDescription>
-              Join an existing Cube and build wealth through community savings.
-            </GlowingStarsDescription>
-            <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
-              <Icon />
+        <a
+          href="https://apps.apple.com/us/app/cube-money-together/id6755666521"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "block", cursor: "pointer" }}
+        >
+          <GlowingStarsBackgroundCard showStars={false} imageSrc="/AbstractSymbols/Join2.png">
+            <GlowingStarsTitle>Join a Cube</GlowingStarsTitle>
+            <div className="flex justify-between items-end">
+              <GlowingStarsDescription>
+                Join an existing Cube and save together with your circle.
+              </GlowingStarsDescription>
+              <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
+                <Icon />
+              </div>
             </div>
-          </div>
-        </GlowingStarsBackgroundCard>
+          </GlowingStarsBackgroundCard>
+        </a>
       </div>
     </section>
     </>

@@ -135,7 +135,7 @@ export default function WhatIsCubeSection() {
 
           {/* CTA Button */}
           <a
-            href="/how-it-works"
+            href="/stories"
             style={{
               alignSelf: "center",
               textDecoration: "none",
