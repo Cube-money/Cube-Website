@@ -20,6 +20,21 @@ export const metadata: Metadata = {
   verification: {
     google: "a36be1b5dca67cf9",
   },
+  icons: {
+    icon: [
+      {
+        url: "/CubeLogo/BlackLogo.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/CubeLogo/WhiteLogo.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: "/CubeLogo/WhiteLogo.png",
+  },
 };
 
 export const viewport: Viewport = {
